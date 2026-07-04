@@ -1121,7 +1121,7 @@ FREE COURSE CARD
 
 .free-price{
     color:#16a34a;
-    font-size:34px;
+    font-size:25px;
     font-weight:800;
 }
 
@@ -1415,6 +1415,52 @@ MARKETPLACE - TABLETS (992px)
 
 }
 
+/*==================================
+TABLETS (992px) for FREE GIVEAWAY CARD
+===================================*/
+
+.giveaway-card{
+    padding:24px;
+}
+
+.giveaway-badge{
+    top:16px;
+    right:-48px;
+    padding:9px 50px;
+    font-size:11px;
+}
+
+.course-category{
+    font-size:12px;
+    padding:6px 12px;
+}
+
+.old-price{
+    font-size:18px;
+}
+
+.free-price{
+    font-size:30px;
+}
+
+.course-features{
+    gap:8px;
+}
+
+.course-features span{
+    font-size:12px;
+    padding:7px 12px;
+}
+
+.course-footer{
+    font-size:13px;
+}
+
+.giveaway-card .card-btn{
+    font-size:14px;
+    padding:13px;
+}
+
 
 /*==================================================
 PHONES
@@ -1572,6 +1618,56 @@ justify-content:center;
 gap:10px;
 }
 
+/*==================================
+PHONES (768px) FREE GIVEAWAY GIFT
+===================================*/
+
+.giveaway-card{
+    padding:20px;
+}
+
+.giveaway-badge{
+    top:14px;
+    right:-50px;
+    padding:8px 48px;
+    font-size:10px;
+}
+
+.course-category{
+    font-size:12px;
+}
+
+.old-price{
+    display:block;
+    margin-bottom:6px;
+    margin-right:0;
+}
+
+.free-price{
+    display:block;
+    font-size:25px;
+}
+
+.course-features{
+    justify-content:center;
+}
+
+.course-features span{
+    flex:1 1 calc(50% - 10px);
+    text-align:center;
+}
+
+.course-footer{
+    flex-direction:column;
+    gap:10px;
+    text-align:center;
+}
+
+.giveaway-card .card-btn{
+    font-size:14px;
+}
+
+
 }
 
 
@@ -1668,6 +1764,56 @@ height:190px;
 
 .price{
 font-size:22px;
+}
+
+/*==================================
+SMALL PHONES (480px) FREE GIVEAWAY GIFT
+===================================*/
+
+.giveaway-card{
+    padding:18px;
+}
+
+.giveaway-badge{
+    top:12px;
+    right:-55px;
+    padding:7px 46px;
+    font-size:9px;
+}
+
+.course-category{
+    font-size:11px;
+    padding:6px 10px;
+}
+
+.giveaway-card h3{
+    font-size:20px;
+}
+
+.old-price{
+    font-size:16px;
+}
+
+.free-price{
+    font-size:22px;
+}
+
+.course-features{
+    flex-direction:column;
+}
+
+.course-features span{
+    width:100%;
+    text-align:center;
+}
+
+.course-footer{
+    font-size:12px;
+}
+
+.giveaway-card .card-btn{
+    font-size:13px;
+    padding:12px;
 }
 
 }
