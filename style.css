@@ -1673,6 +1673,12 @@ PHONES (768px) FREE GIVEAWAY GIFT
     font-size:14px;
 }
 
+/*=================================================
+MARKET GRID
+=================================================*/
+.market-grid{
+    grid-template-columns:repeat(1,1fr);
+}
 
 }
 
