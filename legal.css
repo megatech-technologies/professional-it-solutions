@@ -1,0 +1,461 @@
+/* ==========================
+LEGAL PAGES
+MegaTech IT Solutions
+========================== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#f4f6f9;
+color:#333;
+line-height:1.8;
+}
+
+.legal-container{
+
+max-width:900px;
+
+margin:60px auto;
+
+background:#fff;
+
+padding:50px;
+
+border-radius:8px;
+
+box-shadow:0 4px 12px rgba(0,0,0,.08);
+
+}
+
+h1{
+
+color:#1e3c72;
+
+margin-bottom:10px;
+
+font-size:34px;
+
+}
+
+.date{
+
+color:#666;
+
+margin-bottom:35px;
+
+font-size:14px;
+
+}
+
+h2{
+
+margin-top:35px;
+
+margin-bottom:12px;
+
+color:#2a5298;
+
+font-size:22px;
+
+}
+
+p{
+
+margin-bottom:15px;
+
+font-size:15px;
+
+}
+
+ul{
+
+margin-left:25px;
+
+margin-bottom:18px;
+
+}
+
+li{
+
+margin-bottom:10px;
+
+}
+
+a{
+
+color:#2a5298;
+
+text-decoration:none;
+
+}
+
+a:hover{
+
+text-decoration:underline;
+
+}
+
+
+/*==================================
+NAVBAR
+==================================*/
+
+.navbar{
+    background:#111;
+    padding:12px 30px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:9999;
+}
+
+.logo{
+    color:#fff;
+    font-size:20px;
+}
+
+.logo a{
+    color:#fff;
+    text-decoration:none;
+}
+
+.menu{
+    list-style:none;
+    display:flex;
+    gap:18px;
+}
+
+.menu li a{
+    text-decoration:none;
+    color:#fff;
+    padding:8px 10px;
+    font-size:13px;
+}
+
+.menu li a i{
+    margin-right:6px;
+}
+
+.menu li a:hover{
+    background:#2a5298;
+    border-radius:8px;
+}
+
+.nav-btn{
+    background:none;
+    border:none;
+    color:#fff;
+    padding:8px 10px;
+    font-size:13px;
+    cursor:pointer;
+}
+
+.nav-btn:hover{
+    background:#2a5298;
+    border-radius:8px;
+}
+
+/*==================================
+DROPDOWN
+==================================*/
+
+.dropdown{
+    position:relative;
+}
+
+.submenu{
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    background:#222;
+    list-style:none;
+    margin-top:8px;
+    min-width:180px;
+    border-radius:4px;
+    max-height:300px;
+    overflow-y:auto;
+    z-index:1000;
+}
+
+.dropdown.active .submenu{
+    display:block;
+}
+
+.submenu li a{
+    display:block;
+    padding:8px 12px;
+}
+
+.submenu li a:hover{
+    background:#333;
+    color:#00bcd4;
+}
+
+/*==================================
+MOBILE MENU
+==================================*/
+
+.menu-toggle{
+    display:none;
+    background:none;
+    border:none;
+    color:#fff;
+    font-size:28px;
+    cursor:pointer;
+    margin-left: auto;
+}
+
+
+
+/*==================================
+MEGATECH FOOTER
+==================================*/
+
+
+/*==================================
+MEGATECH FOOTER
+==================================*/
+
+.mega-footer{
+    background:#111;
+    color:#fff;
+    padding:45px 40px 15px;
+    margin-top:60px;
+}
+
+
+
+
+
+@media(max-width:992px){
+
+    /*====================================
+CSS NAVBAR MOBILE
+=====================================*/
+.navbar{
+    padding:18px 20px;
+    flex-wrap:wrap;
+}
+
+.logo{
+    font-size:18px;
+    max-width:75%;
+}
+
+.menu-toggle{
+    display:block;
+}
+
+nav{
+    width:100%;
+}
+
+.menu{
+    display:none;
+    flex-direction:column;
+    width:100%;
+    background:#111;
+    margin-top:18px;
+    padding:15px 0;
+    border-top:1px solid rgba(255,255,255,.1);
+}
+
+.menu.show{
+    display:flex;
+}
+
+.menu li{
+    width:100%;
+}
+
+.menu li a{
+    display:block;
+    padding:14px 20px;
+    font-size:15px;
+}
+
+.nav-btn{
+    width:100%;
+    text-align:left;
+    padding:14px 20px;
+    font-size:15px;
+}
+
+.submenu{
+    position:static;
+    margin-top:0;
+    border-radius:0;
+    width:100%;
+    max-height:none;
+    overflow:hidden;
+}
+
+.dropdown.active .submenu{
+    display:block;
+}
+
+}
+
+
+@media(max-width:768px){
+
+.legal-container{
+
+margin:20px;
+
+padding:30px 22px;
+
+}
+
+h1{
+
+font-size:28px;
+
+}
+
+h2{
+
+font-size:20px;
+
+}
+
+
+
+/*==================================
+FOOTER RESPONSIVE
+==================================*/
+
+.footer-container{
+    max-width:1200px;
+    margin:0 auto;
+     text-align:center;
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:35px;
+}
+
+.footer-column h3{
+    margin-bottom:18px;
+    color:#00bcd4;
+    font-size:20px;
+}
+
+.footer-column p{
+    color:#ddd;
+    font-size:14px;
+    line-height:1.7;
+}
+
+.footer-column a{
+    display:block;
+    color:#ccc;
+    text-decoration:none;
+    margin:10px 0;
+    font-size:14px;
+    transition:.3s;
+}
+
+.footer-column a:hover{
+    color:#00bcd4;
+    transform:translateX(5px);
+}
+
+.social-links{
+    display:flex;
+    gap:12px;
+    margin:15px 0;
+    justify-content:center;
+}
+
+.social-links a{
+    width:38px;
+    height:38px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:#222;
+    color:#fff;
+
+    border-radius:50%;
+
+    font-size:18px;
+
+    transition:.3s;
+}
+
+.social-links a:hover{
+    background:#2a5298;
+    transform:translateY(-5px);
+}
+
+.footer-bottom{
+    margin-top:35px;
+    padding-top:18px;
+
+    border-top:1px solid rgba(255,255,255,.15);
+
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:10px;
+
+    font-size:13px;
+    color:#aaa;
+}
+
+}
+
+@media(max-width:480px){
+
+.legal-container{
+
+padding:22px 18px;
+
+}
+
+h1{
+
+font-size:24px;
+
+}
+
+h2{
+
+font-size:18px;
+
+}
+
+p,li{
+
+font-size:14px;
+
+}
+
+/* CSS NAVBAR*/
+
+.logo{
+    font-size:15px;
+}
+
+.menu li a,
+.nav-btn{
+    font-size:14px;
+}
+
+}
