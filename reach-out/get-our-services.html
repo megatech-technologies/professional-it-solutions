@@ -18,8 +18,8 @@
   <!-- NAVIGATION -->
   <header class="navbar">
     <div class="logo">
-      <i class="fa-solid fa-code"></i> MegaTech Technologies
-    </div>
+    <img src="../preview/logo.png" alt="MegaTech Technologies">
+</div>
 
     <nav>
       <ul class="menu">
@@ -37,124 +37,208 @@
       </ul>
     </nav>
 
-    <button class="menu-toggle" id="menuToggle">
+    <div class="menu-toggle" id="menuToggle">
     <i class="fa-solid fa-bars-staggered"></i>
-</button>
+</div>
   </header>
 
   <!-- HERO -->
-  <section class="hero">
+  <section class="portfolio-profile">
     <h1>Get Our Services</h1><br>
     <p>Reach out for IT support, web design, computer repair services, training, or product inquiries.</p>
   </section>
 
 
   <!-- CONTACT FORM -->
-  <section class="tools-section">
-    <h2 style="margin-bottom:30px;">Lets Get To Know You...</h2>
+  <!-- ======================================
+CONTACT FORM
+====================================== -->
 
-    <div class="tools-container">
-      <div class="tool-card">
+<section class="tools-section">
 
-        <marquee><p><strong>Response Time:</strong> Within one business day.</p></marquee><br>
+    <div class="container">
 
-        <form action="https://formsubmit.co/aeb1ae69791a4e6eafc689987fa3f687" method="POST">
+        <h2 style="text-align:center; margin-bottom:30px;">
+            Let's Get To Know You...
+        </h2>
 
-          <input type="hidden" name="_subject" value="New MegaTech Technologies Website Enquiry">
-          
-          <input type="hidden" name="_captcha" value="false">
-          
-          <input type="hidden" name="_template" value="table">
+        <div class="contact-form-wrapper">
 
-          <label>
-            Full Name
-          </label>
-          <input type="text" name="name" required placeholder="Your Name">
+            <div class="tool-card">
 
-            
+                <marquee>
+                    <p><strong>Response Time:</strong> Within one business day.</p>
+                </marquee>
 
-            <label>
-              Email Adress
-            </label>
+                <br>
 
-          <input type="email" name="email" required placeholder="Your Email">
+                <form action="https://formsubmit.co/aeb1ae69791a4e6eafc689987fa3f687" method="POST">
 
-            <label>
-              How can we be of help?
-            </label>
+                    <input type="hidden" name="_subject" value="New MegaTech Technologies Website Enquiry">
 
-            <select name="service" required>
-              <option value="">
-                Select an option
-              </option>
+                    <input type="hidden" name="_captcha" value="false">
 
-              <option>
-                Software Installation
-              </option>
+                    <input type="hidden" name="_template" value="table">
 
-              <option>
-                I want to take your courses
-              </option>
+                    <label>Full Name</label>
 
-              <option>
-                I have microsoft license support issues
-              </option>
+                    <input
+                        type="text"
+                        name="name"
+                        required
+                        placeholder="Your Name"
+                    >
 
-              <option>
-                Create a website for me / my business
-              </option>
+                    <label>Email Address</label>
 
-              <option>
-                I want to recover my login password
-              </option>
+                    <input
+                        type="email"
+                        name="email"
+                        required
+                        placeholder="Your Email"
+                    >
 
-              <option>
-                I want to create multiboot USB bootable stick
-              </option>
+                    <label>How can we help?</label>
 
-              <option>
-                Other Enquiry
-              </option>
+                    <select name="service" required>
 
-            </select>
+                        <option value="">Select an option</option>
 
-            <label>
-              Your Message
-            </label>
+                        <option>Software Installation</option>
 
-          <textarea name="message" required placeholder="Type your message..."></textarea>
-          
-          
+                        <option>I want to take your courses</option>
 
-          <button type="submit" class="card-btn">
-            <i class="fa-solid fa-paper-plane"></i> Send Message
-          </button>
-        </form>
+                        <option>I have Microsoft license support issues</option>
 
-      </div>
-    </div>
-  </section>
+                        <option>Create a website for me / my business</option>
 
+                        <option>I want to recover my login password</option>
 
-  <!-- CONTACT INFO -->
-  <section class="tools-section">
-    
-    <div class="tools-container">
+                        <option>I want to create a multiboot USB stick</option>
 
-      
+                        <option>Other Enquiry</option>
 
-      <!-- WhatsApp -->
-      <div class="tool-card1">
-        <h3><i class="fa-brands fa-whatsapp"></i> WhatsApp Support</h3>
-        <p>Chat directly with our team for quick assistance.</p>
-        <p><strong>Fast Response Guaranteed</strong></p>
-        <a href="https://wa.link/xrl8i7" target="_blank" class="card-btn">
-          <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
-        </a>
-      </div>
+                    </select>
+
+                    <label>Your Message</label>
+
+                    <textarea
+                        name="message"
+                        required
+                        placeholder="Type your message..."
+                    ></textarea>
+
+                    <button type="submit" class="card-btn">
+
+                        <i class="fa-solid fa-paper-plane"></i>
+
+                        Send Message
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
 
     </div>
-  </section>
+
+</section>
+
+
+<!-- ======================================
+CONTACT INFORMATION
+====================================== -->
+
+<section class="tools-section">
+
+    <div class="container">
+
+        <div class="contact-layout">
+
+            <!-- WhatsApp -->
+
+            <div class="tool-card">
+
+                <h3>
+                    <i class="fa-brands fa-whatsapp"></i>
+                    WhatsApp Support
+                </h3>
+
+                <p>
+                    Chat directly with our team for quick assistance.
+                </p>
+
+                <p>
+                    <strong>Fast Response Guaranteed</strong>
+                </p>
+
+                <a href="https://wa.link/xrl8i7"
+                   target="_blank"
+                   class="card-btn">
+
+                    <i class="fa-brands fa-whatsapp"></i>
+
+                    Chat on WhatsApp
+
+                </a>
+
+            </div>
+
+
+            <!-- Email -->
+
+            <div class="tool-card">
+
+                <h3>
+                    <i class="fa-solid fa-envelope"></i>
+                    Email Support
+                </h3>
+
+                <p>
+                    Prefer email? Send us your enquiries anytime.
+                </p>
+
+                <p>
+                    <strong>support@megatechtechnologies.com</strong>
+                </p>
+
+                <a href="mailto:militarybasesuperman@gmail.com?subject=Website%20Enquiry&body=Hello%20MegaTech%20Technologies" class="card-btn">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    Send Email
+
+                </a>
+
+            </div>
+
+
+            <!-- Business Hours -->
+
+            <div class="tool-card">
+
+                <h3>
+                    <i class="fa-solid fa-clock"></i>
+                    Business Hours
+                </h3>
+
+                <p>Monday - Friday</p>
+
+                <p><strong>8:00 AM - 6:00 PM</strong></p>
+
+                <p>
+                    Weekend responses may take longer.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 
   
 
