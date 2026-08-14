@@ -1,0 +1,308 @@
+/*==================================================
+  HOW WE WORK
+==================================================*/
+
+.service-process{
+
+    position:relative;
+
+    padding:120px 0;
+
+    overflow:hidden;
+
+}
+
+
+/*==================================================
+  PROCESS HEADER
+==================================================*/
+
+.service-process-header{
+
+    max-width:760px;
+
+    margin:0 auto 75px;
+
+    text-align:center;
+
+}
+
+
+.service-process-header h2{
+
+    margin:22px 0;
+
+    font-family:var(--heading-font);
+
+    font-size:clamp(2.5rem,4vw,4rem);
+
+    line-height:1.1;
+
+    letter-spacing:-1.5px;
+
+    font-weight:var(--fw-black);
+
+}
+
+
+.service-process-header p{
+
+    max-width:650px;
+
+    margin:auto;
+
+    color:var(--text-light);
+
+    font-size:1.05rem;
+
+    line-height:1.8;
+
+}
+
+
+/*==================================================
+  PROCESS TRACK
+==================================================*/
+
+.service-process-track{
+
+    width:100%;
+
+    max-width:1320px;
+
+    margin:auto;
+
+    padding:0 40px;
+
+    display:grid;
+
+    grid-template-columns:
+        1fr
+        70px
+        1fr
+        70px
+        1fr
+        70px
+        1fr;
+
+    align-items:center;
+
+}
+
+
+/*==================================================
+  PROCESS CARD
+==================================================*/
+
+.process-card{
+
+    position:relative;
+
+    min-height:360px;
+
+    padding:38px 32px;
+
+    border-radius:24px;
+
+    overflow:hidden;
+
+    transition:
+        transform .45s ease,
+        border-color .45s ease,
+        box-shadow .45s ease;
+
+}
+
+
+.process-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+
+/*==================================================
+  PROCESS NUMBER
+==================================================*/
+
+.process-number{
+
+    position:absolute;
+
+    top:25px;
+
+    right:28px;
+
+    font-family:var(--heading-font);
+
+    font-size:2.5rem;
+
+    line-height:1;
+
+    font-weight:var(--fw-black);
+
+    color:rgba(99,232,255,.08);
+
+}
+
+
+/*==================================================
+  PROCESS ICON
+==================================================*/
+
+.process-icon{
+
+    width:64px;
+
+    height:64px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin-bottom:28px;
+
+    border:1px solid var(--border-primary);
+
+    border-radius:18px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(0,217,255,.12),
+            var(--glass)
+        );
+
+    color:var(--primary-light);
+
+    font-size:1.35rem;
+
+    box-shadow:
+        inset 0 0 25px rgba(0,217,255,.04),
+        var(--glow-primary);
+
+}
+
+
+/*==================================================
+  PROCESS LABEL
+==================================================*/
+
+.process-label{
+
+    display:block;
+
+    margin-bottom:12px;
+
+    color:var(--primary-light);
+
+    font-size:.68rem;
+
+    font-weight:var(--fw-bold);
+
+    letter-spacing:2px;
+
+}
+
+
+/*==================================================
+  PROCESS TITLE
+==================================================*/
+
+.process-card h3{
+
+    margin-bottom:15px;
+
+    font-family:var(--heading-font);
+
+    font-size:1.35rem;
+
+    font-weight:var(--fw-bold);
+
+}
+
+
+/*==================================================
+  PROCESS TEXT
+==================================================*/
+
+.process-card p{
+
+    color:var(--text-light);
+
+    font-size:.92rem;
+
+    line-height:1.8;
+
+}
+
+
+/*==================================================
+  PROCESS CONNECTOR
+==================================================*/
+
+.process-connector{
+
+    position:relative;
+
+    height:2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--border-primary),
+            transparent
+        );
+
+}
+
+
+.process-connector span{
+
+    position:absolute;
+
+    top:50%;
+
+    left:0;
+
+    width:7px;
+
+    height:7px;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+    box-shadow:var(--glow-primary);
+
+    transform:translateY(-50%);
+
+    animation:
+        processPulse 2.5s ease-in-out infinite;
+
+}
+
+
+@keyframes processPulse{
+
+    0%,
+    100%{
+
+        left:0;
+
+        opacity:.4;
+
+    }
+
+    50%{
+
+        left:calc(100% - 7px);
+
+        opacity:1;
+
+    }
+
+}

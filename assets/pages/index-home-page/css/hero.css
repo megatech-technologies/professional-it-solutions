@@ -1,0 +1,2080 @@
+/*==================================================
+HERO
+==================================================*/
+
+.hero{
+
+    position:relative;
+
+    min-height:100vh;
+
+    display:flex;
+
+
+    align-items:center;
+
+    overflow:hidden;
+
+    background:
+
+radial-gradient(
+    circle at top left,
+    rgba(108,99,255,.08),
+    transparent 35%
+),
+
+radial-gradient(
+    circle at bottom right,
+    rgba(0,217,255,.08),
+    transparent 40%
+),
+
+linear-gradient(
+    180deg,
+    var(--body) 0%,
+    var(--surface) 50%,
+    var(--body) 100%
+);
+
+}
+
+
+/*==================================================
+HERO BACKGROUND
+==================================================*/
+
+.hero-background{
+
+    position:absolute;
+
+    inset:0;
+
+    overflow:hidden;
+
+    z-index:1;
+
+}
+
+
+/*==================================================
+HERO GRID
+==================================================*/
+
+.hero-grid{
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:
+
+    linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),
+
+    linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);
+
+    background-size:60px 60px;
+
+    mask-image:radial-gradient(circle at center,black 45%,transparent 95%);
+
+    opacity:.6;
+
+}
+
+
+/*==================================================
+HERO GLOW
+==================================================*/
+
+.hero-glow{
+
+position:absolute;
+
+inset:0;
+
+background:
+
+radial-gradient(
+
+circle at center,
+
+rgba(0,217,255,.18) 0%,
+
+rgba(108,99,255,.08) 35%,
+
+transparent 72%
+
+);
+
+pointer-events:none;
+
+}
+
+
+/*==================================================
+GRADIENT ORBS
+==================================================*/
+
+.hero-orb{
+
+position:absolute;
+
+border-radius:50%;
+
+filter:blur(150px);
+
+opacity:.85;
+
+mix-blend-mode:screen;
+
+}
+
+.hero-orb-1{
+
+width:460px;
+
+height:460px;
+
+top:-120px;
+
+left:-120px;
+
+background:rgba(108,99,255,.22);
+
+}
+
+.hero-orb-2{
+
+width:520px;
+
+height:520px;
+
+right:-170px;
+
+bottom:-170px;
+
+background:rgba(0,217,255,.18);
+
+}
+
+
+/*==================================================
+CANVAS
+==================================================*/
+
+.hero canvas{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+
+    height:100%;
+
+}
+
+
+
+
+/*==================================================
+HERO LAYOUT
+==================================================*/
+
+.hero .container{
+
+    position:relative;
+
+    z-index:10;
+
+}
+
+.hero-wrapper{
+
+    min-height:100vh;
+
+    display:grid;
+
+    grid-template-columns:1.05fr .95fr;
+
+    align-items:center;
+
+    gap:80px;
+
+    padding-top:140px;
+
+    padding-bottom:80px;
+
+}
+
+
+/*==================================================
+HERO CONTENT
+==================================================*/
+
+.hero-content{
+
+    position:relative;
+
+    z-index:20;
+
+    max-width:700px;
+
+}
+
+
+/*==================================================
+HERO BADGE
+==================================================*/
+
+.hero-badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:12px 24px;
+
+    margin-bottom:30px;
+
+    border-radius:999px;
+
+    color:var(--primary);
+
+    background:var(--glass);
+
+    border:1px solid var(--border-primary);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    font-size:.9rem;
+
+    font-weight:600;
+
+    letter-spacing:.5px;
+
+}
+
+.hero-badge i{
+
+    font-size:.9rem;
+
+}
+
+
+/*==================================================
+HERO TITLE
+==================================================*/
+
+.hero-title{
+
+    margin-bottom:30px;
+
+    font-size:clamp(3.8rem,7vw,6.5rem);
+
+    line-height:1.05;
+
+    font-weight:800;
+
+    letter-spacing:-3px;
+
+    color:var(--white);
+
+}
+
+.hero-title .gradient-text{
+
+    display:inline-block;
+
+}
+
+
+/*==================================================
+HERO DESCRIPTION
+==================================================*/
+
+.hero-description{
+
+    max-width:620px;
+
+    margin-bottom:45px;
+
+    font-size:1.15rem;
+
+    line-height:1.9;
+
+    color:var(--text-light);
+
+}
+
+
+/*==================================================
+HERO BUTTONS
+==================================================*/
+
+.hero-buttons{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    margin-bottom:70px;
+
+}
+
+
+/*==================================================
+HERO VISUAL
+==================================================*/
+
+.hero-visual{
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    min-height:700px;
+
+    width:100%;
+
+    max-width:700px;
+
+    margin:0 auto;
+
+}
+
+
+/*==================================================
+REACTOR CONTAINER
+==================================================*/
+
+/*==================================================
+REACTOR CONTAINER
+==================================================*/
+
+.reactor-container{
+
+position:relative;
+
+width:520px;
+
+aspect-ratio:1;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+}
+
+
+/*==================================================
+SVG
+==================================================*/
+
+.reactor-svg{
+
+width:100%;
+
+height:100%;
+
+overflow:visible;
+
+}
+
+
+
+
+/*==================================================
+HUD PANELS
+==================================================*/
+
+.hud-panel{
+
+    position:absolute;
+
+    width:200px;
+
+    padding:18px;
+
+    border-radius:18px;
+
+    background:var(--glass);
+
+   border:1px solid var(--border-primary);
+
+    backdrop-filter:blur(20px);
+
+    -webkit-backdrop-filter:blur(20px);
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow-md);
+
+}
+
+.hud-panel::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    repeating-linear-gradient(
+
+        0deg,
+
+        transparent,
+
+        transparent 3px,
+
+        rgba(255,255,255,.02) 4px
+
+    );
+
+    pointer-events:none;
+
+}
+
+.hud-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:18px;
+
+}
+
+.hud-header span:first-child{
+
+    font-size:.75rem;
+
+    letter-spacing:2px;
+
+    color:var(--text-muted);
+
+}
+
+.status{
+
+    width:10px;
+
+    height:10px;
+
+    border-radius:50%;
+
+    background:var(--accent);
+
+    box-shadow:var(--glow-success);
+
+}
+
+.hud-panel h3{
+
+    margin-bottom:18px;
+
+    color:var(--primary);
+
+    font-size:2rem;
+
+}
+
+.hud-progress{
+
+    width:100%;
+
+    height:6px;
+
+    border-radius:50px;
+
+    background:rgba(255,255,255,.05);
+
+    overflow:hidden;
+
+}
+
+.hud-progress span{
+
+    display:block;
+
+    width:90%;
+
+    height:100%;
+
+    background:linear-gradient(
+
+        90deg,
+
+        var(--primary),
+
+        #ffffff
+
+    );
+
+}
+
+
+/*==================================================
+HUD POSITIONS
+==================================================*/
+
+.hud-top-left{
+
+    top: 20px;
+
+    left:0;
+
+}
+
+.hud-top-right{
+
+    top:20px;
+
+    right:0;
+
+}
+
+.hud-bottom-left{
+
+    bottom:20px;
+
+    left:0;
+
+}
+
+.hud-bottom-right{
+
+    bottom: 20px;
+
+    right:0;
+
+}
+
+
+
+/*==================================================
+HERO STATISTICS
+==================================================*/
+
+.hero-stats{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:20px;
+
+}
+
+.hero-stats .stat-card{
+
+    padding:25px;
+
+    text-align:center;
+
+    border-radius:20px;
+
+    background:var(--glass);
+
+     border:1px solid var(--border);
+
+    backdrop-filter:blur(16px);
+
+    -webkit-backdrop-filter:blur(16px);
+
+}
+
+.hero-stats h3{
+
+    margin-bottom:10px;
+
+    color:var(--primary);
+
+    font-size:2rem;
+
+}
+
+.hero-stats span{
+
+    color:var(--text-light);
+
+    font-size:.9rem;
+
+}
+
+
+/*==================================================
+SCROLL INDICATOR
+==================================================*/
+
+.scroll-down{
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:40px;
+
+    transform:translateX(-50%);
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:10px;
+
+    color:var(--text-light);
+
+    z-index:20;
+
+}
+
+.scroll-down span{
+
+    width:2px;
+
+    height:60px;
+
+    background:linear-gradient(
+
+        transparent,
+
+        var(--primary),
+
+        transparent
+
+    );
+
+}
+
+.scroll-down small{
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    font-size:.75rem;
+
+}
+
+
+/*==================================================
+REACTOR 
+==================================================*/
+
+.reactor-container{
+
+position:relative;
+
+width:520px;
+
+aspect-ratio:1;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+}
+
+
+/*==================================================
+SVG
+==================================================*/
+
+.reactor-svg{
+
+width:100%;
+
+height:100%;
+
+overflow:visible;
+
+position:relative;
+
+z-index:5;
+
+}
+
+
+/*==================================================
+REACTOR GLOW
+==================================================*/
+
+.reactor-glow{
+
+position:absolute;
+
+left:50%;
+
+top:50%;
+
+width:220px;
+
+height:220px;
+
+border-radius:50%;
+
+transform:translate(-50%,-50%);
+
+background:
+
+radial-gradient(
+
+circle,
+
+var(--primary-light),
+
+rgba(0,217,255,.20) 45%,
+
+transparent 75%
+
+);
+
+filter:blur(45px);
+
+z-index:1;
+
+pointer-events:none;
+
+animation:coreGlow 4s ease-in-out infinite;
+
+}
+
+
+/*==================================================
+CORE GLOW
+==================================================*/
+
+@keyframes coreGlow{
+
+0%{
+
+transform:translate(-50%,-50%) scale(.9);
+
+opacity:.65;
+
+}
+
+50%{
+
+transform:translate(-50%,-50%) scale(1.08);
+
+opacity:1;
+
+}
+
+100%{
+
+transform:translate(-50%,-50%) scale(.9);
+
+opacity:.65;
+
+}
+
+}
+
+
+/*==================================================
+HUD ANIMATIONS
+==================================================*/
+
+.hud-panel{
+
+    animation:
+
+    floating 6s ease-in-out infinite;
+
+}
+
+.hud-top-right{
+
+    animation-delay:.5s;
+
+}
+
+.hud-bottom-left{
+
+    animation-delay:1s;
+
+}
+
+.hud-bottom-right{
+
+    animation-delay:1.5s;
+
+}
+
+.status{
+
+    animation:
+
+    blinkStatus 1.5s infinite;
+
+}
+
+.hud-progress span{
+
+    animation:
+
+    progressGlow 2.5s linear infinite;
+
+}
+
+.hero-title{
+
+    font-size:4rem;
+
+}
+
+
+
+/*==================================================
+REACTOR SPOKES
+==================================================*/
+
+.reactor-spokes{
+
+position:absolute;
+
+width:420px;
+
+height:420px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+pointer-events:none;
+
+animation:
+
+rotateClockwise 10s linear infinite;
+
+}
+
+.spoke{
+
+position:absolute;
+
+width:150px;
+
+height:2px;
+
+background:
+
+linear-gradient(
+
+90deg,
+
+transparent,
+
+var(--primary),
+
+transparent
+
+);
+
+box-shadow:var(--glow-primary);
+
+transform-origin:center;
+
+}
+
+.spoke-1{
+
+transform:rotate(0deg);
+
+}
+
+.spoke-2{
+
+transform:rotate(60deg);
+
+}
+
+.spoke-3{
+
+transform:rotate(120deg);
+
+}
+
+.spoke-4{
+
+transform:rotate(180deg);
+
+}
+
+.spoke-5{
+
+transform:rotate(240deg);
+
+}
+
+.spoke-6{
+
+transform:rotate(300deg);
+
+}
+
+
+.spoke::before,
+
+.spoke::after{
+
+content:"";
+
+position:absolute;
+
+top:50%;
+
+width:10px;
+
+height:10px;
+
+border-radius:50%;
+
+background:#ffffff;
+
+box-shadow:var(--glow-primary);
+
+transform:translateY(-50%);
+
+}
+
+
+.spoke::before{
+
+left:12px;
+
+}
+
+
+.spoke::after{
+
+right:12px;
+
+}
+
+
+/*==================================================
+OUTER ARMOR
+==================================================*/
+
+.armor-body{
+
+fill:#0a1223;
+
+stroke:#3c526f;
+
+stroke-width:10;
+
+}
+
+.armor-border{
+
+fill:none;
+
+stroke:var(--primary);
+
+stroke-width:2;
+
+opacity:.35;
+
+}
+
+
+.armor-segment{
+
+fill:#1d314b;
+
+stroke:#00d9ff;
+
+stroke-width:2;
+
+rx:8;
+
+}
+
+
+
+/*==================================================
+SUPPORT ARMS
+==================================================*/
+
+.support-arm{
+
+fill:#1a2b42;
+
+stroke:#00d9ff;
+
+stroke-width:2;
+
+filter:drop-shadow(0 0 8px rgba(0,217,255,.25));
+
+}
+
+
+/*==================================================
+MECHANICAL JOINTS
+==================================================*/
+
+.joint{
+
+fill:#5d738f;
+
+stroke:#00d9ff;
+
+stroke-width:2;
+
+filter:drop-shadow(0 0 10px rgba(0,217,255,.5));
+
+}
+
+
+/*==================================================
+OUTER ROTATING RING
+==================================================*/
+
+.outer-ring-body{
+
+fill:none;
+
+stroke:#26384d;
+
+stroke-width:18;
+
+}
+
+.outer-ring-inner{
+
+fill:none;
+
+stroke:#00d9ff;
+
+stroke-width:2;
+
+opacity:.4;
+
+}
+
+.outer-ring-outer{
+
+fill:none;
+
+stroke:#506882;
+
+stroke-width:3;
+
+opacity:.6;
+
+}
+
+
+/*==================================================
+TURBINE BLADES
+==================================================*/
+
+.blade{
+
+fill:#324961;
+
+stroke:#00d9ff;
+
+stroke-width:1.5;
+
+filter:drop-shadow(0 0 8px rgba(0,217,255,.25));
+
+}
+
+
+/*==================================================
+MECHANICAL GROOVES
+==================================================*/
+
+.groove{
+
+fill:none;
+
+stroke:#5d738f;
+
+stroke-width:1;
+
+opacity:.25;
+
+stroke-dasharray:8 10;
+
+}
+
+
+/*==================================================
+MIDDLE ENGINEERING RING
+==================================================*/
+
+.middle-ring-body{
+
+fill:none;
+
+stroke:#203247;
+
+stroke-width:18;
+
+}
+
+.middle-ring-inner{
+
+fill:none;
+
+stroke:#00d9ff;
+
+stroke-width:2;
+
+opacity:.45;
+
+}
+
+.middle-ring-outer{
+
+fill:none;
+
+stroke:#4b617b;
+
+stroke-width:3;
+
+opacity:.6;
+
+}
+
+
+/*==================================================
+ENERGY MODULES
+==================================================*/
+
+.energy-module{
+
+fill:var(--primary);
+
+stroke:var(--white);
+
+stroke-width:1;
+
+filter:drop-shadow(var(--glow-primary));
+
+}
+
+
+/*==================================================
+BOLT HEADS
+==================================================*/
+
+.bolt{
+
+fill:#7b8fa8;
+
+stroke:#d8f9ff;
+
+stroke-width:1;
+
+}
+
+
+/*==================================================
+INNER GROOVE
+==================================================*/
+
+.middle-groove{
+
+fill:none;
+
+stroke:#5d738f;
+
+stroke-width:1;
+
+opacity:.3;
+
+stroke-dasharray:5 7;
+
+}
+
+
+/*==================================================
+ENERGY CORE
+==================================================*/
+
+.core-shell{
+
+fill:#12243a;
+
+stroke:#4d6480;
+
+stroke-width:8;
+
+}
+
+.core-ring{
+
+fill:none;
+
+stroke:#00d9ff;
+
+stroke-width:5;
+
+opacity:.8;
+
+}
+
+.plasma-core{
+
+fill:url(#plasmaGradient);
+
+filter:url(#plasmaGlow);
+
+}
+
+
+/*==================================================
+HEXAGON CHAMBER
+==================================================*/
+
+.hex-core{
+
+fill:none;
+
+stroke:#d8ffff;
+
+stroke-width:3;
+
+filter:drop-shadow(0 0 14px rgba(0,217,255,.8));
+
+}
+
+
+/*==================================================
+ENERGY VEINS
+==================================================*/
+
+.energy-line{
+
+stroke:#00d9ff;
+
+stroke-width:4;
+
+stroke-linecap:round;
+
+filter:drop-shadow(var(--glow-primary));
+
+}
+
+/*==================================================
+ENERGY DOTS
+==================================================*/
+
+.energy-dot{
+
+fill:var(--white);
+
+filter:drop-shadow(0 0 8px #00d9ff);
+
+}
+
+
+/*==================================================
+CORE PULSE
+==================================================*/
+
+.plasma-core{
+
+animation:plasmaPulse 2.8s ease-in-out infinite;
+
+}
+
+@keyframes plasmaPulse{
+
+0%{
+
+transform:scale(.95);
+
+transform-origin:center;
+
+filter:url(#plasmaGlow);
+
+}
+
+50%{
+
+transform:scale(1.08);
+
+transform-origin:center;
+
+}
+
+100%{
+
+transform:scale(.95);
+
+transform-origin:center;
+
+}
+
+}
+
+
+/*==================================================
+INNER RING
+==================================================*/
+
+.inner-ring-body{
+
+fill:none;
+
+stroke:#203247;
+
+stroke-width:14;
+
+}
+
+.inner-ring-inner{
+
+fill:none;
+
+stroke:#00d9ff;
+
+stroke-width:2;
+
+opacity:.55;
+
+}
+
+.inner-ring-outer{
+
+fill:none;
+
+stroke:#4d6480;
+
+stroke-width:2;
+
+opacity:.45;
+
+}
+
+/*==================================================
+INNER TURBINE FINS
+==================================================*/
+
+.inner-fin{
+
+fill:#00d9ff;
+
+stroke:#ffffff;
+
+stroke-width:.8;
+
+filter:drop-shadow(var(--glow-primary));
+
+}
+
+
+/*==================================================
+INNER BOLTS
+==================================================*/
+
+.inner-bolt{
+
+fill:#ffffff;
+
+stroke:#00d9ff;
+
+stroke-width:.8;
+
+}
+
+
+
+
+
+
+
+
+
+
+/*==================================================
+REACTOR BREATH
+==================================================*/
+
+.reactor-container{
+
+animation:reactorBreath 5s ease-in-out infinite;
+
+}
+
+@keyframes reactorBreath{
+
+0%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.02);
+
+}
+
+100%{
+
+transform:scale(1);
+
+}
+
+}
+
+
+
+/*==================================================
+REACTOR BREATH
+==================================================*/
+
+.reactor-container{
+
+    animation:reactorBreath 5s ease-in-out infinite;
+
+}
+
+@keyframes reactorBreath{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.02);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+
+
+/*==================================================
+REACTOR GLOW
+==================================================*/
+
+.reactor-glow{
+
+    position:absolute;
+
+    left:50%;
+
+    top:50%;
+
+    width:220px;
+
+    height:220px;
+
+    border-radius:50%;
+
+    transform:translate(-50%,-50%);
+
+    background:
+
+    radial-gradient(
+
+        circle,
+
+        rgba(0,217,255,.45),
+
+        rgba(0,217,255,.18) 45%,
+
+        transparent 75%
+
+    );
+
+    filter:blur(45px);
+
+    pointer-events:none;
+
+    z-index:1;
+
+    animation:coreGlow 4s ease-in-out infinite;
+
+}
+
+@keyframes coreGlow{
+
+    0%{
+
+        transform:translate(-50%,-50%) scale(.9);
+
+        opacity:.65;
+
+    }
+
+    50%{
+
+        transform:translate(-50%,-50%) scale(1.08);
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:translate(-50%,-50%) scale(.9);
+
+        opacity:.65;
+
+    }
+
+}
+
+
+
+/*==================================================
+PLASMA PULSE
+==================================================*/
+
+.plasma-core{
+
+    animation:plasmaPulse 2.8s ease-in-out infinite;
+
+}
+
+@keyframes plasmaPulse{
+
+    0%{
+
+        transform:scale(.95);
+
+        transform-origin:center;
+
+    }
+
+    50%{
+
+        transform:scale(1.08);
+
+        transform-origin:center;
+
+    }
+
+    100%{
+
+        transform:scale(.95);
+
+        transform-origin:center;
+
+    }
+
+}
+
+
+
+
+
+
+/*==================================================
+MEGATECH INDEX PAGE FEATURES REUSABLES
+====================================================
+
+1. Glassmorphism UI
+   - Frosted glass cards, navbar and panels.
+
+2. Sci-Fi Color System
+   - Uses CSS variables for futuristic cyan, blue and neon glow.
+
+3. Animated Hero Reactor (JS Needed)
+   - JavaScript drives the reactor rotations, pulse and effects.
+
+4. Interactive Hero HUD
+   - Floating futuristic status panels around the reactor.
+
+5. Scroll Reveal (JS Needed)
+   - Sections fade/slide into view as they enter the viewport.
+
+6. Parallax Effects (JS Needed)
+   - Elements move at different speeds while scrolling.
+
+7. Magnetic Buttons (JS Needed)
+   - Buttons slightly follow the mouse cursor.
+
+8. 3D Card Tilt (JS Needed)
+   - Cards rotate based on mouse position.
+
+9. Multi-Layer 3D Tilt (JS Needed)
+   - Individual elements inside cards move at different depths.
+
+10. Card Spotlight (JS Needed)
+    - Mouse-controlled light follows the cursor over cards.
+
+11. Project Image Hover
+    - Images zoom smoothly on hover.
+
+12. Neon Hover Effects
+    - Cards glow and lift with futuristic shadows.
+
+13. Scan Line Effects
+    - Animated light sweep across cards.
+
+14. Animated Borders
+    - Top neon border expands on hover.
+
+15. Floating Cards
+    - Cards lift upward when hovered.
+
+16. Glass Buttons
+    - Neon/glass buttons with glow hover states.
+
+17. FAQ Accordion (JS Needed)
+    - Expand and collapse FAQ answers.
+
+18. Testimonial Marquee
+    - Infinite horizontal testimonial slider.
+
+19. Technology Marquee
+    - Infinite scrolling technology logos.
+
+20. About Display
+    - Futuristic reactor/grid visualization.
+
+21. Why Us Radar Display
+    - Animated radar rings with glowing nodes.
+
+22. Scroll Progress Navbar (JS Needed)
+    - Navbar changes appearance after scrolling.
+
+23. Mobile Navigation (JS Needed)
+    - Toggle menu, outside-click close and Escape key support.
+
+24. Active Navigation State
+    - Current page highlighted.
+
+25. Back To Top Button (JS Needed)
+    - Appears after scrolling and smoothly returns to top.
+
+26. Footer Glow
+    - Large radial glow behind footer content.
+
+27. Corner Decorations
+    - Futuristic neon corner accents on solution cards.
+
+28. Progress Bars
+    - HUD progress indicators.
+
+29. Grid Backgrounds
+    - Futuristic engineering grid overlays.
+
+30. Neon Badges
+    - Small glowing status labels.
+
+31. Gradient Text
+    - Cyan/blue futuristic heading gradients.
+
+32. Reveal Animation Classes (JS Needed)
+    - .reveal
+    - .reveal-left
+    - .reveal-right
+    - .reveal-scale
+    - Used by Intersection Observer.
+
+33. Global Design System
+    - Centralized variables for colors, spacing,
+      shadows, typography and transitions.
+
+==================================================
+FILES THAT REQUIRE JAVASCRIPT
+==================================================
+
+✓ navigation.js
+  - Navbar scroll effects
+  - Mobile navigation
+  - Outside click
+  - Escape key
+  - Back-to-top button
+
+✓ reveal.js
+  - Scroll reveal animations
+
+✓ parallax.js
+  - Scroll parallax effects
+
+✓ magnetic-buttons.js
+  - Magnetic button interactions
+
+✓ card-tilt.js
+  - 3D tilt
+  - Multi-layer depth
+  - Cursor spotlight
+
+✓ hero-reactor.js
+  - Hero reactor animations
+
+==================================================
+CURRENT STYLE
+==================================================
+
+Modern Futuristic
+Sci-Fi Interface
+Glassmorphism
+Neon Cyber UI
+Interactive Micro-Animations
+Awwwards-Inspired Experience
+
+==================================================*/
+
+
+/*==================================================
+SCROLL ANIMATIONS
+==================================================*/
+
+.reveal{
+
+opacity:0;
+
+visibility:hidden;
+
+transition:
+
+opacity .8s ease,
+
+transform .8s ease;
+
+will-change:transform,opacity;
+
+}
+
+.reveal.active{
+
+opacity:1;
+
+visibility:visible;
+
+transform:none;
+
+}
+
+
+/*==================================================
+REVEAL UP
+==================================================*/
+
+.reveal-up{
+
+transform:translateY(80px);
+
+}
+
+/*==================================================
+REVEAL DOWN
+==================================================*/
+
+.reveal-down{
+
+transform:translateY(-80px);
+
+}
+
+/*==================================================
+REVEAL LEFT
+==================================================*/
+
+.reveal-left{
+
+transform:translateX(-80px);
+
+}
+
+/*==================================================
+REVEAL RIGHT
+==================================================*/
+
+.reveal-right{
+
+transform:translateX(80px);
+
+}
+
+/*==================================================
+REVEAL ZOOM
+==================================================*/
+
+.reveal-zoom{
+
+transform:scale(.92);
+
+}
+
+
+/*==================================================
+STAGGER
+==================================================*/
+
+.stagger{
+
+transition-delay:var(--delay,0ms);
+
+}
+
+
+
+
+
+/*==================================================
+MAGNETIC BUTTON
+==================================================*/
+
+.magnetic{
+
+position:relative;
+
+overflow:hidden;
+
+will-change:transform;
+
+transition:
+
+transform .18s ease,
+
+box-shadow .25s ease,
+
+filter .25s ease;
+
+}
+
+
+
+/*==================================================
+MAGNETIC GLOW
+==================================================*/
+
+.magnetic-glow{
+
+position:absolute;
+
+left:50%;
+
+top:50%;
+
+width:0;
+
+height:0;
+
+border-radius:50%;
+
+background:
+
+radial-gradient(
+
+circle,
+
+rgba(99,232,255,.35),
+
+transparent 70%
+
+);
+
+transform:translate(-50%,-50%);
+
+pointer-events:none;
+
+transition:
+
+width .25s ease,
+
+height .25s ease,
+
+left .08s linear,
+
+top .08s linear;
+
+}
+
+
+
+
+
+
+
+/*==================================================
+3D CARD TILT
+==================================================*/
+
+.tilt-card{
+
+position:relative;
+
+transform-style:preserve-3d;
+
+transform-origin:center;
+
+will-change:transform;
+
+backface-visibility:hidden;
+
+transition:
+
+transform .18s ease,
+
+box-shadow .25s ease,
+
+filter .25s ease;
+
+}
+
+
+
+/*==================================================
+CARD SPOTLIGHT
+==================================================*/
+
+.card-spotlight{
+
+position:absolute;
+
+left:50%;
+
+top:50%;
+
+width:0;
+
+height:0;
+
+border-radius:50%;
+
+pointer-events:none;
+
+transform:translate(-50%,-50%);
+
+background:
+
+radial-gradient(
+
+circle,
+
+rgba(99,232,255,.18),
+
+rgba(108,99,255,.08),
+
+transparent 72%
+
+);
+
+transition:
+
+width .25s ease,
+
+height .25s ease,
+
+left .08s linear,
+
+top .08s linear;
+
+z-index:1;
+
+}
+
+.tilt-card{
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+/*==================================================
+CARD SPOTLIGHT
+==================================================*/
+
+.card-spotlight{
+
+position:absolute;
+
+width:0;
+
+height:0;
+
+left:50%;
+
+top:50%;
+
+transform:translate(-50%,-50%);
+
+border-radius:50%;
+
+pointer-events:none;
+
+background:
+
+radial-gradient(
+
+circle,
+
+rgba(99,232,255,.22) 0%,
+
+rgba(0,217,255,.12) 35%,
+
+rgba(108,99,255,.08) 60%,
+
+transparent 75%
+
+);
+
+filter:blur(10px);
+
+transition:
+
+width .25s ease,
+
+height .25s ease;
+
+mix-blend-mode:screen;
+
+z-index:0;
+
+}
+
+
+
+[data-depth]{
+
+transform-style:preserve-3d;
+
+transition:
+
+transform .15s linear;
+
+will-change:transform;
+
+}
+
+

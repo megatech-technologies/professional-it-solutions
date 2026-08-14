@@ -1,0 +1,499 @@
+/*==================================================
+MEGATECH INDEX PAGE FEATURES REUSABLES
+====================================================
+
+1. Glassmorphism UI
+   - Frosted glass cards, navbar and panels.
+
+2. Sci-Fi Color System
+   - Uses CSS variables for futuristic cyan, blue and neon glow.
+
+3. Animated Hero Reactor (JS Needed)
+   - JavaScript drives the reactor rotations, pulse and effects.
+
+4. Interactive Hero HUD
+   - Floating futuristic status panels around the reactor.
+
+5. Scroll Reveal (JS Needed)
+   - Sections fade/slide into view as they enter the viewport.
+
+6. Parallax Effects (JS Needed)
+   - Elements move at different speeds while scrolling.
+
+7. Magnetic Buttons (JS Needed)
+   - Buttons slightly follow the mouse cursor.
+
+8. 3D Card Tilt (JS Needed)
+   - Cards rotate based on mouse position.
+
+9. Multi-Layer 3D Tilt (JS Needed)
+   - Individual elements inside cards move at different depths.
+
+10. Card Spotlight (JS Needed)
+    - Mouse-controlled light follows the cursor over cards.
+
+11. Project Image Hover
+    - Images zoom smoothly on hover.
+
+12. Neon Hover Effects
+    - Cards glow and lift with futuristic shadows.
+
+13. Scan Line Effects
+    - Animated light sweep across cards.
+
+14. Animated Borders
+    - Top neon border expands on hover.
+
+15. Floating Cards
+    - Cards lift upward when hovered.
+
+16. Glass Buttons
+    - Neon/glass buttons with glow hover states.
+
+17. FAQ Accordion (JS Needed)
+    - Expand and collapse FAQ answers.
+
+18. Testimonial Marquee
+    - Infinite horizontal testimonial slider.
+
+19. Technology Marquee
+    - Infinite scrolling technology logos.
+
+20. About Display
+    - Futuristic reactor/grid visualization.
+
+21. Why Us Radar Display
+    - Animated radar rings with glowing nodes.
+
+22. Scroll Progress Navbar (JS Needed)
+    - Navbar changes appearance after scrolling.
+
+23. Mobile Navigation (JS Needed)
+    - Toggle menu, outside-click close and Escape key support.
+
+24. Active Navigation State
+    - Current page highlighted.
+
+25. Back To Top Button (JS Needed)
+    - Appears after scrolling and smoothly returns to top.
+
+26. Footer Glow
+    - Large radial glow behind footer content.
+
+27. Corner Decorations
+    - Futuristic neon corner accents on solution cards.
+
+28. Progress Bars
+    - HUD progress indicators.
+
+29. Grid Backgrounds
+    - Futuristic engineering grid overlays.
+
+30. Neon Badges
+    - Small glowing status labels.
+
+31. Gradient Text
+    - Cyan/blue futuristic heading gradients.
+
+32. Reveal Animation Classes (JS Needed)
+    - .reveal
+    - .reveal-left
+    - .reveal-right
+    - .reveal-scale
+    - Used by Intersection Observer.
+
+33. Global Design System
+    - Centralized variables for colors, spacing,
+      shadows, typography and transitions.
+
+==================================================
+FILES THAT REQUIRE JAVASCRIPT
+==================================================
+
+✓ navigation.js
+  - Navbar scroll effects
+  - Mobile navigation
+  - Outside click
+  - Escape key
+  - Back-to-top button
+
+✓ reveal.js
+  - Scroll reveal animations
+
+✓ parallax.js
+  - Scroll parallax effects
+
+✓ magnetic-buttons.js
+  - Magnetic button interactions
+
+✓ card-tilt.js
+  - 3D tilt
+  - Multi-layer depth
+  - Cursor spotlight
+
+✓ hero-reactor.js
+  - Hero reactor animations
+
+==================================================
+CURRENT STYLE
+==================================================
+
+Modern Futuristic
+Sci-Fi Interface
+Glassmorphism
+Neon Cyber UI
+Interactive Micro-Animations
+Awwwards-Inspired Experience
+
+==================================================*/
+
+
+/*==================================================
+SCROLL ANIMATIONS
+==================================================*/
+
+.reveal{
+
+opacity:0;
+
+visibility:hidden;
+
+transition:
+
+opacity .8s ease,
+
+transform .8s ease;
+
+will-change:transform,opacity;
+
+}
+
+.reveal.active{
+
+opacity:1;
+
+visibility:visible;
+
+transform:none;
+
+}
+
+
+/*==================================================
+REVEAL UP
+==================================================*/
+
+.reveal-up{
+
+transform:translateY(80px);
+
+}
+
+/*==================================================
+REVEAL DOWN
+==================================================*/
+
+.reveal-down{
+
+transform:translateY(-80px);
+
+}
+
+/*==================================================
+REVEAL LEFT
+==================================================*/
+
+.reveal-left{
+
+transform:translateX(-80px);
+
+}
+
+/*==================================================
+REVEAL RIGHT
+==================================================*/
+
+.reveal-right{
+
+transform:translateX(80px);
+
+}
+
+/*==================================================
+REVEAL ZOOM
+==================================================*/
+
+.reveal-zoom{
+
+transform:scale(.92);
+
+}
+
+
+/*==================================================
+STAGGER
+==================================================*/
+
+.stagger{
+
+transition-delay:var(--delay,0ms);
+
+}
+
+
+
+
+
+/*==================================================
+MAGNETIC BUTTON
+==================================================*/
+
+.magnetic{
+
+position:relative;
+
+overflow:hidden;
+
+will-change:transform;
+
+transition:
+
+transform .18s ease,
+
+box-shadow .25s ease,
+
+filter .25s ease;
+
+}
+
+
+
+/*==================================================
+MAGNETIC GLOW
+==================================================*/
+
+.magnetic-glow{
+
+position:absolute;
+
+left:50%;
+
+top:50%;
+
+width:0;
+
+height:0;
+
+border-radius:50%;
+
+background:
+
+radial-gradient(
+
+circle,
+
+rgba(99,232,255,.35),
+
+transparent 70%
+
+);
+
+transform:translate(-50%,-50%);
+
+pointer-events:none;
+
+transition:
+
+width .25s ease,
+
+height .25s ease,
+
+left .08s linear,
+
+top .08s linear;
+
+}
+
+
+
+
+
+
+
+/*==================================================
+3D CARD TILT
+==================================================*/
+
+.tilt-card{
+
+position:relative;
+
+transform-style:preserve-3d;
+
+transform-origin:center;
+
+will-change:transform;
+
+backface-visibility:hidden;
+
+transition:
+
+transform .18s ease,
+
+box-shadow .25s ease,
+
+filter .25s ease;
+
+}
+
+
+
+/*==================================================
+CARD SPOTLIGHT
+==================================================*/
+
+.card-spotlight{
+
+position:absolute;
+
+left:50%;
+
+top:50%;
+
+width:0;
+
+height:0;
+
+border-radius:50%;
+
+pointer-events:none;
+
+transform:translate(-50%,-50%);
+
+background:
+
+radial-gradient(
+
+circle,
+
+rgba(99,232,255,.18),
+
+rgba(108,99,255,.08),
+
+transparent 72%
+
+);
+
+transition:
+
+width .25s ease,
+
+height .25s ease,
+
+left .08s linear,
+
+top .08s linear;
+
+z-index:1;
+
+}
+
+.tilt-card{
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+/*==================================================
+CARD SPOTLIGHT
+==================================================*/
+
+.card-spotlight{
+
+position:absolute;
+
+width:0;
+
+height:0;
+
+left:50%;
+
+top:50%;
+
+transform:translate(-50%,-50%);
+
+border-radius:50%;
+
+pointer-events:none;
+
+background:
+
+radial-gradient(
+
+circle,
+
+rgba(99,232,255,.22) 0%,
+
+rgba(0,217,255,.12) 35%,
+
+rgba(108,99,255,.08) 60%,
+
+transparent 75%
+
+);
+
+filter:blur(10px);
+
+transition:
+
+width .25s ease,
+
+height .25s ease;
+
+mix-blend-mode:screen;
+
+z-index:0;
+
+}
+
+
+
+[data-depth]{
+
+transform-style:preserve-3d;
+
+transition:
+
+transform .15s linear;
+
+will-change:transform;
+
+}
+
+
+
+
+
+
+
+/*==================================================
+HERO SCROLL EFFECTS
+==================================================*/
+
+.hero-scroll-content,
+.hero-scroll-reactor,
+.hero-scroll-grid,
+.hero-scroll-glow,
+.hero-scroll-indicator{
+
+will-change:transform,opacity;
+
+transition:
+
+transform .08s linear,
+
+opacity .08s linear;
+
+}

@@ -1,0 +1,122 @@
+Yes. Since touchups.css is already your global reusable effects layer, I would avoid adding more CSS. Use the existing classes strategically so every page feels like the same MegaTech system.
+
+Recommended usage by section
+Section	Recommended classes
+Navbar	fx-glass + existing navbar classes
+Page/section heading	reveal + fx-gradient-text on key words
+Hero	reveal-scale, fx-grid, fx-badge
+Hero status/HUD cards	fx-glass + fx-glass-glow + fx-corners
+Main feature cards	fx-glass + fx-glass-glow + fx-tilt + fx-spotlight
+Cards with images	fx-image-hover + fx-glass-glow
+Important cards	fx-neon-hover + fx-border
+Small status labels	fx-badge
+Buttons	fx-glass-btn + fx-magnetic
+CTA section	fx-glass + fx-glass-glow + reveal-scale + fx-corners
+Progress/HUD elements	fx-progress
+Decorative backgrounds	fx-grid
+Large visual elements	fx-parallax
+Footer	fx-footer-glow
+Major sections	reveal, reveal-left, reveal-right, or reveal-scale
+Best card combination
+
+For your important futuristic cards, this is the combination I'd use:
+
+<div class="your-card fx-glass fx-glass-glow fx-tilt fx-spotlight fx-border">
+
+Then if the card contains an image:
+
+<div class="your-card fx-glass fx-glass-glow fx-tilt fx-spotlight fx-border">
+    
+    <div class="fx-image-hover">
+        <img src="..." alt="...">
+    </div>
+
+</div>
+
+If you have an icon/title that should appear above the card surface during 3D tilt:
+
+<div class="fx-depth">
+    ...
+</div>
+For About page specifically
+
+I'd structure the touchups like this:
+
+Founder
+
+Founder display → reveal-left
+Founder terminal → fx-glass fx-glass-glow fx-spotlight
+Supporting information/card → fx-glass fx-glass-glow fx-tilt
+Important labels → fx-badge
+
+Vision & Mission
+
+Cards → fx-glass fx-glass-glow fx-tilt fx-spotlight fx-border
+Central core → reveal-scale
+Headings → fx-gradient-text
+
+Core Values
+
+Each .value-card → fx-glass-glow fx-tilt fx-spotlight fx-border
+Icons → leave their existing styling alone
+
+Company Journey
+
+Timeline cards → fx-glass fx-glass-glow
+Timeline items → stagger with reveal-left / reveal-right
+Tags → fx-badge
+
+Why MegaTech
+
+Main visual → reveal-scale + fx-parallax
+Status labels → fx-glass fx-glass-glow
+Feature rows → reveal-right
+
+Expertise
+
+Each .expertise-item → fx-glass-glow fx-tilt fx-spotlight fx-border
+Icons/content → optionally fx-depth
+
+CTA
+
+<section class="your-cta fx-glass fx-glass-glow fx-corners reveal-scale">
+
+CTA buttons:
+
+<a href="#" class="your-button fx-glass-btn fx-magnetic">
+
+Footer
+
+<footer class="footer fx-footer-glow">
+The important rule
+
+Don't put every effect on everything. That will make the site feel overloaded.
+
+Your strongest combination should be reserved for premium cards and important visual elements:
+
+fx-glass + fx-glass-glow + fx-tilt + fx-spotlight
+
+For normal content, simply use:
+
+reveal
+
+And for buttons:
+
+fx-glass-btn + fx-magnetic
+
+
+
+
+
+
+
+
+
+Hero: reveal + fx-parallax + fx-gradient-text
+Founder: fx-glass + fx-glass-glow + fx-spotlight + fx-scan
+Cards: fx-glass + fx-glass-glow + fx-border + fx-spotlight + fx-tilt
+Buttons: fx-glass-btn + fx-magnetic
+Timeline: fx-glass + fx-neon-hover + fx-border
+Badges: fx-badge
+Images: fx-image-hover
+Footer: fx-footer-glow

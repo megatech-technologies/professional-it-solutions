@@ -1,0 +1,926 @@
+/*==================================================
+  SERVICES.CSS
+  MegaTech Technologies
+  Services Page
+==================================================*/
+
+
+/*==================================================
+  SERVICES HERO
+==================================================*/
+
+.services-hero{
+
+    position:relative;
+
+    min-height:850px;
+
+    display:flex;
+
+    align-items:center;
+
+    overflow:hidden;
+
+    padding:150px 0 100px;
+
+    background:
+        radial-gradient(
+            circle at 75% 50%,
+            rgba(0,217,255,.07),
+            transparent 35%
+        );
+
+}
+
+
+/*==================================================
+  HERO GRID
+==================================================*/
+
+.services-hero-grid{
+
+    width:100%;
+
+    max-width:1400px;
+
+    margin:auto;
+
+    padding:0 40px;
+
+    display:grid;
+
+    grid-template-columns:.9fr 1.1fr;
+
+    align-items:center;
+
+    gap:40px;
+
+}
+
+
+/*==================================================
+  HERO CONTENT
+==================================================*/
+
+.services-hero-content{
+
+    position:relative;
+
+    z-index:10;
+
+    max-width:650px;
+
+}
+
+
+/*==================================================
+  HERO TITLE
+==================================================*/
+
+.services-hero-title{
+
+    margin:28px 0 25px;
+
+    font-size:clamp(3.4rem,5vw,5.5rem);
+
+    line-height:1.05;
+
+    letter-spacing:-2px;
+
+    font-weight:800;
+
+}
+
+
+.services-hero-title span{
+
+    display:block;
+
+    margin-top:8px;
+
+}
+
+
+/*==================================================
+  HERO DESCRIPTION
+==================================================*/
+
+.services-hero-text{
+
+    max-width:620px;
+
+    color:var(--text-light);
+
+    font-size:1.08rem;
+
+    line-height:1.9;
+
+}
+
+
+/*==================================================
+  HERO ACTIONS
+==================================================*/
+
+.services-hero-actions{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+    margin-top:38px;
+
+}
+
+
+/*==================================================
+  HERO STATUS
+==================================================*/
+
+.services-hero-status{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-top:35px;
+
+}
+
+
+/*==================================================
+  SERVICE NETWORK
+==================================================*/
+
+.service-network{
+
+    position:relative;
+
+    width:700px;
+
+    height:700px;
+
+    margin:auto;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    perspective:1200px;
+
+}
+
+
+/*==================================================
+  NETWORK AMBIENT GLOW
+==================================================*/
+
+.network-glow{
+
+    position:absolute;
+
+    width:520px;
+
+    height:520px;
+
+    left:50%;
+
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(99,232,255,.12),
+            rgba(0,140,255,.05) 40%,
+            transparent 72%
+        );
+
+    filter:blur(30px);
+
+    pointer-events:none;
+
+    animation:
+        networkGlowPulse 5s ease-in-out infinite;
+
+}
+
+
+@keyframes networkGlowPulse{
+
+    0%,
+    100%{
+
+        transform:
+            translate(-50%,-50%)
+            scale(.95);
+
+        opacity:.7;
+
+    }
+
+    50%{
+
+        transform:
+            translate(-50%,-50%)
+            scale(1.08);
+
+        opacity:1;
+
+    }
+
+}
+
+
+/*==================================================
+  NETWORK SVG
+==================================================*/
+
+.service-network-svg{
+
+    position:relative;
+
+    width:100%;
+
+    height:100%;
+
+    overflow:visible;
+
+    z-index:2;
+
+}
+
+
+/*==================================================
+  NETWORK GRID
+==================================================*/
+
+.network-grid{
+
+    fill:none;
+
+    stroke:rgba(99,232,255,.035);
+
+    stroke-width:1;
+
+    opacity:.7;
+
+}
+
+
+/*==================================================
+  NETWORK CONNECTIONS
+==================================================*/
+
+.network-path{
+
+    stroke-width:1.5;
+
+    stroke-dasharray:7 10;
+
+    opacity:.35;
+
+    filter:
+        drop-shadow(
+            0 0 5px
+            rgba(99,232,255,.35)
+        );
+
+    animation:
+        networkPathPulse 4s ease-in-out infinite;
+
+}
+
+
+.network-path:nth-child(2){
+
+    animation-delay:.5s;
+
+}
+
+
+.network-path:nth-child(3){
+
+    animation-delay:1s;
+
+}
+
+
+.network-path:nth-child(4){
+
+    animation-delay:1.5s;
+
+}
+
+
+.network-path:nth-child(5){
+
+    animation-delay:2s;
+
+}
+
+
+.network-path:nth-child(6){
+
+    animation-delay:2.5s;
+
+}
+
+
+@keyframes networkPathPulse{
+
+    0%,
+    100%{
+
+        opacity:.2;
+
+    }
+
+    50%{
+
+        opacity:.55;
+
+    }
+
+}
+
+
+/*==================================================
+  DATA PULSES
+==================================================*/
+
+.network-pulse{
+
+    fill:#63e8ff;
+
+    filter:
+        drop-shadow(
+            0 0 6px
+            rgba(99,232,255,.95)
+        );
+
+}
+
+
+/*==================================================
+  CENTRAL CORE
+==================================================*/
+
+.network-core{
+
+    transform-origin:350px 350px;
+
+    animation:
+        coreFloat 5s ease-in-out infinite;
+
+}
+
+
+@keyframes coreFloat{
+
+    0%,
+    100%{
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+
+    50%{
+
+        transform:
+            translateY(-5px)
+            scale(1.025);
+
+    }
+
+}
+
+
+/*==================================================
+  OUTER HEXAGON
+==================================================*/
+
+.core-hex-outer{
+
+    fill:rgba(7,17,29,.45);
+
+    stroke:rgba(99,232,255,.45);
+
+    stroke-width:2;
+
+    stroke-dasharray:12 8;
+
+    filter:
+        drop-shadow(
+            0 0 12px
+            rgba(99,232,255,.3)
+        );
+
+    animation:
+        outerHexRotate 18s linear infinite;
+
+    transform-origin:350px 350px;
+
+}
+
+
+@keyframes outerHexRotate{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+
+/*==================================================
+  INNER HEXAGON
+==================================================*/
+
+.core-hex-inner{
+
+    fill:
+        rgba(99,232,255,.035);
+
+    stroke:
+        rgba(99,232,255,.7);
+
+    stroke-width:1.5;
+
+    filter:
+        drop-shadow(
+            0 0 8px
+            rgba(99,232,255,.5)
+        );
+
+    animation:
+        innerHexPulse 3s ease-in-out infinite;
+
+}
+
+
+@keyframes innerHexPulse{
+
+    0%,
+    100%{
+
+        opacity:.55;
+
+    }
+
+    50%{
+
+        opacity:1;
+
+    }
+
+}
+
+
+/*==================================================
+  ENERGY CORE
+==================================================*/
+
+.core-energy{
+
+    fill:url(#coreGradient);
+
+    filter:
+        drop-shadow(
+            0 0 12px
+            rgba(99,232,255,.9)
+        );
+
+    animation:
+        energyPulse 2.2s ease-in-out infinite;
+
+}
+
+
+@keyframes energyPulse{
+
+    0%,
+    100%{
+
+        r:44px;
+
+        opacity:.8;
+
+    }
+
+    50%{
+
+        r:52px;
+
+        opacity:1;
+
+    }
+
+}
+
+
+/*==================================================
+  CORE ICON
+==================================================*/
+
+.core-icon{
+
+    fill:#07111d;
+
+    font-size:27px;
+
+    font-weight:bold;
+
+    pointer-events:none;
+
+}
+
+
+/*==================================================
+  SERVICE NODES
+==================================================*/
+
+.service-node{
+
+    cursor:pointer;
+
+}
+
+
+.node-ring{
+
+    fill:
+        rgba(7,17,29,.75);
+
+    stroke:
+        rgba(99,232,255,.5);
+
+    stroke-width:1.5;
+
+    filter:
+        drop-shadow(
+            0 0 8px
+            rgba(99,232,255,.35)
+        );
+
+    animation:
+        nodePulse 3s ease-in-out infinite;
+
+}
+
+
+.node-core{
+
+    fill:#63e8ff;
+
+    filter:
+        drop-shadow(
+            0 0 7px
+            rgba(99,232,255,1)
+        );
+
+}
+
+
+@keyframes nodePulse{
+
+    0%,
+    100%{
+
+        r:20px;
+
+        opacity:.65;
+
+    }
+
+    50%{
+
+        r:24px;
+
+        opacity:1;
+
+    }
+
+}
+
+
+/*==================================================
+  NODE STAGGERING
+==================================================*/
+
+.node-seo{
+
+    animation-delay:.4s;
+
+}
+
+
+.node-it{
+
+    animation-delay:.8s;
+
+}
+
+
+.node-google{
+
+    animation-delay:1.2s;
+
+}
+
+
+.node-repair{
+
+    animation-delay:1.6s;
+
+}
+
+
+.node-support{
+
+    animation-delay:2s;
+
+}
+
+
+/*==================================================
+  NETWORK LABELS
+==================================================*/
+
+.network-label{
+
+    position:absolute;
+
+    z-index:5;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:9px;
+
+    padding:9px 14px;
+
+    border:1px solid rgba(99,232,255,.16);
+
+    border-radius:10px;
+
+    background:
+        rgba(7,17,29,.65);
+
+    backdrop-filter:blur(14px);
+
+    -webkit-backdrop-filter:blur(14px);
+
+    color:var(--text-light);
+
+    font-size:.72rem;
+
+    font-weight:600;
+
+    letter-spacing:.4px;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.2),
+        0 0 18px rgba(99,232,255,.05);
+
+    transition:
+        transform .35s ease,
+        border-color .35s ease,
+        box-shadow .35s ease;
+
+}
+
+
+.network-label i{
+
+    color:var(--primary);
+
+    font-size:.75rem;
+
+}
+
+
+.network-label:hover{
+
+    transform:translateY(-4px);
+
+    border-color:
+        rgba(99,232,255,.4);
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.25),
+        0 0 25px rgba(99,232,255,.12);
+
+}
+
+
+/*==================================================
+  LABEL POSITIONS
+==================================================*/
+
+.label-web{
+
+    top:105px;
+
+    left:35px;
+
+}
+
+
+.label-seo{
+
+    top:120px;
+
+    right:20px;
+
+}
+
+
+.label-it{
+
+    top:320px;
+
+    left:0;
+
+}
+
+
+.label-google{
+
+    top:355px;
+
+    right:-5px;
+
+}
+
+
+.label-repair{
+
+    bottom:100px;
+
+    left:55px;
+
+}
+
+
+.label-support{
+
+    bottom:95px;
+
+    right:25px;
+
+}
+
+
+/*==================================================
+  NETWORK HUD
+==================================================*/
+
+.network-hud{
+
+    position:absolute;
+
+    z-index:6;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:4px;
+
+    padding:10px 14px;
+
+    border-left:2px solid var(--primary);
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(99,232,255,.06),
+            transparent
+        );
+
+    color:rgba(255,255,255,.45);
+
+    font-size:.58rem;
+
+    letter-spacing:1.5px;
+
+}
+
+
+.network-hud strong{
+
+    color:var(--primary-light);
+
+    font-size:.7rem;
+
+    letter-spacing:1px;
+
+}
+
+
+.network-hud strong i{
+
+    margin-right:5px;
+
+    font-size:.45rem;
+
+    color:var(--primary);
+
+    filter:
+        drop-shadow(
+            0 0 5px
+            var(--primary)
+        );
+
+}
+
+
+.network-hud-top{
+
+    top:20px;
+
+    right:75px;
+
+}
+
+
+.network-hud-bottom{
+
+    bottom:20px;
+
+    left:75px;
+
+}
+
+
+/*==================================================
+  HERO DEPTH
+==================================================*/
+
+.service-network::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:420px;
+
+    height:120px;
+
+    left:50%;
+
+    bottom:45px;
+
+    transform:translateX(-50%);
+
+    background:
+        radial-gradient(
+            ellipse,
+            rgba(99,232,255,.12),
+            transparent 70%
+        );
+
+    filter:blur(25px);
+
+    pointer-events:none;
+
+    z-index:1;
+
+}
+
+
+
+
+.network-line{
+    transition:
+    stroke .4s ease,
+    filter .4s ease;
+}
+
+.network-line.active-line{
+    stroke:var(--primary-light);
+
+    filter:drop-shadow(0 0 10px var(--primary));
+}

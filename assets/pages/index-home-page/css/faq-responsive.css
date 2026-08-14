@@ -1,0 +1,276 @@
+/*==================================================
+1200px
+==================================================*/
+
+@media (max-width:1200px){
+
+.cta-wrapper{
+
+padding:80px 60px;
+
+}
+
+.cta-content{
+
+max-width:700px;
+
+}
+
+.cta-content h2{
+
+font-size:2.7rem;
+
+}
+
+.cta-glow{
+
+width:560px;
+
+height:560px;
+
+}
+
+}
+
+
+/*==================================================
+992px
+==================================================*/
+
+@media (max-width:992px){
+
+.cta-wrapper{
+
+padding:70px 50px;
+
+}
+
+.cta-content{
+
+max-width:680px;
+
+}
+
+.cta-content h2{
+
+font-size:2.4rem;
+
+}
+
+.cta-content p{
+
+max-width:600px;
+
+}
+
+.cta-buttons{
+
+margin-top:40px;
+
+}
+
+}
+
+
+/*==================================================
+768px
+==================================================*/
+
+@media (max-width:768px){
+
+.cta-wrapper{
+
+padding:60px 35px;
+
+}
+
+.cta-content h2{
+
+font-size:2.1rem;
+
+}
+
+.cta-content p{
+
+font-size:1rem;
+
+}
+
+.cta-buttons{
+
+flex-direction:column;
+
+align-items:center;
+
+gap:16px;
+
+}
+
+.cta-buttons .btn{
+
+width:100%;
+
+max-width:340px;
+
+justify-content:center;
+
+}
+
+.cta-glow{
+
+width:450px;
+
+height:450px;
+
+}
+
+}
+
+
+/*==================================================
+576px
+==================================================*/
+
+@media (max-width:576px){
+
+.cta-wrapper{
+
+padding:55px 28px;
+
+border-radius:24px;
+
+}
+
+.cta-content h2{
+
+font-size:1.9rem;
+
+line-height:1.3;
+
+}
+
+.cta-content p{
+
+font-size:.95rem;
+
+line-height:1.8;
+
+}
+
+.cta-buttons{
+
+margin-top:35px;
+
+}
+
+.cta-buttons .btn{
+
+max-width:100%;
+
+}
+
+.cta-glow{
+
+width:380px;
+
+height:380px;
+
+}
+
+}
+
+
+/*==================================================
+480px
+==================================================*/
+
+@media (max-width:480px){
+
+.cta-wrapper{
+
+padding:50px 24px;
+
+}
+
+.cta-content h2{
+
+font-size:1.7rem;
+
+}
+
+.cta-content p{
+
+font-size:.92rem;
+
+}
+
+.cta-buttons{
+
+gap:14px;
+
+}
+
+.cta-glow{
+
+width:320px;
+
+height:320px;
+
+}
+
+}
+
+
+/*==================================================
+360px
+==================================================*/
+
+@media (max-width:360px){
+
+.cta-wrapper{
+
+padding:45px 20px;
+
+border-radius:20px;
+
+}
+
+.cta-content h2{
+
+font-size:1.45rem;
+
+line-height:1.35;
+
+}
+
+.cta-content p{
+
+font-size:.88rem;
+
+line-height:1.7;
+
+}
+
+.cta-buttons{
+
+margin-top:30px;
+
+gap:12px;
+
+}
+
+.cta-buttons .btn{
+
+font-size:.9rem;
+
+}
+
+.cta-glow{
+
+width:260px;
+
+height:260px;
+
+}
+
+}

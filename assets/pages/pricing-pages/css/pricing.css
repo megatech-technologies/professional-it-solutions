@@ -1,0 +1,2711 @@
+/*==================================================
+MEGATECH TECHNOLOGIES
+PRICING PAGE
+PREMIUM FUTURISTIC DESIGN SYSTEM
+CSS ONLY — NO REVEAL SYSTEM
+==================================================*/
+
+
+/*==================================================
+PAGE SECTIONS
+==================================================*/
+
+.pricing-hero,
+.pricing-system,
+.pricing-consulting,
+.pricing-process{
+    position:relative;
+    overflow:hidden;
+}
+
+
+/*==================================================
+GLOBAL FUTURISTIC LIGHT
+==================================================*/
+
+.pricing-hero *,
+.pricing-system *,
+.pricing-consulting *,
+.pricing-process *{
+    box-sizing:border-box;
+}
+
+
+/*==================================================
+PRICING HERO
+==================================================*/
+
+.pricing-hero{
+    min-height:780px;
+
+    display:flex;
+    align-items:center;
+
+    background:
+        radial-gradient(
+            circle at 15% 25%,
+            color-mix(in srgb,var(--primary) 10%,transparent),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 85% 70%,
+            color-mix(in srgb,var(--secondary) 10%,transparent),
+            transparent 35%
+        ),
+        linear-gradient(
+            180deg,
+            var(--body),
+            var(--surface)
+        );
+}
+
+
+/*==================================================
+DIGITAL GRID
+==================================================*/
+
+.pricing-hero::before{
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    background-image:
+        linear-gradient(
+            color-mix(in srgb,var(--primary) 3.5%,transparent) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            color-mix(in srgb,var(--primary) 3.5%,transparent) 1px,
+            transparent 1px
+        );
+
+    background-size:70px 70px;
+
+    mask-image:
+        linear-gradient(
+            to bottom,
+            var(--black),
+            transparent 92%
+        );
+
+    pointer-events:none;
+
+    animation:
+        pricingGridMove 18s linear infinite;
+}
+
+
+@keyframes pricingGridMove{
+
+    from{
+        background-position:0 0;
+    }
+
+    to{
+        background-position:70px 70px;
+    }
+
+}
+
+
+/*==================================================
+MOVING SCAN LIGHT
+==================================================*/
+
+.pricing-hero::after{
+    content:"";
+
+    position:absolute;
+
+    top:-20%;
+    left:-35%;
+
+    width:28%;
+    height:140%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            color-mix(in srgb,var(--primary-light) 8%,transparent),
+            transparent
+        );
+
+    transform:skewX(-20deg);
+
+    pointer-events:none;
+
+    animation:
+        pricingScan 9s linear infinite;
+}
+
+
+@keyframes pricingScan{
+
+    0%{
+        left:-35%;
+    }
+
+    100%{
+        left:135%;
+    }
+
+}
+
+
+/*==================================================
+HERO CONTAINER
+==================================================*/
+
+.pricing-hero-container{
+    position:relative;
+
+    width:min(
+        var(--container-width),
+        calc(100% - 40px)
+    );
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+        minmax(0,1.05fr)
+        minmax(400px,.95fr);
+
+    align-items:center;
+
+    gap:60px;
+
+    z-index:2;
+}
+
+
+/*==================================================
+HERO CONTENT
+==================================================*/
+
+.pricing-hero-content{
+    position:relative;
+    z-index:3;
+
+    max-width:760px;
+}
+
+
+/*==================================================
+SYSTEM LABEL
+==================================================*/
+
+.section-system-label{
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    color:var(--primary);
+
+    font-size:.72rem;
+
+    font-weight:var(--fw-bold);
+
+    letter-spacing:.16em;
+
+    text-transform:uppercase;
+}
+
+
+.system-dot{
+    width:7px;
+    height:7px;
+
+    flex-shrink:0;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+    box-shadow:
+        0 0 10px var(--primary),
+        0 0 25px color-mix(in srgb,var(--primary) 50%,transparent);
+
+    animation:
+        systemPulse 2s ease-in-out infinite;
+}
+
+
+@keyframes systemPulse{
+
+    0%,
+    100%{
+        transform:scale(1);
+        opacity:1;
+    }
+
+    50%{
+        transform:scale(1.6);
+        opacity:.45;
+    }
+
+}
+
+
+.system-line{
+    width:45px;
+    height:1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--primary),
+            transparent
+        );
+}
+
+
+/*==================================================
+HERO TITLE
+==================================================*/
+
+.pricing-hero-content h1{
+    margin:25px 0;
+
+    font-family:var(--heading-font);
+
+    font-size:
+        clamp(
+            3rem,
+            6vw,
+            5.6rem
+        );
+
+    line-height:1.02;
+
+    letter-spacing:-.055em;
+
+    color:var(--white);
+
+    font-weight:var(--fw-black);
+
+    text-shadow:
+        0 0 40px color-mix(in srgb,var(--primary) 8%,transparent);
+
+    animation:
+        heroTitleFloat 6s ease-in-out infinite;
+}
+
+
+.pricing-hero-content h1 span{
+    display:block;
+
+    color:var(--primary);
+
+    text-shadow:
+        0 0 25px color-mix(in srgb,var(--primary) 30%,transparent),
+        0 0 70px color-mix(in srgb,var(--primary) 12%,transparent);
+
+    animation:
+        titleGlow 3s ease-in-out infinite alternate;
+}
+
+
+@keyframes heroTitleFloat{
+
+    0%,
+    100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-3px);
+    }
+
+}
+
+
+@keyframes titleGlow{
+
+    from{
+        text-shadow:
+            0 0 20px color-mix(in srgb,var(--primary) 20%,transparent),
+            0 0 45px color-mix(in srgb,var(--primary) 8%,transparent);
+    }
+
+    to{
+        text-shadow:
+            0 0 30px color-mix(in srgb,var(--primary) 45%,transparent),
+            0 0 80px color-mix(in srgb,var(--primary) 16%,transparent);
+    }
+
+}
+
+
+/*==================================================
+HERO DESCRIPTION
+==================================================*/
+
+.pricing-hero-content > p{
+    max-width:700px;
+
+    margin-bottom:30px;
+
+    color:var(--text-light);
+
+    font-size:1.08rem;
+
+    line-height:1.9;
+}
+
+
+/*==================================================
+HERO STATUS
+==================================================*/
+
+.pricing-hero-status{
+    display:flex;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:13px;
+
+    margin-top:30px;
+
+    color:var(--text-muted);
+
+    font-size:.72rem;
+
+    font-weight:var(--fw-semibold);
+
+    letter-spacing:.1em;
+}
+
+
+.pricing-hero-status > span{
+    width:8px;
+    height:8px;
+
+    border-radius:50%;
+
+    background:var(--accent);
+
+    box-shadow:
+        0 0 12px var(--accent);
+
+    animation:
+        statusPulse 2s ease-in-out infinite;
+}
+
+
+@keyframes statusPulse{
+
+    0%,
+    100%{
+        box-shadow:
+            0 0 8px var(--accent);
+    }
+
+    50%{
+        box-shadow:
+            0 0 22px var(--accent),
+            0 0 35px color-mix(in srgb,var(--accent) 25%,transparent);
+    }
+
+}
+
+
+.pricing-hero-status i{
+    font-size:4px;
+
+    color:var(--primary);
+}
+
+
+/*==================================================
+HERO BUTTONS
+==================================================*/
+
+.pricing-hero-actions{
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:15px;
+
+    margin-top:35px;
+}
+
+
+.pricing-hero-actions .pricing-card-btn{
+    width:auto;
+}
+
+
+.pricing-secondary-btn{
+    background:var(--glass) !important;
+
+    color:var(--text) !important;
+
+    border:
+        1px solid
+        var(--border-primary) !important;
+}
+
+
+.pricing-secondary-btn:hover{
+    background:var(--glass-strong) !important;
+
+    color:var(--primary) !important;
+}
+
+
+/*==================================================
+HERO VISUAL
+==================================================*/
+
+.pricing-hero-visual{
+    position:relative;
+
+    width:520px;
+    height:520px;
+
+    max-width:100%;
+
+    margin:auto;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    isolation:isolate;
+}
+
+
+/*==================================================
+VISUAL AMBIENT GLOW
+==================================================*/
+
+.pricing-hero-visual::before{
+    content:"";
+
+    position:absolute;
+
+    width:240px;
+    height:240px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            color-mix(in srgb,var(--primary) 16%,transparent),
+            transparent 70%
+        );
+
+    filter:blur(10px);
+
+    animation:
+        visualGlow 4s ease-in-out infinite;
+}
+
+
+@keyframes visualGlow{
+
+    0%,
+    100%{
+        transform:scale(.9);
+        opacity:.5;
+    }
+
+    50%{
+        transform:scale(1.2);
+        opacity:1;
+    }
+
+}
+
+
+/*==================================================
+ORBITS
+==================================================*/
+
+.pricing-orbit{
+    position:absolute;
+
+    left:50%;
+    top:50%;
+
+    border-radius:50%;
+
+    transform:
+        translate(-50%,-50%);
+
+    pointer-events:none;
+
+    border:
+        1px solid
+        color-mix(in srgb,var(--primary) 18%,transparent);
+
+    box-shadow:
+        inset 0 0 40px color-mix(in srgb,var(--primary) 2.5%,transparent),
+        0 0 30px color-mix(in srgb,var(--primary) 3%,transparent);
+}
+
+
+.orbit-one{
+    width:270px;
+    height:270px;
+
+    border-color:
+        color-mix(in srgb,var(--primary) 35%,transparent);
+
+    animation:
+        pricingOrbitOne 14s linear infinite;
+}
+
+
+.orbit-two{
+    width:370px;
+    height:370px;
+
+    border-color:
+        color-mix(in srgb,var(--secondary) 25%,transparent);
+
+    border-style:dashed;
+
+    animation:
+        pricingOrbitTwo 20s linear infinite reverse;
+}
+
+
+.orbit-three{
+    width:490px;
+    height:490px;
+
+    border-color:
+        color-mix(in srgb,var(--primary) 11%,transparent);
+
+    animation:
+        pricingOrbitThree 28s linear infinite;
+}
+
+
+@keyframes pricingOrbitOne{
+
+    from{
+        transform:
+            translate(-50%,-50%)
+            rotate(0deg);
+    }
+
+    to{
+        transform:
+            translate(-50%,-50%)
+            rotate(360deg);
+    }
+
+}
+
+
+@keyframes pricingOrbitTwo{
+
+    from{
+        transform:
+            translate(-50%,-50%)
+            rotate(0deg);
+    }
+
+    to{
+        transform:
+            translate(-50%,-50%)
+            rotate(-360deg);
+    }
+
+}
+
+
+@keyframes pricingOrbitThree{
+
+    from{
+        transform:
+            translate(-50%,-50%)
+            rotate(0deg);
+    }
+
+    to{
+        transform:
+            translate(-50%,-50%)
+            rotate(360deg);
+    }
+
+}
+
+
+/*==================================================
+ORBIT ENERGY DOTS
+==================================================*/
+
+.orbit-one::after,
+.orbit-two::after,
+.orbit-three::after{
+    content:"";
+
+    position:absolute;
+
+    top:50%;
+    left:-4px;
+
+    width:8px;
+    height:8px;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+    box-shadow:
+        0 0 10px var(--primary),
+        0 0 25px color-mix(in srgb,var(--primary) 60%,transparent);
+}
+
+
+/*==================================================
+CORE
+==================================================*/
+
+.pricing-core{
+    position:relative;
+
+    width:145px;
+    height:145px;
+
+    z-index:4;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            var(--surface-light),
+            var(--body) 70%
+        );
+
+    border:
+        1px solid
+        var(--border-primary);
+
+    box-shadow:
+        0 0 30px color-mix(in srgb,var(--primary) 20%,transparent),
+        0 0 80px color-mix(in srgb,var(--primary) 10%,transparent),
+        inset 0 0 40px color-mix(in srgb,var(--primary) 8%,transparent);
+
+    animation:
+        coreFloat 4s ease-in-out infinite;
+}
+
+
+.pricing-core::before{
+    content:"";
+
+    position:absolute;
+
+    inset:-12px;
+
+    border-radius:50%;
+
+    border:
+        1px solid
+        color-mix(in srgb,var(--primary) 25%,transparent);
+
+    animation:
+        coreRing 3s ease-in-out infinite;
+}
+
+
+.pricing-core::after{
+    content:"";
+
+    position:absolute;
+
+    inset:-35px;
+
+    border-radius:50%;
+
+    border:
+        1px solid
+        color-mix(in srgb,var(--secondary) 15%,transparent);
+
+    animation:
+        coreRing 4s ease-in-out infinite reverse;
+}
+
+
+.pricing-core-inner{
+    width:92px;
+    height:92px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            color-mix(in srgb,var(--primary) 20%,transparent),
+            color-mix(in srgb,var(--primary) 3%,transparent) 65%,
+            transparent
+        );
+
+    border:
+        1px solid
+        color-mix(in srgb,var(--primary-light) 35%,transparent);
+
+    box-shadow:
+        var(--glow-primary);
+
+    animation:
+        coreInnerPulse 2.5s ease-in-out infinite;
+}
+
+
+.pricing-core-inner i{
+    color:var(--primary);
+
+    font-size:2rem;
+
+    text-shadow:
+        0 0 20px color-mix(in srgb,var(--primary) 65%,transparent);
+
+    animation:
+        iconPulse 2s ease-in-out infinite;
+}
+
+
+@keyframes coreFloat{
+
+    0%,
+    100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-10px);
+    }
+
+}
+
+
+@keyframes coreRing{
+
+    0%,
+    100%{
+        opacity:.35;
+        transform:scale(1);
+    }
+
+    50%{
+        opacity:.9;
+        transform:scale(1.06);
+    }
+
+}
+
+
+@keyframes coreInnerPulse{
+
+    0%,
+    100%{
+        box-shadow:
+            0 0 15px color-mix(in srgb,var(--primary) 15%,transparent);
+    }
+
+    50%{
+        box-shadow:
+            0 0 35px color-mix(in srgb,var(--primary) 35%,transparent),
+            inset 0 0 25px color-mix(in srgb,var(--primary) 10%,transparent);
+    }
+
+}
+
+
+@keyframes iconPulse{
+
+    0%,
+    100%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.12);
+    }
+
+}
+
+
+/*==================================================
+FLOATING NODES
+==================================================*/
+
+.pricing-node{
+    position:absolute;
+
+    width:62px;
+    height:62px;
+
+    z-index:5;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:18px;
+
+    background:
+        color-mix(in srgb,var(--surface) 82%,transparent);
+
+    border:
+        1px solid
+        var(--border-primary);
+
+    backdrop-filter:blur(15px);
+
+    -webkit-backdrop-filter:blur(15px);
+
+    color:var(--primary);
+
+    box-shadow:
+        var(--shadow-md),
+        0 0 25px color-mix(in srgb,var(--primary) 10%,transparent);
+
+    animation:
+        nodeFloat 4s ease-in-out infinite;
+}
+
+
+.pricing-node::before{
+    content:"";
+
+    position:absolute;
+
+    inset:-5px;
+
+    border-radius:21px;
+
+    border:
+        1px solid
+        color-mix(in srgb,var(--primary) 8%,transparent);
+
+    opacity:0;
+
+    transition:opacity .3s ease;
+}
+
+
+.pricing-node:hover::before{
+    opacity:1;
+}
+
+
+.pricing-node i{
+    font-size:1.2rem;
+
+    text-shadow:
+        0 0 15px color-mix(in srgb,var(--primary) 50%,transparent);
+}
+
+
+.pricing-node-one{
+    top:18%;
+    left:15%;
+
+    animation-delay:.2s;
+}
+
+
+.pricing-node-two{
+    right:8%;
+    top:38%;
+
+    color:var(--secondary-light);
+
+    border-color:
+        color-mix(in srgb,var(--secondary) 25%,transparent);
+
+    animation-delay:1s;
+}
+
+
+.pricing-node-three{
+    bottom:15%;
+    left:25%;
+
+    color:var(--accent);
+
+    border-color:
+        color-mix(in srgb,var(--accent) 22%,transparent);
+
+    animation-delay:1.7s;
+}
+
+
+@keyframes nodeFloat{
+
+    0%,
+    100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-12px);
+    }
+
+}
+
+
+/*==================================================
+WEBSITE PRICING SECTION
+==================================================*/
+
+.pricing-system{
+    padding:120px 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            var(--surface),
+            var(--body)
+        );
+}
+
+
+.pricing-system::before{
+    content:"";
+
+    position:absolute;
+
+    width:600px;
+    height:600px;
+
+    right:-300px;
+    top:10%;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            color-mix(in srgb,var(--secondary) 8%,transparent),
+            transparent 70%
+        );
+
+    pointer-events:none;
+
+    animation:
+        backgroundOrb 10s ease-in-out infinite;
+}
+
+
+@keyframes backgroundOrb{
+
+    0%,
+    100%{
+        transform:translate(0,0);
+    }
+
+    50%{
+        transform:translate(-40px,30px);
+    }
+
+}
+
+
+/*==================================================
+CONTAINER
+==================================================*/
+
+.pricing-container{
+    position:relative;
+
+    width:min(
+        var(--container-width),
+        calc(100% - 40px)
+    );
+
+    margin:auto;
+
+    z-index:2;
+}
+
+
+/*==================================================
+SECTION HEADER
+==================================================*/
+
+.pricing-section-header{
+    max-width:780px;
+
+    margin:0 auto 70px;
+
+    text-align:center;
+}
+
+
+.pricing-section-header h2{
+    margin:22px 0;
+
+    font-family:var(--heading-font);
+
+    font-size:
+        clamp(
+            2.2rem,
+            4vw,
+            4rem
+        );
+
+    line-height:1.1;
+
+    color:var(--white);
+
+    letter-spacing:-.04em;
+}
+
+
+.pricing-section-header h2 span{
+    color:var(--primary);
+
+    text-shadow:
+        0 0 25px color-mix(in srgb,var(--primary) 22%,transparent);
+}
+
+
+.pricing-section-header p{
+    color:var(--text-light);
+
+    line-height:1.85;
+
+    font-size:1rem;
+}
+
+
+/*==================================================
+PRICING GRID
+==================================================*/
+
+.pricing-grid{
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,minmax(0,1fr));
+
+    gap:25px;
+}
+
+
+/*==================================================
+PRICING CARD
+==================================================*/
+
+.pricing-card{
+    position:relative;
+
+    display:flex;
+
+    flex-direction:column;
+
+    padding:38px;
+
+    min-height:100%;
+
+    background:
+        linear-gradient(
+            145deg,
+            color-mix(in srgb,var(--card) 96%,transparent),
+            color-mix(in srgb,var(--surface) 90%,transparent)
+        );
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:26px;
+
+    overflow:hidden;
+
+    box-shadow:
+        var(--shadow-md);
+
+    transition:
+        transform .45s ease,
+        border-color .45s ease,
+        box-shadow .45s ease,
+        background .45s ease;
+}
+
+
+/*==================================================
+CARD TOP ENERGY
+==================================================*/
+
+.pricing-card::before{
+    content:"";
+
+    position:absolute;
+
+    left:-100%;
+    top:0;
+
+    width:100%;
+    height:2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--primary),
+            transparent
+        );
+
+    opacity:.5;
+
+    transition:left .7s ease;
+}
+
+
+.pricing-card:hover::before{
+    left:100%;
+}
+
+
+/*==================================================
+CARD AMBIENT GLOW
+==================================================*/
+
+.pricing-card::after{
+    content:"";
+
+    position:absolute;
+
+    width:250px;
+    height:250px;
+
+    right:-150px;
+    bottom:-150px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            color-mix(in srgb,var(--primary) 10%,transparent),
+            transparent 70%
+        );
+
+    pointer-events:none;
+
+    transition:
+        transform .7s ease,
+        opacity .7s ease;
+}
+
+
+.pricing-card:hover::after{
+    transform:scale(1.5);
+}
+
+
+/*==================================================
+CARD HOVER
+==================================================*/
+
+.pricing-card:hover{
+    transform:translateY(-12px);
+
+    border-color:
+        var(--border-primary);
+
+    box-shadow:
+        var(--shadow-lg),
+        0 0 40px color-mix(in srgb,var(--primary) 8%,transparent);
+}
+
+
+/*==================================================
+FEATURED CARD
+==================================================*/
+
+.pricing-card-featured{
+    border-color:
+        color-mix(in srgb,var(--primary) 30%,transparent);
+
+    background:
+        linear-gradient(
+            145deg,
+            color-mix(in srgb,var(--surface-light) 98%,transparent),
+            color-mix(in srgb,var(--surface) 96%,transparent)
+        );
+
+    box-shadow:
+        var(--shadow-md),
+        0 0 40px color-mix(in srgb,var(--primary) 6%,transparent);
+}
+
+
+.pricing-card-featured::before{
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--primary),
+            transparent
+        );
+}
+
+
+/*==================================================
+BADGE
+==================================================*/
+
+.pricing-card-badge{
+    position:absolute;
+
+    top:20px;
+    right:20px;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:7px;
+
+    padding:7px 12px;
+
+    border-radius:50px;
+
+    background:
+        color-mix(in srgb,var(--primary) 8%,transparent);
+
+    border:
+        1px solid
+        color-mix(in srgb,var(--primary) 22%,transparent);
+
+    color:var(--primary);
+
+    font-size:.62rem;
+
+    font-weight:var(--fw-bold);
+
+    letter-spacing:.08em;
+
+    animation:
+        badgePulse 3s ease-in-out infinite;
+}
+
+
+@keyframes badgePulse{
+
+    0%,
+    100%{
+        box-shadow:
+            0 0 0 color-mix(in srgb,var(--primary) 0%,transparent);
+    }
+
+    50%{
+        box-shadow:
+            0 0 20px color-mix(in srgb,var(--primary) 10%,transparent);
+    }
+
+}
+
+
+.pricing-card-badge i{
+    font-size:.65rem;
+}
+
+
+/*==================================================
+CARD TOP
+==================================================*/
+
+.pricing-card-top{
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    margin-bottom:28px;
+}
+
+
+.pricing-card-number{
+    color:var(--text-muted);
+
+    font-family:var(--heading-font);
+
+    font-size:.8rem;
+
+    font-weight:var(--fw-bold);
+
+    letter-spacing:.15em;
+}
+
+
+/*==================================================
+CARD ICON
+==================================================*/
+
+.pricing-card-icon{
+    width:58px;
+    height:58px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:16px;
+
+    background:
+        color-mix(in srgb,var(--primary) 6%,transparent);
+
+    border:
+        1px solid
+        var(--border-primary);
+
+    color:var(--primary);
+
+    box-shadow:
+        inset 0 0 20px color-mix(in srgb,var(--primary) 4%,transparent);
+
+    transition:
+        transform .4s ease,
+        background .4s ease,
+        box-shadow .4s ease;
+}
+
+
+.pricing-card:hover .pricing-card-icon{
+    transform:
+        rotate(-5deg)
+        scale(1.08);
+
+    background:
+        color-mix(in srgb,var(--primary) 11%,transparent);
+
+    box-shadow:
+        var(--glow-primary);
+}
+
+
+.pricing-card-icon i{
+    font-size:1.2rem;
+}
+
+
+/*==================================================
+CARD LABEL
+==================================================*/
+
+.pricing-card-label{
+    display:block;
+
+    margin-bottom:10px;
+
+    color:var(--primary);
+
+    font-size:.68rem;
+
+    font-weight:var(--fw-bold);
+
+    letter-spacing:.14em;
+}
+
+
+/*==================================================
+CARD TITLE
+==================================================*/
+
+.pricing-card h3{
+    margin:0 0 15px;
+
+    font-family:var(--heading-font);
+
+    color:var(--white);
+
+    font-size:1.65rem;
+
+    line-height:1.25;
+}
+
+
+/*==================================================
+CARD DESCRIPTION
+==================================================*/
+
+.pricing-card-description{
+    color:var(--text-light);
+
+    line-height:1.75;
+
+    font-size:.93rem;
+
+    margin-bottom:22px;
+}
+
+
+.pricing-card-description strong{
+    color:var(--white);
+}
+
+
+/*==================================================
+BEST FOR
+==================================================*/
+
+.pricing-best-for{
+    display:flex;
+
+    gap:13px;
+
+    padding:15px;
+
+    margin-bottom:25px;
+
+    border-radius:14px;
+
+    background:
+        color-mix(in srgb,var(--white) 2.5%,transparent);
+
+    border:
+        1px solid
+        var(--border);
+
+    transition:
+        border-color .35s ease,
+        background .35s ease;
+}
+
+
+.pricing-card:hover .pricing-best-for{
+    border-color:
+        color-mix(in srgb,var(--primary) 16%,transparent);
+
+    background:
+        color-mix(in srgb,var(--primary) 2.5%,transparent);
+}
+
+
+.pricing-best-for > i{
+    color:var(--primary);
+
+    margin-top:3px;
+
+    text-shadow:
+        0 0 12px color-mix(in srgb,var(--primary) 40%,transparent);
+}
+
+
+.pricing-best-for small{
+    display:block;
+
+    margin-bottom:5px;
+
+    color:var(--text-muted);
+
+    font-size:.6rem;
+
+    font-weight:var(--fw-bold);
+
+    letter-spacing:.12em;
+}
+
+
+.pricing-best-for span{
+    display:block;
+
+    color:var(--text-light);
+
+    font-size:.78rem;
+
+    line-height:1.55;
+}
+
+
+/*==================================================
+PRICE
+==================================================*/
+
+.pricing-price{
+    display:flex;
+
+    flex-direction:column;
+
+    gap:5px;
+
+    padding:22px 0;
+
+    margin-top:auto;
+}
+
+
+.pricing-price strong{
+    color:var(--white);
+
+    font-family:var(--heading-font);
+
+    font-size:2rem;
+
+    line-height:1.15;
+
+    letter-spacing:-.03em;
+}
+
+
+.pricing-price span{
+    color:var(--text-muted);
+
+    font-size:.78rem;
+}
+
+
+.pricing-free strong{
+    color:var(--accent);
+
+    font-size:1.65rem;
+
+    text-shadow:
+        0 0 18px color-mix(in srgb,var(--accent) 18%,transparent);
+
+    animation:
+        freePulse 3s ease-in-out infinite;
+}
+
+
+@keyframes freePulse{
+
+    0%,
+    100%{
+        text-shadow:
+            0 0 10px color-mix(in srgb,var(--accent) 12%,transparent);
+    }
+
+    50%{
+        text-shadow:
+            0 0 25px color-mix(in srgb,var(--accent) 35%,transparent);
+    }
+
+}
+
+
+/*==================================================
+NEGOTIABLE
+==================================================*/
+
+.pricing-negotiable{
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:9px;
+
+    padding:11px 13px;
+
+    margin-bottom:20px;
+
+    border-radius:10px;
+
+    color:var(--text-muted);
+
+    background:
+        color-mix(in srgb,var(--warning) 3.5%,transparent);
+
+    border:
+        1px solid
+        color-mix(in srgb,var(--warning) 12%,transparent);
+
+    font-size:.72rem;
+
+    line-height:1.5;
+}
+
+
+.pricing-negotiable i{
+    color:var(--warning);
+
+    margin-top:2px;
+}
+
+
+/*==================================================
+FEATURES
+==================================================*/
+
+.pricing-features{
+    display:flex;
+
+    flex-direction:column;
+
+    gap:13px;
+
+    margin:0 0 30px;
+
+    padding:0;
+
+    list-style:none;
+}
+
+
+.pricing-features li{
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:11px;
+
+    color:var(--text-light);
+
+    font-size:.82rem;
+
+    line-height:1.5;
+
+    transition:
+        transform .3s ease,
+        color .3s ease;
+}
+
+
+.pricing-card:hover .pricing-features li{
+    transform:translateX(3px);
+}
+
+
+.pricing-features li i{
+    flex-shrink:0;
+
+    margin-top:3px;
+
+    color:var(--accent);
+
+    font-size:.72rem;
+
+    text-shadow:
+        0 0 10px color-mix(in srgb,var(--accent) 35%,transparent);
+}
+
+
+/*==================================================
+PRICING BUTTON
+==================================================*/
+
+.pricing-card-btn{
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:12px;
+
+    width:100%;
+
+    min-height:54px;
+
+    padding:14px 20px;
+
+    overflow:hidden;
+
+    border-radius:13px;
+
+    background:
+        var(--primary);
+
+    border:
+        1px solid
+        var(--primary);
+
+    color:var(--body);
+
+    font-size:.82rem;
+
+    font-weight:var(--fw-bold);
+
+    text-align:center;
+
+    transition:
+        transform .35s ease,
+        background .35s ease,
+        box-shadow .35s ease;
+}
+
+
+.pricing-card-btn::before{
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:-120%;
+
+    width:80%;
+    height:100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            color-mix(in srgb,var(--white) 25%,transparent),
+            transparent
+        );
+
+    transform:skewX(-20deg);
+
+    transition:left .6s ease;
+}
+
+
+.pricing-card-btn:hover::before{
+    left:140%;
+}
+
+
+.pricing-card-btn:hover{
+    transform:translateY(-3px);
+
+    background:
+        var(--primary-light);
+
+    box-shadow:
+        var(--glow-primary);
+}
+
+
+.pricing-card-btn i{
+    transition:
+        transform .35s ease;
+}
+
+
+.pricing-card-btn:hover i{
+    transform:translateX(5px);
+}
+
+
+/*==================================================
+CONSULTING CARD
+FIXED SELECTORS
+==================================================*/
+
+.pricing-consulting-card{
+    border-color:
+        color-mix(in srgb,var(--accent) 18%,transparent);
+}
+
+
+.pricing-consulting-card::before{
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--accent),
+            transparent
+        );
+}
+
+
+.pricing-consulting-card .pricing-card-label{
+    color:var(--accent);
+}
+
+
+.pricing-consulting-card .pricing-card-icon{
+    color:var(--accent);
+
+    border-color:
+        color-mix(in srgb,var(--accent) 20%,transparent);
+
+    background:
+        color-mix(in srgb,var(--accent) 5%,transparent);
+}
+
+
+.pricing-consulting-btn{
+    background:var(--accent);
+
+    border-color:var(--accent);
+
+    color:var(--body);
+}
+
+
+.pricing-consulting-btn:hover{
+    background:color-mix(
+        in srgb,
+        var(--accent) 80%,
+        var(--white)
+    );
+
+    box-shadow:
+        var(--glow-success);
+}
+
+
+/*==================================================
+STRATEGIST BADGE
+==================================================*/
+
+.strategist-badge{
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:9px;
+
+    width:max-content;
+
+    max-width:100%;
+
+    padding:9px 13px;
+
+    margin-bottom:20px;
+
+    border-radius:50px;
+
+    color:var(--accent);
+
+    background:
+        color-mix(in srgb,var(--accent) 5%,transparent);
+
+    border:
+        1px solid
+        color-mix(in srgb,var(--accent) 15%,transparent);
+
+    font-size:.62rem;
+
+    font-weight:var(--fw-bold);
+
+    letter-spacing:.08em;
+
+    animation:
+        strategistPulse 3s ease-in-out infinite;
+}
+
+
+@keyframes strategistPulse{
+
+    0%,
+    100%{
+        box-shadow:
+            0 0 0 color-mix(in srgb,var(--accent) 0%,transparent);
+    }
+
+    50%{
+        box-shadow:
+            0 0 22px color-mix(in srgb,var(--accent) 8%,transparent);
+    }
+
+}
+
+
+/*==================================================
+CONSULTING SECTION
+==================================================*/
+
+.pricing-consulting{
+    padding:130px 0;
+
+    background:
+        radial-gradient(
+            circle at 20% 50%,
+            color-mix(in srgb,var(--primary) 7%,transparent),
+            transparent 30%
+        ),
+        linear-gradient(
+            180deg,
+            var(--body),
+            var(--surface)
+        );
+}
+
+
+.pricing-consulting-container{
+    position:relative;
+
+    width:min(
+        var(--container-width),
+        calc(100% - 40px)
+    );
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+        minmax(400px,.85fr)
+        minmax(0,1.15fr);
+
+    align-items:center;
+
+    gap:80px;
+}
+
+
+/*==================================================
+CONSULTING VISUAL
+==================================================*/
+
+.consulting-visual{
+    position:relative;
+
+    width:460px;
+    height:460px;
+
+    max-width:100%;
+
+    margin:auto;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+}
+
+
+.consulting-visual::before{
+    content:"";
+
+    position:absolute;
+
+    width:220px;
+    height:220px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            color-mix(in srgb,var(--primary) 12%,transparent),
+            transparent 70%
+        );
+
+    filter:blur(12px);
+
+    animation:
+        consultingGlow 4s ease-in-out infinite;
+}
+
+
+@keyframes consultingGlow{
+
+    0%,
+    100%{
+        transform:scale(.85);
+    }
+
+    50%{
+        transform:scale(1.2);
+    }
+
+}
+
+
+/*==================================================
+CONSULTING ORBITS
+==================================================*/
+
+.consulting-orbit{
+    position:absolute;
+
+    left:50%;
+    top:50%;
+
+    border-radius:50%;
+
+    transform:
+        translate(-50%,-50%);
+
+    border:
+        1px solid
+        color-mix(in srgb,var(--primary) 18%,transparent);
+}
+
+
+.consulting-orbit.orbit-one{
+    width:260px;
+    height:260px;
+
+    animation:
+        consultingRotate 15s linear infinite;
+}
+
+
+.consulting-orbit.orbit-two{
+    width:390px;
+    height:390px;
+
+    border-style:dashed;
+
+    border-color:
+        color-mix(in srgb,var(--secondary) 18%,transparent);
+
+    animation:
+        consultingRotate 22s linear infinite reverse;
+}
+
+
+@keyframes consultingRotate{
+
+    from{
+        transform:
+            translate(-50%,-50%)
+            rotate(0);
+    }
+
+    to{
+        transform:
+            translate(-50%,-50%)
+            rotate(360deg);
+    }
+
+}
+
+
+/*==================================================
+CONSULTING CORE
+==================================================*/
+
+.consulting-core{
+    position:relative;
+
+    width:125px;
+    height:125px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            color-mix(in srgb,var(--primary) 18%,transparent),
+            var(--body) 70%
+        );
+
+    border:
+        1px solid
+        var(--border-primary);
+
+    box-shadow:
+        var(--glow-primary);
+
+    z-index:2;
+
+    animation:
+        consultingCoreFloat 4s ease-in-out infinite;
+}
+
+
+.consulting-core::before{
+    content:"";
+
+    position:absolute;
+
+    inset:-12px;
+
+    border-radius:50%;
+
+    border:
+        1px solid
+        color-mix(in srgb,var(--primary) 20%,transparent);
+
+    animation:
+        coreRing 3s ease-in-out infinite;
+}
+
+
+.consulting-core i{
+    color:var(--primary);
+
+    font-size:2rem;
+
+    text-shadow:
+        0 0 25px color-mix(in srgb,var(--primary) 65%,transparent);
+
+    animation:
+        iconPulse 2s ease-in-out infinite;
+}
+
+
+@keyframes consultingCoreFloat{
+
+    0%,
+    100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-10px);
+    }
+
+}
+
+
+/*==================================================
+CONSULTING NODES
+==================================================*/
+
+.consulting-node{
+    position:absolute;
+
+    width:58px;
+    height:58px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:16px;
+
+    background:
+        color-mix(in srgb,var(--surface) 90%,transparent);
+
+    border:
+        1px solid
+        var(--border-primary);
+
+    color:var(--primary);
+
+    box-shadow:
+        var(--shadow-md);
+
+    z-index:3;
+
+    animation:
+        consultingNodeFloat 4s ease-in-out infinite;
+}
+
+
+.consulting-node i{
+    font-size:1.05rem;
+}
+
+
+.node-one{
+    left:10%;
+    top:20%;
+
+    animation-delay:.5s;
+}
+
+
+.node-two{
+    right:8%;
+    top:45%;
+
+    color:var(--secondary-light);
+
+    border-color:
+        color-mix(in srgb,var(--secondary) 20%,transparent);
+
+    animation-delay:1.2s;
+}
+
+
+.node-three{
+    left:20%;
+    bottom:12%;
+
+    color:var(--accent);
+
+    border-color:
+        color-mix(in srgb,var(--accent) 20%,transparent);
+
+    animation-delay:1.8s;
+}
+
+
+@keyframes consultingNodeFloat{
+
+    0%,
+    100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-9px);
+    }
+
+}
+
+
+/*==================================================
+CONSULTING CONTENT
+==================================================*/
+
+.consulting-content{
+    max-width:720px;
+}
+
+
+.consulting-content h2{
+    margin:22px 0;
+
+    font-family:var(--heading-font);
+
+    font-size:
+        clamp(
+            2.3rem,
+            4vw,
+            4rem
+        );
+
+    line-height:1.08;
+
+    letter-spacing:-.04em;
+
+    color:var(--white);
+}
+
+
+.consulting-content h2 span{
+    display:block;
+
+    color:var(--primary);
+
+    text-shadow:
+        0 0 25px color-mix(in srgb,var(--primary) 18%,transparent);
+}
+
+
+.consulting-content > p{
+    color:var(--text-light);
+
+    line-height:1.9;
+
+    margin-bottom:20px;
+}
+
+
+.consulting-content > p strong{
+    color:var(--white);
+}
+
+
+/*==================================================
+FREE CONSULTING OFFER
+==================================================*/
+
+.consulting-free-offer{
+    display:flex;
+
+    gap:18px;
+
+    margin-top:32px;
+
+    padding:22px;
+
+    border-radius:20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            color-mix(in srgb,var(--primary) 6%,transparent),
+            color-mix(in srgb,var(--secondary) 4%,transparent)
+        );
+
+    border:
+        1px solid
+        var(--border-primary);
+
+    box-shadow:
+        inset 0 0 30px color-mix(in srgb,var(--primary) 2.5%,transparent);
+
+    transition:
+        transform .4s ease,
+        border-color .4s ease,
+        box-shadow .4s ease;
+}
+
+
+.consulting-free-offer:hover{
+    transform:translateY(-5px);
+
+    border-color:
+        color-mix(in srgb,var(--primary) 30%,transparent);
+
+    box-shadow:
+        0 15px 40px color-mix(in srgb,var(--black) 15%,transparent),
+        0 0 30px color-mix(in srgb,var(--primary) 6%,transparent);
+}
+
+
+.consulting-offer-icon{
+    width:54px;
+    height:54px;
+
+    flex-shrink:0;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:15px;
+
+    color:var(--primary);
+
+    background:
+        color-mix(in srgb,var(--primary) 7%,transparent);
+
+    border:
+        1px solid
+        color-mix(in srgb,var(--primary) 20%,transparent);
+}
+
+
+.consulting-offer-icon i{
+    font-size:1.1rem;
+}
+
+
+.consulting-free-offer span{
+    display:block;
+
+    margin-bottom:7px;
+
+    color:var(--primary);
+
+    font-size:.63rem;
+
+    font-weight:var(--fw-bold);
+
+    letter-spacing:.12em;
+}
+
+
+.consulting-free-offer strong{
+    display:block;
+
+    margin-bottom:8px;
+
+    color:var(--white);
+
+    font-family:var(--heading-font);
+
+    font-size:1.05rem;
+}
+
+
+.consulting-free-offer p{
+    margin:0;
+
+    color:var(--text-muted);
+
+    font-size:.82rem;
+
+    line-height:1.7;
+}
+
+
+/*==================================================
+CONSULTING ACTIONS
+==================================================*/
+
+.consulting-actions{
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:15px;
+
+    margin-top:28px;
+}
+
+
+.consulting-btn{
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:12px;
+
+    min-height:54px;
+
+    padding:14px 24px;
+
+    border-radius:13px;
+
+    background:var(--accent);
+
+    color:var(--body);
+
+    border:
+        1px solid
+        var(--accent);
+
+    font-size:.82rem;
+
+    font-weight:var(--fw-bold);
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease,
+        background .35s ease;
+}
+
+
+.consulting-btn:hover{
+    transform:translateY(-4px);
+
+    background:color-mix(
+        in srgb,
+        var(--accent) 80%,
+        var(--white)
+    );
+
+    box-shadow:
+        var(--glow-success);
+}
+
+
+/*==================================================
+PROCESS SECTION
+==================================================*/
+
+.pricing-process{
+    padding:120px 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            var(--surface),
+            var(--body)
+        );
+}
+
+
+/*==================================================
+PROCESS GRID
+==================================================*/
+
+.pricing-process-grid{
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap:20px;
+}
+
+
+/*==================================================
+PROCESS ITEM
+==================================================*/
+
+.process-item{
+    position:relative;
+
+    padding:30px 25px;
+
+    background:
+        color-mix(in srgb,var(--white) 2.5%,transparent);
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:20px;
+
+    text-align:center;
+
+    overflow:hidden;
+
+    transition:
+        transform .4s ease,
+        border-color .4s ease,
+        background .4s ease,
+        box-shadow .4s ease;
+}
+
+
+.process-item::before{
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:-100%;
+
+    width:100%;
+    height:2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--primary),
+            transparent
+        );
+
+    transition:left .6s ease;
+}
+
+
+.process-item:hover::before{
+    left:100%;
+}
+
+
+.process-item:hover{
+    transform:translateY(-8px);
+
+    background:
+        color-mix(in srgb,var(--primary) 3.5%,transparent);
+
+    border-color:
+        var(--border-primary);
+
+    box-shadow:
+        0 15px 40px color-mix(in srgb,var(--black) 15%,transparent),
+        0 0 25px color-mix(in srgb,var(--primary) 5%,transparent);
+}
+
+
+.process-item > span{
+    position:absolute;
+
+    top:15px;
+    right:18px;
+
+    color:var(--text-muted);
+
+    font-size:.65rem;
+
+    font-weight:var(--fw-bold);
+
+    letter-spacing:.1em;
+}
+
+
+.process-item > i{
+    width:60px;
+    height:60px;
+
+    margin:15px auto 20px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    color:var(--primary);
+
+    background:
+        color-mix(in srgb,var(--primary) 5%,transparent);
+
+    border:
+        1px solid
+        var(--border-primary);
+
+    box-shadow:
+        0 0 25px color-mix(in srgb,var(--primary) 5%,transparent);
+
+    transition:
+        transform .4s ease,
+        box-shadow .4s ease;
+}
+
+
+.process-item:hover > i{
+    transform:
+        rotate(8deg)
+        scale(1.08);
+
+    box-shadow:
+        var(--glow-primary);
+}
+
+
+.process-item h3{
+    margin-bottom:10px;
+
+    font-family:var(--heading-font);
+
+    color:var(--white);
+
+    font-size:1.15rem;
+}
+
+
+.process-item p{
+    margin:0;
+
+    color:var(--text-muted);
+
+    font-size:.82rem;
+
+    line-height:1.7;
+}
+
+
+
+
+
+
+
+/*==================================================
+REDUCED MOTION
+==================================================*/
+
+@media(prefers-reduced-motion:reduce){
+
+    .pricing-hero::before,
+    .pricing-hero::after,
+    .pricing-hero-content h1,
+    .pricing-hero-content h1 span,
+    .system-dot,
+    .pricing-hero-status > span,
+    .pricing-hero-visual::before,
+    .pricing-orbit,
+    .pricing-core,
+    .pricing-core::before,
+    .pricing-core::after,
+    .pricing-core-inner,
+    .pricing-core-inner i,
+    .pricing-node,
+    .pricing-card-badge,
+    .pricing-free strong,
+    .strategist-badge,
+    .consulting-visual::before,
+    .consulting-orbit,
+    .consulting-core,
+    .consulting-core::before,
+    .consulting-core i,
+    .consulting-node,
+    .pricing-system::before{
+        animation:none !important;
+    }
+
+}

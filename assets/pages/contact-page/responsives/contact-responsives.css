@@ -1,0 +1,1250 @@
+/*==================================================
+33. RESPONSIVE SYSTEM
+CONTACT PAGE
+==================================================*/
+
+
+/*==================================================
+1200px — LARGE LAPTOP / SMALL DESKTOP
+==================================================*/
+
+@media (max-width:1200px){
+
+    .contact-hero{
+        padding-left:20px;
+        padding-right:20px;
+    }
+
+    .contact-hero-container{
+        grid-template-columns:minmax(0,1fr) minmax(360px,.85fr);
+        gap:var(--space-7);
+    }
+
+    .contact-hero-title{
+        font-size:clamp(3rem,5vw,5rem);
+    }
+
+    .contact-hero-visual{
+        min-height:520px;
+    }
+
+    .contact-core-system{
+        width:410px;
+        height:410px;
+    }
+
+    .orbit-one{
+        width:390px;
+        height:155px;
+    }
+
+    .orbit-two{
+        width:350px;
+        height:350px;
+    }
+
+    .orbit-three{
+        width:415px;
+        height:215px;
+    }
+
+    .contact-core-ring{
+        width:215px;
+        height:215px;
+    }
+
+    .contact-system-grid{
+        grid-template-columns:minmax(0,1.25fr) minmax(300px,.75fr);
+    }
+
+    .contact-section-header h2,
+    .contact-location-header h2{
+        font-size:clamp(2.2rem,4vw,3.6rem);
+    }
+
+    .map-frame{
+        height:520px;
+    }
+
+}
+
+
+/*==================================================
+992px — TABLET / SMALL LAPTOP
+==================================================*/
+
+@media (max-width:992px){
+
+    .contact-hero{
+        min-height:auto;
+        padding-top:var(--space-9);
+        padding-bottom:var(--space-9);
+    }
+
+    .contact-hero-container{
+        grid-template-columns:1fr;
+        gap:var(--space-8);
+    }
+
+    .contact-hero-content{
+        max-width:760px;
+        margin:0 auto;
+        text-align:center;
+    }
+
+    .contact-hero-content .section-system-label{
+        justify-content:center;
+    }
+
+    .contact-hero-title{
+        max-width:800px;
+        margin:0 auto;
+        font-size:clamp(3rem,7vw,4.8rem);
+    }
+
+    .contact-hero-text{
+        max-width:680px;
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .contact-hero-actions{
+        justify-content:center;
+    }
+
+    .contact-hero-status{
+        justify-content:center;
+    }
+
+    .contact-hero-visual{
+        min-height:500px;
+        max-width:600px;
+        width:100%;
+        margin:0 auto;
+    }
+
+    .contact-core-system{
+        width:410px;
+        height:410px;
+    }
+
+    .contact-system-grid{
+        grid-template-columns:1fr;
+    }
+
+    .contact-form-panel,
+    .contact-info-panel{
+        width:100%;
+    }
+
+    .contact-info-panel{
+        min-height:auto;
+    }
+
+    .contact-location-header{
+        align-items:flex-start;
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .contact-location-header > div,
+    .contact-location-header p{
+        max-width:100%;
+    }
+
+    .contact-location-header p{
+        margin:0;
+    }
+
+    .contact-faq-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .map-frame{
+        height:480px;
+    }
+
+    .contact-section-header{
+        margin-bottom:var(--space-7);
+    }
+
+}
+
+
+/*==================================================
+768px — TABLET / LARGE MOBILE
+==================================================*/
+
+@media (max-width:768px){
+
+    .contact-hero{
+        padding:var(--space-8) 18px var(--space-8);
+    }
+
+    .contact-hero-container{
+        gap:var(--space-7);
+    }
+
+    .contact-hero-title{
+        font-size:clamp(2.6rem,9vw,4rem);
+        line-height:1;
+    }
+
+    .contact-hero-text{
+        font-size:.95rem;
+        line-height:1.75;
+    }
+
+    .contact-hero-actions{
+        flex-direction:column;
+        width:100%;
+        max-width:360px;
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .contact-primary-btn,
+    .contact-secondary-btn{
+        width:100%;
+    }
+
+    .contact-hero-status{
+        font-size:.62rem;
+        justify-content:center;
+        text-align:center;
+    }
+
+    .contact-hero-visual{
+        min-height:430px;
+    }
+
+    .contact-core-system{
+        width:340px;
+        height:340px;
+    }
+
+    .contact-core-energy{
+        width:145px;
+        height:145px;
+    }
+
+    .orbit-one{
+        width:325px;
+        height:130px;
+    }
+
+    .orbit-two{
+        width:295px;
+        height:295px;
+    }
+
+    .orbit-three{
+        width:350px;
+        height:180px;
+    }
+
+    .contact-core-ring{
+        width:185px;
+        height:185px;
+    }
+
+    .contact-core-ring-inner{
+        width:105px;
+        height:105px;
+    }
+
+    .contact-core-ring-inner i{
+        font-size:1.6rem;
+    }
+
+    .contact-core-center{
+        width:50px;
+        height:50px;
+    }
+
+    /*
+    Reduce outer node positions so they
+    remain inside the visual system.
+    */
+
+    .node-one{
+        top:55px;
+        left:60px;
+    }
+
+    .node-two{
+        top:90px;
+        right:35px;
+    }
+
+    .node-three{
+        bottom:55px;
+        right:60px;
+    }
+
+    .node-four{
+        bottom:90px;
+        left:35px;
+    }
+
+    /*
+    Data labels become smaller.
+    */
+
+    .contact-data-label{
+        min-width:85px;
+        padding:7px 9px;
+    }
+
+    .contact-data-label small{
+        font-size:.48rem;
+    }
+
+    .contact-data-label strong{
+        font-size:.6rem;
+    }
+
+    .label-one{
+        top:35px;
+        left:0;
+    }
+
+    .label-two{
+        top:135px;
+        right:0;
+    }
+
+    .label-three{
+        bottom:60px;
+        right:0;
+    }
+
+    .label-four{
+        bottom:30px;
+        left:10px;
+    }
+
+    /*
+    HUD positioning.
+    */
+
+    .contact-hero-hud{
+        min-width:145px;
+        padding:9px 11px;
+    }
+
+    .hud-top{
+        top:10px;
+        right:5px;
+    }
+
+    .hud-bottom{
+        bottom:15px;
+        left:5px;
+    }
+
+    .hud-side{
+        right:5px;
+        bottom:95px;
+    }
+
+    /*
+    Sections.
+    */
+
+    .contact-system,
+    .contact-location,
+    .contact-faq{
+        padding:var(--space-9) 18px;
+    }
+
+    .contact-form-panel{
+        padding:var(--space-6);
+    }
+
+    .contact-info-panel{
+        padding:var(--space-5);
+    }
+
+    /*
+    Form becomes one column.
+    */
+
+    .form-row{
+        grid-template-columns:1fr;
+        gap:var(--space-5);
+    }
+
+    .contact-panel-header{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .panel-status{
+        align-self:flex-start;
+    }
+
+    .contact-section-header h2,
+    .contact-location-header h2{
+        font-size:clamp(2rem,7vw,3rem);
+    }
+
+    .contact-section-header p{
+        font-size:.9rem;
+    }
+
+    /*
+    Map.
+    */
+
+    .contact-map-system{
+        padding:12px;
+    }
+
+    .map-frame{
+        height:420px;
+    }
+
+    .map-hud{
+        min-width:auto;
+        max-width:calc(100% - 20px);
+        gap:15px;
+        padding:9px 11px;
+    }
+
+    .map-hud span{
+        font-size:.52rem;
+    }
+
+    .map-hud strong{
+        font-size:.5rem;
+    }
+
+    .map-location-label{
+        bottom:30%;
+    }
+
+    .map-coordinates{
+        right:15px;
+        bottom:15px;
+    }
+
+    .map-corner{
+        width:28px;
+        height:28px;
+    }
+
+    .map-corner-one{
+        top:10px;
+        left:10px;
+    }
+
+    .map-corner-two{
+        top:10px;
+        right:10px;
+    }
+
+    .map-corner-three{
+        bottom:10px;
+        left:10px;
+    }
+
+    .map-corner-four{
+        right:10px;
+        bottom:10px;
+    }
+
+    /*
+    FAQ becomes one column.
+    */
+
+    .contact-faq-grid{
+        grid-template-columns:1fr;
+        max-width:760px;
+    }
+
+}
+
+
+/*==================================================
+576px — MOBILE
+==================================================*/
+
+@media (max-width:576px){
+
+    .contact-hero{
+        padding:var(--space-7) 15px var(--space-8);
+    }
+
+    .contact-hero-title{
+        font-size:clamp(2.35rem,11vw,3.2rem);
+        letter-spacing:-.035em;
+    }
+
+    .contact-hero-text{
+        font-size:.88rem;
+        line-height:1.7;
+    }
+
+    .contact-hero-status{
+        gap:7px;
+        font-size:.55rem;
+    }
+
+    .contact-hero-visual{
+        min-height:355px;
+    }
+
+    .contact-core-system{
+        width:285px;
+        height:285px;
+    }
+
+    .contact-core-energy{
+        width:120px;
+        height:120px;
+    }
+
+    .orbit-one{
+        width:270px;
+        height:105px;
+    }
+
+    .orbit-two{
+        width:245px;
+        height:245px;
+    }
+
+    .orbit-three{
+        width:290px;
+        height:145px;
+    }
+
+    .contact-core-ring{
+        width:155px;
+        height:155px;
+    }
+
+    .contact-core-ring::before{
+        inset:-11px;
+    }
+
+    .contact-core-ring-inner{
+        width:88px;
+        height:88px;
+    }
+
+    .contact-core-ring-inner i{
+        font-size:1.35rem;
+    }
+
+    .contact-core-center{
+        width:44px;
+        height:44px;
+    }
+
+    .contact-core-center i{
+        font-size:.95rem;
+    }
+
+    /*
+    Nodes.
+    */
+
+    .contact-data-node{
+        width:9px;
+        height:9px;
+    }
+
+    .contact-data-node span{
+        inset:2px;
+    }
+
+    .node-one{
+        top:45px;
+        left:45px;
+    }
+
+    .node-two{
+        top:70px;
+        right:25px;
+    }
+
+    .node-three{
+        bottom:45px;
+        right:45px;
+    }
+
+    .node-four{
+        bottom:70px;
+        left:25px;
+    }
+
+    /*
+    Labels.
+    */
+
+    .contact-data-label{
+        min-width:70px;
+        padding:6px 8px;
+    }
+
+    .contact-data-label small{
+        font-size:.42rem;
+        letter-spacing:.08em;
+    }
+
+    .contact-data-label strong{
+        font-size:.52rem;
+        letter-spacing:.05em;
+    }
+
+    .contact-data-label::before{
+        width:18px;
+    }
+
+    .label-one{
+        top:25px;
+        left:0;
+    }
+
+    .label-two{
+        top:110px;
+        right:-2px;
+    }
+
+    .label-three{
+        bottom:45px;
+        right:-2px;
+    }
+
+    .label-four{
+        bottom:20px;
+        left:0;
+    }
+
+    /*
+    HUD.
+    */
+
+    .contact-hero-hud{
+        min-width:115px;
+        padding:7px 9px;
+        gap:4px;
+    }
+
+    .contact-hero-hud span{
+        font-size:.43rem;
+    }
+
+    .contact-hero-hud strong{
+        font-size:.5rem;
+    }
+
+    .hud-top{
+        top:0;
+        right:0;
+    }
+
+    .hud-bottom{
+        bottom:0;
+        left:0;
+    }
+
+    .hud-side{
+        display:none;
+    }
+
+    /*
+    Sections.
+    */
+
+    .contact-system,
+    .contact-location,
+    .contact-faq{
+        padding:var(--space-8) 15px;
+    }
+
+    .contact-section-header{
+        margin-bottom:var(--space-6);
+    }
+
+    .contact-section-header h2,
+    .contact-location-header h2{
+        font-size:clamp(1.8rem,9vw,2.6rem);
+    }
+
+    .contact-section-header p,
+    .contact-location-header p{
+        font-size:.84rem;
+        line-height:1.7;
+    }
+
+    /*
+    Panels.
+    */
+
+    .contact-form-panel{
+        padding:var(--space-5);
+    }
+
+    .contact-info-panel{
+        padding:var(--space-4);
+    }
+
+    .contact-panel-header h3,
+    .contact-info-header h3{
+        font-size:1.15rem;
+    }
+
+    .contact-panel-header > div:first-child span,
+    .contact-info-header > span{
+        font-size:.56rem;
+    }
+
+    /*
+    Form.
+    */
+
+    .contact-form{
+        gap:var(--space-4);
+    }
+
+    .form-row{
+        gap:var(--space-4);
+    }
+
+    .input-shell input,
+    .input-shell select{
+        height:50px;
+        font-size:.82rem;
+    }
+
+    .input-shell textarea{
+        min-height:130px;
+        font-size:.82rem;
+    }
+
+    .contact-submit-btn{
+        min-height:52px;
+        font-size:.68rem;
+    }
+
+    /*
+    Contact cards.
+    */
+
+    .contact-info-card{
+        grid-template-columns:36px minmax(0,1fr) auto;
+        min-height:70px;
+        padding:10px;
+        gap:9px;
+    }
+
+    .contact-info-icon{
+        width:36px;
+        height:36px;
+    }
+
+    .contact-info-content strong{
+        font-size:.7rem;
+    }
+
+    .contact-info-content span{
+        font-size:.58rem;
+    }
+
+    .contact-card-arrow{
+        font-size:.55rem;
+    }
+
+    /*
+    Availability.
+    */
+
+    .contact-availability{
+        padding:12px;
+        gap:9px;
+    }
+
+    .availability-indicator{
+        width:30px;
+        height:30px;
+        flex-basis:30px;
+    }
+
+    /*
+    Map.
+    */
+
+    .contact-map-system{
+        padding:8px;
+    }
+
+    .map-frame{
+        height:360px;
+    }
+
+    .map-hud{
+        max-width:calc(100% - 16px);
+        gap:8px;
+        padding:7px 9px;
+    }
+
+    .map-hud span{
+        font-size:.44rem;
+        letter-spacing:.06em;
+    }
+
+    .map-hud span i{
+        margin-right:4px;
+    }
+
+    .map-hud strong{
+        font-size:.43rem;
+    }
+
+    .map-location-label{
+        bottom:28%;
+        padding:7px 9px;
+    }
+
+    .map-location-label span{
+        font-size:.52rem;
+    }
+
+    .map-location-label strong{
+        font-size:.45rem;
+    }
+
+    .map-location-label::before{
+        width:30px;
+    }
+
+    .map-coordinates{
+        right:10px;
+        bottom:10px;
+        padding:7px 9px;
+    }
+
+    .map-coordinates span{
+        font-size:.43rem;
+    }
+
+    .map-coordinates strong{
+        font-size:.48rem;
+    }
+
+    .map-grid-overlay{
+        background-size:30px 30px;
+    }
+
+    /*
+    FAQ.
+    */
+
+    .contact-faq-item summary{
+        min-height:60px;
+        padding:15px;
+        font-size:.72rem;
+        gap:12px;
+    }
+
+    .contact-faq-item p{
+        padding:0 15px 15px;
+        font-size:.72rem;
+        line-height:1.7;
+    }
+
+}
+
+
+/*==================================================
+480px — SMALL MOBILE
+==================================================*/
+
+@media (max-width:480px){
+
+    .contact-hero{
+        padding-left:12px;
+        padding-right:12px;
+    }
+
+    .contact-hero-title{
+        font-size:clamp(2.1rem,12vw,2.8rem);
+    }
+
+    .contact-hero-text{
+        font-size:.82rem;
+    }
+
+    .contact-primary-btn,
+    .contact-secondary-btn{
+        min-height:49px;
+        padding:0 17px;
+        font-size:.75rem;
+    }
+
+    .contact-hero-visual{
+        min-height:320px;
+    }
+
+    .contact-core-system{
+        width:250px;
+        height:250px;
+    }
+
+    .orbit-one{
+        width:235px;
+        height:90px;
+    }
+
+    .orbit-two{
+        width:215px;
+        height:215px;
+    }
+
+    .orbit-three{
+        width:255px;
+        height:125px;
+    }
+
+    .contact-core-ring{
+        width:135px;
+        height:135px;
+    }
+
+    .contact-core-ring-inner{
+        width:76px;
+        height:76px;
+    }
+
+    .contact-core-ring-inner i{
+        font-size:1.15rem;
+    }
+
+    .contact-core-center{
+        width:40px;
+        height:40px;
+    }
+
+    /*
+    Keep labels compact so they don't
+    create horizontal overflow.
+    */
+
+    .contact-data-label{
+        min-width:62px;
+        max-width:75px;
+        padding:5px 6px;
+    }
+
+    .contact-data-label small{
+        font-size:.38rem;
+    }
+
+    .contact-data-label strong{
+        font-size:.46rem;
+    }
+
+    .label-one{
+        left:2px;
+    }
+
+    .label-two{
+        right:2px;
+    }
+
+    .label-three{
+        right:2px;
+    }
+
+    .label-four{
+        left:2px;
+    }
+
+    .contact-hero-hud{
+        min-width:100px;
+    }
+
+    .hud-side{
+        display:none;
+    }
+
+    .contact-form-panel{
+        padding:18px;
+    }
+
+    .contact-info-panel{
+        padding:15px;
+    }
+
+    .contact-info-card{
+        grid-template-columns:34px minmax(0,1fr) 12px;
+    }
+
+    .contact-info-content strong{
+        font-size:.66rem;
+    }
+
+    .contact-info-content span{
+        font-size:.54rem;
+    }
+
+    .map-frame{
+        height:320px;
+    }
+
+    .map-hud-bottom{
+        right:5px;
+    }
+
+    .map-location-label{
+        transform:translateX(15px);
+    }
+
+    .map-location-label::before{
+        width:20px;
+    }
+
+}
+
+
+/*==================================================
+360px — VERY SMALL MOBILE
+==================================================*/
+
+@media (max-width:360px){
+
+    .contact-hero{
+        padding-left:10px;
+        padding-right:10px;
+    }
+
+    .contact-hero-title{
+        font-size:2rem;
+    }
+
+    .contact-hero-text{
+        font-size:.78rem;
+    }
+
+    .contact-hero-status{
+        font-size:.48rem;
+    }
+
+    .contact-hero-visual{
+        min-height:285px;
+    }
+
+    .contact-core-system{
+        width:220px;
+        height:220px;
+    }
+
+    .contact-core-energy{
+        width:95px;
+        height:95px;
+    }
+
+    .orbit-one{
+        width:205px;
+        height:78px;
+    }
+
+    .orbit-two{
+        width:190px;
+        height:190px;
+    }
+
+    .orbit-three{
+        width:220px;
+        height:108px;
+    }
+
+    .contact-core-ring{
+        width:118px;
+        height:118px;
+    }
+
+    .contact-core-ring::before{
+        inset:-9px;
+    }
+
+    .contact-core-ring-inner{
+        width:66px;
+        height:66px;
+    }
+
+    .contact-core-ring-inner i{
+        font-size:1rem;
+    }
+
+    .contact-core-center{
+        width:36px;
+        height:36px;
+    }
+
+    .contact-core-center i{
+        font-size:.8rem;
+    }
+
+    /*
+    Hide decorative labels at extremely
+    narrow widths rather than allowing
+    them to collide with the core.
+    */
+
+    .contact-data-label{
+        display:none;
+    }
+
+    .contact-data-node{
+        width:8px;
+        height:8px;
+    }
+
+    .node-one{
+        top:35px;
+        left:35px;
+    }
+
+    .node-two{
+        top:55px;
+        right:20px;
+    }
+
+    .node-three{
+        bottom:35px;
+        right:35px;
+    }
+
+    .node-four{
+        bottom:55px;
+        left:20px;
+    }
+
+    /*
+    HUD.
+    */
+
+    .contact-hero-hud{
+        min-width:85px;
+        padding:6px 7px;
+    }
+
+    .contact-hero-hud span{
+        font-size:.37rem;
+    }
+
+    .contact-hero-hud strong{
+        font-size:.43rem;
+    }
+
+    /*
+    Sections.
+    */
+
+    .contact-system,
+    .contact-location,
+    .contact-faq{
+        padding-left:10px;
+        padding-right:10px;
+    }
+
+    .contact-section-header h2,
+    .contact-location-header h2{
+        font-size:1.8rem;
+    }
+
+    .contact-form-panel{
+        padding:15px;
+    }
+
+    .contact-info-panel{
+        padding:12px;
+    }
+
+    .contact-panel-header{
+        gap:12px;
+    }
+
+    .panel-status{
+        width:100%;
+        justify-content:center;
+    }
+
+    .input-shell input,
+    .input-shell select{
+        height:48px;
+        padding-left:40px;
+    }
+
+    .input-shell textarea{
+        padding-left:40px;
+    }
+
+    .contact-info-card{
+        grid-template-columns:32px minmax(0,1fr);
+    }
+
+    .contact-card-arrow{
+        display:none;
+    }
+
+    .contact-info-icon{
+        width:32px;
+        height:32px;
+    }
+
+    .contact-info-content strong{
+        font-size:.62rem;
+    }
+
+    .contact-info-content span{
+        font-size:.5rem;
+    }
+
+    .map-frame{
+        height:280px;
+    }
+
+    .map-hud{
+        max-width:calc(100% - 10px);
+    }
+
+    .map-hud span{
+        font-size:.38rem;
+    }
+
+    .map-hud strong{
+        font-size:.38rem;
+    }
+
+    .map-location-label{
+        padding:6px 7px;
+    }
+
+    .map-location-label span{
+        font-size:.45rem;
+    }
+
+    .map-location-label strong{
+        font-size:.4rem;
+    }
+
+    .map-coordinates{
+        display:none;
+    }
+
+    .contact-faq-item summary{
+        padding:13px;
+        font-size:.65rem;
+    }
+
+    .contact-faq-item p{
+        padding:0 13px 13px;
+        font-size:.66rem;
+    }
+
+}

@@ -1,0 +1,1029 @@
+/*==================================================
+RESPONSIVE SYSTEM
+1200px → 992px → 768px → 576px → 480px → 360px
+==================================================*/
+
+
+/*==================================================
+1200px — LARGE TABLET / SMALL DESKTOP
+==================================================*/
+
+@media (max-width:1200px){
+
+    .pricing-hero-container{
+        gap:35px;
+    }
+
+    .pricing-hero-visual{
+        width:470px;
+        height:470px;
+    }
+
+    .orbit-three{
+        width:440px;
+        height:440px;
+    }
+
+    .pricing-consulting-container{
+        gap:50px;
+    }
+
+    .pricing-card{
+        padding:32px;
+    }
+
+}
+
+
+/*==================================================
+992px — TABLET
+==================================================*/
+
+@media (max-width:992px){
+
+    /*----------------------------------------------
+    HERO
+    ----------------------------------------------*/
+
+    .pricing-hero{
+        min-height:auto;
+
+        padding:
+            130px 0 100px;
+    }
+
+    .pricing-hero-container{
+        grid-template-columns:1fr;
+
+        gap:55px;
+
+        text-align:center;
+    }
+
+    .pricing-hero-content{
+        max-width:800px;
+
+        margin:auto;
+    }
+
+    .pricing-hero-content > p{
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .pricing-hero-status{
+        justify-content:center;
+    }
+
+    .pricing-hero-actions{
+        justify-content:center;
+    }
+
+    .pricing-hero-visual{
+        width:460px;
+        height:460px;
+    }
+
+
+    /*----------------------------------------------
+    PRICING
+    ----------------------------------------------*/
+
+    .pricing-grid{
+        grid-template-columns:
+            repeat(2,minmax(0,1fr));
+
+        gap:22px;
+    }
+
+    .pricing-card{
+        padding:30px;
+    }
+
+
+    /*----------------------------------------------
+    CONSULTING
+    ----------------------------------------------*/
+
+    .pricing-consulting-container{
+        grid-template-columns:1fr;
+
+        gap:65px;
+    }
+
+    .consulting-content{
+        max-width:760px;
+
+        margin:auto;
+
+        text-align:center;
+    }
+
+    .consulting-free-offer{
+        text-align:left;
+    }
+
+    .consulting-actions{
+        justify-content:center;
+    }
+
+
+    /*----------------------------------------------
+    PROCESS
+    ----------------------------------------------*/
+
+    .pricing-process-grid{
+        grid-template-columns:
+            repeat(2,minmax(0,1fr));
+
+        gap:20px;
+    }
+
+}
+
+
+/*==================================================
+768px — TABLET / MOBILE
+==================================================*/
+
+@media (max-width:768px){
+
+    /*----------------------------------------------
+    SECTION SPACING
+    ----------------------------------------------*/
+
+    .pricing-system,
+    .pricing-process{
+        padding:90px 0;
+    }
+
+    .pricing-consulting{
+        padding:100px 0;
+    }
+
+
+    /*----------------------------------------------
+    HERO
+    ----------------------------------------------*/
+
+    .pricing-hero{
+        padding:
+            110px 0 80px;
+    }
+
+    .pricing-hero-container,
+    .pricing-consulting-container,
+    .pricing-container{
+        width:
+            min(
+                var(--container-width),
+                calc(100% - 30px)
+            );
+    }
+
+    .pricing-hero-content h1{
+        font-size:
+            clamp(
+                2.7rem,
+                9vw,
+                4rem
+            );
+    }
+
+    .pricing-hero-content > p{
+        font-size:1rem;
+
+        line-height:1.8;
+    }
+
+
+    /*----------------------------------------------
+    HERO VISUAL
+    ----------------------------------------------*/
+
+    .pricing-hero-visual{
+        width:400px;
+        height:400px;
+    }
+
+    .orbit-one{
+        width:220px;
+        height:220px;
+    }
+
+    .orbit-two{
+        width:300px;
+        height:300px;
+    }
+
+    .orbit-three{
+        width:380px;
+        height:380px;
+    }
+
+    .pricing-core{
+        width:120px;
+        height:120px;
+    }
+
+    .pricing-core-inner{
+        width:78px;
+        height:78px;
+    }
+
+    .pricing-node{
+        width:54px;
+        height:54px;
+    }
+
+
+    /*----------------------------------------------
+    PRICING GRID
+    ----------------------------------------------*/
+
+    .pricing-grid{
+        grid-template-columns:1fr;
+
+        gap:22px;
+    }
+
+    .pricing-card{
+        padding:30px;
+    }
+
+
+    /*----------------------------------------------
+    CONSULTING VISUAL
+    ----------------------------------------------*/
+
+    .consulting-visual{
+        width:380px;
+        height:380px;
+    }
+
+    .consulting-orbit.orbit-one{
+        width:220px;
+        height:220px;
+    }
+
+    .consulting-orbit.orbit-two{
+        width:320px;
+        height:320px;
+    }
+
+
+    /*----------------------------------------------
+    PROCESS
+    ----------------------------------------------*/
+
+    .pricing-process-grid{
+        grid-template-columns:
+            repeat(2,minmax(0,1fr));
+    }
+
+}
+
+
+/*==================================================
+576px — LARGE MOBILE
+==================================================*/
+
+@media (max-width:576px){
+
+    /*----------------------------------------------
+    SECTION SPACING
+    ----------------------------------------------*/
+
+    .pricing-system,
+    .pricing-process{
+        padding:75px 0;
+    }
+
+    .pricing-consulting{
+        padding:80px 0;
+    }
+
+
+    /*----------------------------------------------
+    CONTAINERS
+    ----------------------------------------------*/
+
+    .pricing-hero-container,
+    .pricing-consulting-container,
+    .pricing-container{
+        width:
+            calc(100% - 30px);
+    }
+
+
+    /*----------------------------------------------
+    HERO
+    ----------------------------------------------*/
+
+    .pricing-hero{
+        padding:
+            100px 0 70px;
+    }
+
+    .pricing-hero-container{
+        gap:40px;
+    }
+
+    .pricing-hero-content h1{
+        font-size:
+            clamp(
+                2.35rem,
+                11vw,
+                3.2rem
+            );
+
+        line-height:1.05;
+    }
+
+    .pricing-hero-content > p{
+        font-size:.95rem;
+
+        line-height:1.75;
+    }
+
+
+    /*----------------------------------------------
+    HERO ACTIONS
+    ----------------------------------------------*/
+
+    .pricing-hero-actions{
+        flex-direction:column;
+
+        width:100%;
+
+        gap:12px;
+    }
+
+    .pricing-hero-actions .pricing-card-btn{
+        width:100%;
+    }
+
+
+    /*----------------------------------------------
+    HERO VISUAL
+    ----------------------------------------------*/
+
+    .pricing-hero-visual{
+        width:330px;
+        height:330px;
+    }
+
+    .orbit-one{
+        width:180px;
+        height:180px;
+    }
+
+    .orbit-two{
+        width:250px;
+        height:250px;
+    }
+
+    .orbit-three{
+        width:315px;
+        height:315px;
+    }
+
+    .pricing-core{
+        width:100px;
+        height:100px;
+    }
+
+    .pricing-core-inner{
+        width:68px;
+        height:68px;
+    }
+
+    .pricing-core-inner i{
+        font-size:1.5rem;
+    }
+
+    .pricing-node{
+        width:46px;
+        height:46px;
+
+        border-radius:14px;
+    }
+
+    .pricing-node i{
+        font-size:.95rem;
+    }
+
+    .pricing-node-one{
+        left:5%;
+    }
+
+    .pricing-node-two{
+        right:2%;
+    }
+
+    .pricing-node-three{
+        left:16%;
+    }
+
+
+    /*----------------------------------------------
+    SECTION HEADER
+    ----------------------------------------------*/
+
+    .pricing-section-header{
+        margin-bottom:50px;
+    }
+
+    .pricing-section-header h2{
+        font-size:
+            clamp(
+                2rem,
+                9vw,
+                3rem
+            );
+    }
+
+    .pricing-section-header p{
+        font-size:.93rem;
+    }
+
+
+    /*----------------------------------------------
+    PRICING CARD
+    ----------------------------------------------*/
+
+    .pricing-card{
+        padding:25px;
+
+        border-radius:21px;
+    }
+
+    .pricing-card h3{
+        font-size:1.45rem;
+    }
+
+    .pricing-card-description{
+        font-size:.9rem;
+    }
+
+    .pricing-price strong{
+        font-size:1.7rem;
+    }
+
+
+    /*----------------------------------------------
+    CONSULTING
+    ----------------------------------------------*/
+
+    .consulting-visual{
+        width:320px;
+        height:320px;
+    }
+
+    .consulting-orbit.orbit-one{
+        width:185px;
+        height:185px;
+    }
+
+    .consulting-orbit.orbit-two{
+        width:275px;
+        height:275px;
+    }
+
+    .consulting-core{
+        width:105px;
+        height:105px;
+    }
+
+    .consulting-node{
+        width:46px;
+        height:46px;
+    }
+
+    .consulting-content h2{
+        font-size:
+            clamp(
+                2rem,
+                9vw,
+                3rem
+            );
+    }
+
+    .consulting-content > p{
+        font-size:.93rem;
+
+        line-height:1.8;
+    }
+
+    .consulting-free-offer{
+        gap:12px;
+
+        padding:17px;
+    }
+
+    .consulting-offer-icon{
+        width:45px;
+        height:45px;
+    }
+
+
+    /*----------------------------------------------
+    PROCESS
+    ----------------------------------------------*/
+
+    .pricing-process-grid{
+        grid-template-columns:1fr;
+    }
+
+    .process-item{
+        padding:28px 22px;
+    }
+
+}
+
+
+/*==================================================
+480px — MOBILE
+==================================================*/
+
+@media (max-width:480px){
+
+    /*----------------------------------------------
+    CONTAINERS
+    ----------------------------------------------*/
+
+    .pricing-hero-container,
+    .pricing-consulting-container,
+    .pricing-container{
+        width:
+            calc(100% - 24px);
+    }
+
+
+    /*----------------------------------------------
+    HERO
+    ----------------------------------------------*/
+
+    .pricing-hero{
+        padding:
+            90px 0 65px;
+    }
+
+    .pricing-hero-container{
+        gap:35px;
+    }
+
+    .pricing-hero-content h1{
+        font-size:
+            clamp(
+                2.1rem,
+                12vw,
+                2.8rem
+            );
+
+        letter-spacing:-.045em;
+    }
+
+    .pricing-hero-content > p{
+        font-size:.9rem;
+
+        line-height:1.7;
+    }
+
+
+    /*----------------------------------------------
+    SYSTEM LABEL
+    ----------------------------------------------*/
+
+    .section-system-label{
+        gap:8px;
+
+        font-size:.62rem;
+
+        letter-spacing:.12em;
+    }
+
+    .system-line{
+        width:30px;
+    }
+
+
+    /*----------------------------------------------
+    STATUS
+    ----------------------------------------------*/
+
+    .pricing-hero-status{
+        gap:9px;
+
+        font-size:.62rem;
+
+        letter-spacing:.07em;
+    }
+
+
+    /*----------------------------------------------
+    HERO VISUAL
+    ----------------------------------------------*/
+
+    .pricing-hero-visual{
+        width:290px;
+        height:290px;
+    }
+
+    .orbit-one{
+        width:160px;
+        height:160px;
+    }
+
+    .orbit-two{
+        width:220px;
+        height:220px;
+    }
+
+    .orbit-three{
+        width:275px;
+        height:275px;
+    }
+
+    .pricing-core{
+        width:88px;
+        height:88px;
+    }
+
+    .pricing-core-inner{
+        width:60px;
+        height:60px;
+    }
+
+    .pricing-core-inner i{
+        font-size:1.3rem;
+    }
+
+    .pricing-node{
+        width:42px;
+        height:42px;
+
+        border-radius:12px;
+    }
+
+    .pricing-node i{
+        font-size:.85rem;
+    }
+
+
+    /*----------------------------------------------
+    PRICING CARD
+    ----------------------------------------------*/
+
+    .pricing-card{
+        padding:22px;
+
+        border-radius:18px;
+    }
+
+    .pricing-card-top{
+        margin-bottom:22px;
+    }
+
+    .pricing-card-icon{
+        width:50px;
+        height:50px;
+
+        border-radius:14px;
+    }
+
+    .pricing-card h3{
+        font-size:1.35rem;
+    }
+
+    .pricing-card-description{
+        font-size:.87rem;
+
+        line-height:1.7;
+    }
+
+    .pricing-best-for{
+        padding:13px;
+
+        gap:10px;
+    }
+
+    .pricing-features{
+        gap:11px;
+    }
+
+    .pricing-features li{
+        font-size:.78rem;
+    }
+
+    .pricing-card-btn{
+        min-height:52px;
+
+        padding:13px 16px;
+
+        font-size:.78rem;
+    }
+
+
+    /*----------------------------------------------
+    CONSULTING
+    ----------------------------------------------*/
+
+    .consulting-visual{
+        width:285px;
+        height:285px;
+    }
+
+    .consulting-orbit.orbit-one{
+        width:165px;
+        height:165px;
+    }
+
+    .consulting-orbit.orbit-two{
+        width:235px;
+        height:235px;
+    }
+
+    .consulting-core{
+        width:90px;
+        height:90px;
+    }
+
+    .consulting-core i{
+        font-size:1.5rem;
+    }
+
+    .consulting-node{
+        width:42px;
+        height:42px;
+
+        border-radius:12px;
+    }
+
+    .consulting-node i{
+        font-size:.85rem;
+    }
+
+    .consulting-content h2{
+        font-size:
+            clamp(
+                1.9rem,
+                10vw,
+                2.6rem
+            );
+    }
+
+    .consulting-free-offer{
+        padding:15px;
+
+        gap:10px;
+    }
+
+    .consulting-offer-icon{
+        width:42px;
+        height:42px;
+
+        border-radius:12px;
+    }
+
+    .consulting-free-offer strong{
+        font-size:.95rem;
+    }
+
+    .consulting-free-offer p{
+        font-size:.76rem;
+    }
+
+    .consulting-actions{
+        flex-direction:column;
+
+        width:100%;
+    }
+
+    .consulting-btn,
+    .pricing-secondary-btn{
+        width:100%;
+    }
+
+
+    /*----------------------------------------------
+    PROCESS
+    ----------------------------------------------*/
+
+    .process-item{
+        padding:25px 18px;
+    }
+
+    .process-item > i{
+        width:54px;
+        height:54px;
+    }
+
+}
+
+
+/*==================================================
+360px — SMALL MOBILE
+==================================================*/
+
+@media (max-width:360px){
+
+    /*----------------------------------------------
+    CONTAINERS
+    ----------------------------------------------*/
+
+    .pricing-hero-container,
+    .pricing-consulting-container,
+    .pricing-container{
+        width:
+            calc(100% - 20px);
+    }
+
+
+    /*----------------------------------------------
+    HERO
+    ----------------------------------------------*/
+
+    .pricing-hero{
+        padding:
+            80px 0 55px;
+    }
+
+    .pricing-hero-content h1{
+        font-size:
+            clamp(
+                1.9rem,
+                12vw,
+                2.45rem
+            );
+    }
+
+    .pricing-hero-content > p{
+        font-size:.86rem;
+    }
+
+
+    /*----------------------------------------------
+    HERO VISUAL
+    ----------------------------------------------*/
+
+    .pricing-hero-visual{
+        width:260px;
+        height:260px;
+    }
+
+    .orbit-one{
+        width:145px;
+        height:145px;
+    }
+
+    .orbit-two{
+        width:200px;
+        height:200px;
+    }
+
+    .orbit-three{
+        width:245px;
+        height:245px;
+    }
+
+    .pricing-core{
+        width:78px;
+        height:78px;
+    }
+
+    .pricing-core-inner{
+        width:54px;
+        height:54px;
+    }
+
+    .pricing-core-inner i{
+        font-size:1.15rem;
+    }
+
+    .pricing-node{
+        width:38px;
+        height:38px;
+
+        border-radius:10px;
+    }
+
+    .pricing-node i{
+        font-size:.75rem;
+    }
+
+
+    /*----------------------------------------------
+    PRICING
+    ----------------------------------------------*/
+
+    .pricing-card{
+        padding:19px;
+    }
+
+    .pricing-card-icon{
+        width:46px;
+        height:46px;
+    }
+
+    .pricing-card h3{
+        font-size:1.25rem;
+    }
+
+    .pricing-price strong{
+        font-size:1.55rem;
+    }
+
+    .pricing-negotiable{
+        padding:10px;
+    }
+
+    .pricing-features li{
+        font-size:.75rem;
+    }
+
+
+    /*----------------------------------------------
+    CONSULTING
+    ----------------------------------------------*/
+
+    .consulting-visual{
+        width:250px;
+        height:250px;
+    }
+
+    .consulting-orbit.orbit-one{
+        width:145px;
+        height:145px;
+    }
+
+    .consulting-orbit.orbit-two{
+        width:205px;
+        height:205px;
+    }
+
+    .consulting-core{
+        width:78px;
+        height:78px;
+    }
+
+    .consulting-core i{
+        font-size:1.25rem;
+    }
+
+    .consulting-node{
+        width:38px;
+        height:38px;
+
+        border-radius:10px;
+    }
+
+    .consulting-node i{
+        font-size:.75rem;
+    }
+
+    .consulting-content h2{
+        font-size:
+            clamp(
+                1.75rem,
+                10vw,
+                2.3rem
+            );
+    }
+
+    .consulting-free-offer{
+        padding:13px;
+    }
+
+    .consulting-offer-icon{
+        width:38px;
+        height:38px;
+    }
+
+    .consulting-free-offer span{
+        font-size:.57rem;
+    }
+
+    .consulting-free-offer strong{
+        font-size:.88rem;
+    }
+
+    .consulting-free-offer p{
+        font-size:.72rem;
+    }
+
+
+    /*----------------------------------------------
+    PROCESS
+    ----------------------------------------------*/
+
+    .process-item{
+        padding:22px 15px;
+    }
+
+    .process-item > i{
+        width:50px;
+        height:50px;
+    }
+
+}

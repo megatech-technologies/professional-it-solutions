@@ -1,0 +1,393 @@
+/*==================================================
+  SERVICE CATEGORIES
+  Premium Command Panel Layout
+==================================================*/
+
+.service-categories{
+
+    position:relative;
+
+    padding:140px 0;
+
+    overflow:hidden;
+
+}
+
+
+/*==================================================
+  CATEGORY HEADER
+==================================================*/
+
+.service-categories-header{
+
+    max-width:800px;
+
+    margin:0 auto 75px;
+
+    text-align:center;
+
+}
+
+
+.service-categories-header h2{
+
+    margin:20px 0;
+
+    font-size:clamp(2.7rem,4.5vw,4.5rem);
+
+    line-height:1.05;
+
+    letter-spacing:-2px;
+
+    font-weight:800;
+
+}
+
+
+.service-categories-header p{
+
+    max-width:680px;
+
+    margin:auto;
+
+    color:var(--text-light);
+
+    font-size:1.05rem;
+
+    line-height:1.85;
+
+}
+
+
+/*==================================================
+  CATEGORY LAYOUT
+==================================================*/
+
+.service-category-grid{
+
+    width:100%;
+
+    max-width:1400px;
+
+    margin:auto;
+
+    padding:0 40px;
+
+    display:grid;
+
+    grid-template-columns:1.15fr .85fr;
+
+    gap:24px;
+
+}
+
+
+/*==================================================
+  CATEGORY CARD BASE
+==================================================*/
+
+.service-category-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    min-height:270px;
+
+    padding:38px;
+
+    border-radius:24px;
+
+}
+
+
+/*==================================================
+  FEATURED CATEGORY
+==================================================*/
+
+.service-category-card:first-child{
+
+    grid-row:span 2;
+
+    min-height:570px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:flex-end;
+
+    padding:45px;
+
+    background:
+
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(99,232,255,.12),
+            transparent 35%
+        ),
+
+        rgba(7,17,29,.55);
+
+}
+
+
+/*==================================================
+  CARD ICON
+==================================================*/
+
+.service-category-icon{
+
+    width:58px;
+
+    height:58px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin-bottom:25px;
+
+    border-radius:16px;
+
+    border:1px solid rgba(99,232,255,.22);
+
+    background:rgba(99,232,255,.06);
+
+    color:var(--primary-light);
+
+    font-size:1.25rem;
+
+}
+
+
+/* FEATURED ICON */
+
+.service-category-card:first-child
+.service-category-icon{
+
+    width:72px;
+
+    height:72px;
+
+    font-size:1.5rem;
+
+    margin-bottom:30px;
+
+}
+
+
+/*==================================================
+  CARD NUMBER
+==================================================*/
+
+.service-category-count{
+
+    position:absolute;
+
+    top:28px;
+
+    right:30px;
+
+    color:rgba(255,255,255,.28);
+
+    font-size:.65rem;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+}
+
+
+/*==================================================
+  CARD CONTENT
+==================================================*/
+
+.service-category-card h3{
+
+    margin-bottom:13px;
+
+    font-size:1.4rem;
+
+    line-height:1.25;
+
+    font-weight:750;
+
+}
+
+
+.service-category-card:first-child h3{
+
+    font-size:2rem;
+
+    max-width:420px;
+
+}
+
+
+.service-category-card p{
+
+    max-width:470px;
+
+    color:var(--text-light);
+
+    font-size:.94rem;
+
+    line-height:1.75;
+
+}
+
+
+.service-category-card:first-child p{
+
+    max-width:520px;
+
+    font-size:1rem;
+
+}
+
+
+/*==================================================
+  CARD ARROW
+==================================================*/
+
+.service-category-arrow{
+
+    position:absolute;
+
+    right:28px;
+
+    bottom:28px;
+
+    width:42px;
+
+    height:42px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    border:1px solid rgba(99,232,255,.18);
+
+    color:var(--primary);
+
+    transition:
+        transform .35s ease,
+        background .35s ease,
+        border-color .35s ease;
+
+}
+
+
+.service-category-card:hover
+.service-category-arrow{
+
+    transform:translate(5px,-5px);
+
+    background:rgba(99,232,255,.08);
+
+    border-color:var(--primary);
+
+}
+
+
+/*==================================================
+  FEATURED CARD VISUAL GLOW
+==================================================*/
+
+.service-category-card:first-child::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:420px;
+
+    height:420px;
+
+    right:-180px;
+
+    top:-180px;
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(99,232,255,.13),
+            transparent 70%
+        );
+
+    filter:blur(25px);
+
+    pointer-events:none;
+
+}
+
+
+/*==================================================
+  CARD HOVER LIGHT
+==================================================*/
+
+.service-category-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:0;
+
+    width:0;
+
+    height:2px;
+
+    background:var(--primary);
+
+    box-shadow:0 0 15px var(--primary);
+
+    transition:width .5s ease;
+
+}
+
+
+.service-category-card:hover::after{
+
+    width:90px;
+
+}
+
+
+/*==================================================
+  CATEGORY DIVIDER
+==================================================*/
+
+.service-categories-divider{
+
+    width:100%;
+
+    max-width:1400px;
+
+    height:1px;
+
+    margin:85px auto 0;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(99,232,255,.2),
+            transparent
+        );
+
+}

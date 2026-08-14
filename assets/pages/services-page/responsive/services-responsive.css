@@ -1,0 +1,1367 @@
+/*==================================================
+  SERVICES RESPONSIVE
+  MegaTech Technologies
+==================================================*/
+
+
+/*==================================================
+  LARGE LAPTOPS
+  1200px
+==================================================*/
+
+@media (max-width:1200px){
+
+    /*==================================================
+      SERVICES HERO
+    ==================================================*/
+
+    .services-hero{
+
+        min-height:auto;
+
+        padding:140px 0 90px;
+
+    }
+
+
+    .services-hero-grid{
+
+        grid-template-columns:1fr 1fr;
+
+        padding:0 30px;
+
+        gap:20px;
+
+    }
+
+
+    .services-hero-title{
+
+        font-size:clamp(3rem,5vw,4.5rem);
+
+    }
+
+
+    .service-network{
+
+        width:600px;
+
+        height:600px;
+
+    }
+
+
+    /*==================================================
+      SERVICE CATEGORIES
+    ==================================================*/
+
+    .service-category-grid{
+
+        padding:0 30px;
+
+        gap:20px;
+
+    }
+
+
+    .service-category-card:first-child{
+
+        min-height:540px;
+
+    }
+
+
+    /*==================================================
+      SERVICE SOLUTIONS
+    ==================================================*/
+
+    .service-solutions-grid{
+
+        padding:0 30px;
+
+        gap:20px;
+
+    }
+
+
+    /*==================================================
+      HOW WE WORK
+    ==================================================*/
+
+    .service-process-track{
+
+        padding:0 30px;
+
+        grid-template-columns:
+            1fr
+            45px
+            1fr
+            45px
+            1fr
+            45px
+            1fr;
+
+        gap:0;
+
+    }
+
+}
+
+
+/*==================================================
+  TABLETS / SMALL LAPTOPS
+  992px
+==================================================*/
+
+@media (max-width:992px){
+
+    /*==================================================
+      SERVICES HERO
+    ==================================================*/
+
+    .services-hero{
+
+        padding:130px 0 80px;
+
+    }
+
+
+    .services-hero-grid{
+
+        grid-template-columns:1fr;
+
+        gap:70px;
+
+        text-align:center;
+
+    }
+
+
+    .services-hero-content{
+
+        max-width:760px;
+
+        margin:auto;
+
+    }
+
+
+    .services-hero-text{
+
+        margin:auto;
+
+    }
+
+
+    .services-hero-actions{
+
+        justify-content:center;
+
+    }
+
+
+    .services-hero-status{
+
+        justify-content:center;
+
+    }
+
+
+    .service-network{
+
+        width:620px;
+
+        height:620px;
+
+    }
+
+
+    /*==================================================
+      SERVICE CATEGORIES
+    ==================================================*/
+
+    .service-categories{
+
+        padding:110px 0;
+
+    }
+
+
+    .service-category-grid{
+
+        grid-template-columns:1fr 1fr;
+
+        padding:0 25px;
+
+    }
+
+
+    .service-category-card:first-child{
+
+        grid-row:auto;
+
+        grid-column:span 2;
+
+        min-height:420px;
+
+        justify-content:flex-end;
+
+    }
+
+
+    /*==================================================
+      SERVICE SOLUTIONS
+    ==================================================*/
+
+    .service-solutions{
+
+        padding:110px 0;
+
+    }
+
+
+    .service-solutions-grid{
+
+        grid-template-columns:1fr 1fr;
+
+        padding:0 25px;
+
+    }
+
+
+    .service-solution-feature{
+
+        grid-row:span 2;
+
+        min-height:520px;
+
+    }
+
+
+    /*==================================================
+      HOW WE WORK
+    ==================================================*/
+
+    .service-process{
+
+        padding:100px 0;
+
+    }
+
+
+    .service-process-track{
+
+        grid-template-columns:1fr 1fr;
+
+        gap:25px;
+
+        padding:0 25px;
+
+    }
+
+
+    .process-connector{
+
+        display:none;
+
+    }
+
+
+    .process-card{
+
+        min-height:330px;
+
+    }
+
+}
+
+
+/*==================================================
+  TABLETS
+  768px
+==================================================*/
+
+@media (max-width:768px){
+
+    /*==================================================
+      SERVICES HERO
+    ==================================================*/
+
+    .services-hero{
+
+        padding:110px 0 70px;
+
+    }
+
+
+    .services-hero-grid{
+
+        padding:0 20px;
+
+        gap:55px;
+
+    }
+
+
+    .services-hero-title{
+
+        font-size:clamp(2.8rem,8vw,4rem);
+
+        letter-spacing:-1.5px;
+
+    }
+
+
+    .services-hero-text{
+
+        font-size:1rem;
+
+        line-height:1.8;
+
+    }
+
+
+    .services-hero-actions{
+
+        flex-wrap:wrap;
+
+    }
+
+
+    .service-network{
+
+        width:540px;
+
+        height:540px;
+
+    }
+
+
+    .network-label{
+
+        font-size:.65rem;
+
+        padding:8px 11px;
+
+    }
+
+
+    .label-web{
+
+        left:15px;
+
+    }
+
+
+    .label-seo{
+
+        right:5px;
+
+    }
+
+
+    .label-it{
+
+        left:-15px;
+
+    }
+
+
+    .label-google{
+
+        right:-20px;
+
+    }
+
+
+    .label-repair{
+
+        left:25px;
+
+    }
+
+
+    .label-support{
+
+        right:5px;
+
+    }
+
+
+    .network-hud-top{
+
+        right:40px;
+
+    }
+
+
+    .network-hud-bottom{
+
+        left:40px;
+
+    }
+
+
+    /*==================================================
+      SERVICE CATEGORIES
+    ==================================================*/
+
+    .service-categories{
+
+        padding:100px 0;
+
+    }
+
+
+    .service-categories-header{
+
+        padding:0 20px;
+
+        margin-bottom:55px;
+
+    }
+
+
+    .service-categories-header h2{
+
+        font-size:clamp(2.4rem,7vw,3.5rem);
+
+    }
+
+
+    .service-category-grid{
+
+        grid-template-columns:1fr;
+
+        padding:0 20px;
+
+    }
+
+
+    .service-category-card:first-child{
+
+        grid-column:auto;
+
+        min-height:390px;
+
+    }
+
+
+    .service-category-card{
+
+        min-height:280px;
+
+    }
+
+
+    /*==================================================
+      SERVICE SOLUTIONS
+    ==================================================*/
+
+    .service-solutions{
+
+        padding:100px 0;
+
+    }
+
+
+    .service-solutions-header{
+
+        padding:0 20px;
+
+        margin-bottom:55px;
+
+    }
+
+
+    .service-solutions-header h2{
+
+        font-size:clamp(2.4rem,7vw,3.5rem);
+
+    }
+
+
+    .service-solutions-grid{
+
+        grid-template-columns:1fr;
+
+        padding:0 20px;
+
+    }
+
+
+    .service-solution-feature{
+
+        grid-row:auto;
+
+        min-height:470px;
+
+    }
+
+
+    .service-solution-card{
+
+        min-height:270px;
+
+    }
+
+
+    /*==================================================
+      HOW WE WORK
+    ==================================================*/
+
+    .service-process{
+
+        padding:90px 0;
+
+    }
+
+
+    .service-process-header{
+
+        padding:0 20px;
+
+        margin-bottom:55px;
+
+    }
+
+
+    .service-process-header h2{
+
+        font-size:clamp(2.3rem,7vw,3.4rem);
+
+    }
+
+
+    .service-process-track{
+
+        grid-template-columns:1fr;
+
+        padding:0 20px;
+
+        gap:20px;
+
+    }
+
+
+    .process-card{
+
+        min-height:300px;
+
+    }
+
+}
+
+
+/*==================================================
+  LARGE MOBILE
+  576px
+==================================================*/
+
+@media (max-width:576px){
+
+    /*==================================================
+      SERVICES HERO
+    ==================================================*/
+
+    .services-hero{
+
+        padding:100px 0 60px;
+
+    }
+
+
+    .services-hero-grid{
+
+        padding:0 16px;
+
+        gap:40px;
+
+    }
+
+
+    .services-hero-title{
+
+        font-size:clamp(2.45rem,10vw,3.2rem);
+
+        letter-spacing:-1px;
+
+    }
+
+
+    .services-hero-text{
+
+        font-size:.95rem;
+
+    }
+
+
+    .services-hero-actions{
+
+        flex-direction:column;
+
+        width:100%;
+
+    }
+
+
+    .services-hero-actions .btn{
+
+        width:100%;
+
+        justify-content:center;
+
+    }
+
+
+    .services-hero-status{
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+
+    /*==================================================
+      SERVICE NETWORK
+    ==================================================*/
+
+    .service-network{
+
+        width:460px;
+
+        height:460px;
+
+        max-width:100%;
+
+    }
+
+
+    .network-label{
+
+        font-size:.58rem;
+
+        padding:7px 9px;
+
+        gap:6px;
+
+    }
+
+
+    .network-label i{
+
+        font-size:.6rem;
+
+    }
+
+
+    .label-web{
+
+        top:75px;
+
+        left:0;
+
+    }
+
+
+    .label-seo{
+
+        top:90px;
+
+        right:0;
+
+    }
+
+
+    .label-it{
+
+        top:220px;
+
+        left:-5px;
+
+    }
+
+
+    .label-google{
+
+        top:245px;
+
+        right:-5px;
+
+    }
+
+
+    .label-repair{
+
+        bottom:75px;
+
+        left:15px;
+
+    }
+
+
+    .label-support{
+
+        bottom:70px;
+
+        right:5px;
+
+    }
+
+
+    .network-hud{
+
+        font-size:.5rem;
+
+        padding:8px 10px;
+
+    }
+
+
+    .network-hud strong{
+
+        font-size:.6rem;
+
+    }
+
+
+    .network-hud-top{
+
+        top:5px;
+
+        right:20px;
+
+    }
+
+
+    .network-hud-bottom{
+
+        bottom:5px;
+
+        left:20px;
+
+    }
+
+
+    /*==================================================
+      SERVICE CATEGORIES
+    ==================================================*/
+
+    .service-categories{
+
+        padding:80px 0;
+
+    }
+
+
+    .service-categories-header{
+
+        padding:0 16px;
+
+    }
+
+
+    .service-categories-header h2{
+
+        font-size:clamp(2.2rem,9vw,3rem);
+
+    }
+
+
+    .service-categories-header p{
+
+        font-size:.95rem;
+
+        line-height:1.75;
+
+    }
+
+
+    .service-category-grid{
+
+        padding:0 16px;
+
+    }
+
+
+    .service-category-card:first-child{
+
+        min-height:360px;
+
+        padding:30px;
+
+    }
+
+
+    .service-category-card{
+
+        min-height:260px;
+
+        padding:30px;
+
+    }
+
+
+    .service-category-card:first-child h3{
+
+        font-size:1.7rem;
+
+    }
+
+
+    .service-category-card h3{
+
+        font-size:1.3rem;
+
+    }
+
+
+    .service-category-card p{
+
+        font-size:.9rem;
+
+    }
+
+
+    /*==================================================
+      SERVICE SOLUTIONS
+    ==================================================*/
+
+    .service-solutions{
+
+        padding:80px 0;
+
+    }
+
+
+    .service-solutions-header{
+
+        padding:0 16px;
+
+    }
+
+
+    .service-solutions-header h2{
+
+        font-size:clamp(2.2rem,9vw,3rem);
+
+    }
+
+
+    .service-solutions-header p{
+
+        font-size:.95rem;
+
+    }
+
+
+    .service-solutions-grid{
+
+        padding:0 16px;
+
+    }
+
+
+    .service-solution-feature{
+
+        min-height:400px;
+
+        padding:30px;
+
+    }
+
+
+    .service-solution-feature h3{
+
+        font-size:1.9rem;
+
+    }
+
+
+    .service-solution-card{
+
+        min-height:250px;
+
+        padding:30px;
+
+    }
+
+
+    .service-solution-orbit{
+
+        width:280px;
+
+        height:280px;
+
+        right:-120px;
+
+        top:70px;
+
+    }
+
+
+    /*==================================================
+      HOW WE WORK
+    ==================================================*/
+
+    .service-process{
+
+        padding:80px 0;
+
+    }
+
+
+    .service-process-header{
+
+        padding:0 16px;
+
+    }
+
+
+    .service-process-header h2{
+
+        font-size:clamp(2.2rem,9vw,3rem);
+
+    }
+
+
+    .service-process-track{
+
+        padding:0 16px;
+
+    }
+
+
+    .process-card{
+
+        min-height:280px;
+
+        padding:30px 25px;
+
+    }
+
+
+    .process-number{
+
+        font-size:2rem;
+
+    }
+
+}
+
+
+/*==================================================
+  SMALL MOBILE
+  480px
+==================================================*/
+
+@media (max-width:480px){
+
+    /*==================================================
+      SERVICES HERO
+    ==================================================*/
+
+    .services-hero{
+
+        padding-top:90px;
+
+    }
+
+
+    .services-hero-title{
+
+        font-size:2.35rem;
+
+    }
+
+
+    .services-hero-text{
+
+        font-size:.9rem;
+
+        line-height:1.75;
+
+    }
+
+
+    .service-network{
+
+        width:400px;
+
+        height:400px;
+
+    }
+
+
+    .network-label{
+
+        font-size:.52rem;
+
+        padding:6px 8px;
+
+    }
+
+
+    .label-web{
+
+        top:65px;
+
+    }
+
+
+    .label-seo{
+
+        top:75px;
+
+    }
+
+
+    .label-it{
+
+        top:195px;
+
+        left:-2px;
+
+    }
+
+
+    .label-google{
+
+        top:215px;
+
+        right:-2px;
+
+    }
+
+
+    .label-repair{
+
+        bottom:60px;
+
+    }
+
+
+    .label-support{
+
+        bottom:55px;
+
+    }
+
+
+    .network-hud-top{
+
+        right:10px;
+
+    }
+
+
+    .network-hud-bottom{
+
+        left:10px;
+
+    }
+
+
+    /*==================================================
+      SERVICE CATEGORIES
+    ==================================================*/
+
+    .service-category-card:first-child{
+
+        min-height:330px;
+
+        padding:25px;
+
+    }
+
+
+    .service-category-card{
+
+        padding:25px;
+
+    }
+
+
+    .service-category-icon{
+
+        width:52px;
+
+        height:52px;
+
+        margin-bottom:20px;
+
+    }
+
+
+    .service-category-card:first-child
+    .service-category-icon{
+
+        width:62px;
+
+        height:62px;
+
+        font-size:1.3rem;
+
+    }
+
+
+    .service-category-card:first-child h3{
+
+        font-size:1.55rem;
+
+    }
+
+
+    .service-category-card h3{
+
+        font-size:1.2rem;
+
+    }
+
+
+    .service-category-count{
+
+        top:20px;
+
+        right:20px;
+
+    }
+
+
+    .service-category-arrow{
+
+        right:20px;
+
+        bottom:20px;
+
+        width:38px;
+
+        height:38px;
+
+    }
+
+
+    /*==================================================
+      SERVICE SOLUTIONS
+    ==================================================*/
+
+    .service-solution-feature{
+
+        min-height:360px;
+
+        padding:25px;
+
+    }
+
+
+    .service-solution-feature
+    .service-solution-icon{
+
+        width:62px;
+
+        height:62px;
+
+        font-size:1.3rem;
+
+    }
+
+
+    .service-solution-feature h3{
+
+        font-size:1.65rem;
+
+    }
+
+
+    .service-solution-card{
+
+        min-height:240px;
+
+        padding:25px;
+
+    }
+
+
+    .service-solution-card h3{
+
+        font-size:1.25rem;
+
+    }
+
+
+    .service-solution-orbit{
+
+        width:240px;
+
+        height:240px;
+
+        right:-120px;
+
+    }
+
+
+    /*==================================================
+      HOW WE WORK
+    ==================================================*/
+
+    .process-card{
+
+        min-height:270px;
+
+        padding:25px;
+
+    }
+
+
+    .process-icon{
+
+        width:56px;
+
+        height:56px;
+
+        margin-bottom:22px;
+
+    }
+
+
+    .process-card h3{
+
+        font-size:1.25rem;
+
+    }
+
+
+    .process-card p{
+
+        font-size:.88rem;
+
+    }
+
+}
+
+
+/*==================================================
+  EXTRA SMALL MOBILE
+  360px
+==================================================*/
+
+@media (max-width:360px){
+
+    /*==================================================
+      SERVICES HERO
+    ==================================================*/
+
+    .services-hero-grid{
+
+        padding:0 10px;
+
+        width:100%;
+
+        box-sizing:border-box;
+
+    }
+
+
+    .services-hero-content{
+
+        width:100%;
+
+        min-width:0;
+
+    }
+
+
+    .services-hero-title{
+
+        font-size:2.1rem;
+
+        letter-spacing:-.8px;
+
+        overflow-wrap:break-word;
+
+    }
+
+
+    .services-hero-text{
+
+        font-size:.86rem;
+
+        max-width:100%;
+
+    }
+
+
+    /*==================================================
+      SERVICE NETWORK
+    ==================================================*/
+
+    .service-network{
+
+        width:100%;
+
+        max-width:340px;
+
+        height:auto;
+
+        aspect-ratio:1 / 1;
+
+        margin:0 auto;
+
+        box-sizing:border-box;
+
+    }
+
+
+    .service-network-svg{
+
+        width:100%;
+
+        height:100%;
+
+    }
+
+
+    .network-label{
+
+        font-size:.46rem;
+
+        padding:5px 6px;
+
+        gap:4px;
+
+        white-space:nowrap;
+
+    }
+
+
+    .network-label i{
+
+        font-size:.5rem;
+
+    }
+
+
+    .network-hud{
+
+        padding:6px 8px;
+
+        letter-spacing:1px;
+
+    }
+
+
+    .network-hud-top{
+
+        right:0;
+
+    }
+
+
+    .network-hud-bottom{
+
+        left:0;
+
+    }
+
+}

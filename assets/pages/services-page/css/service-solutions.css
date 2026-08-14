@@ -1,0 +1,569 @@
+/*==================================================
+  SERVICE SOLUTIONS
+==================================================*/
+
+.service-solutions{
+
+    position:relative;
+
+    padding:140px 0;
+
+    overflow:hidden;
+
+}
+
+
+/*==================================================
+  SECTION HEADER
+==================================================*/
+
+.service-solutions-header{
+
+    max-width:800px;
+
+    margin:0 auto 75px;
+
+    text-align:center;
+
+}
+
+
+.service-solutions-header h2{
+
+    margin:20px 0;
+
+    font-family:var(--heading-font);
+
+    font-size:clamp(2.7rem,4.5vw,4.5rem);
+
+    line-height:1.05;
+
+    letter-spacing:-2px;
+
+    font-weight:var(--fw-black);
+
+}
+
+
+.service-solutions-header p{
+
+    max-width:680px;
+
+    margin:auto;
+
+    color:var(--text-light);
+
+    font-size:1.05rem;
+
+    line-height:1.85;
+
+}
+
+
+/*==================================================
+  SHOWCASE GRID
+==================================================*/
+
+.service-solutions-grid{
+
+    width:100%;
+
+    max-width:var(--container-width);
+
+    margin:auto;
+
+    padding:0 40px;
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:24px;
+
+}
+
+
+/*==================================================
+  FEATURED SERVICE
+==================================================*/
+
+.service-solution-feature{
+
+    position:relative;
+
+    min-height:570px;
+
+    padding:45px;
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:flex-end;
+
+    grid-row:span 2;
+
+}
+
+
+/*==================================================
+  FEATURE NUMBER
+==================================================*/
+
+.service-solution-number{
+
+    position:absolute;
+
+    top:30px;
+
+    right:32px;
+
+    font-family:var(--heading-font);
+
+    font-size:.68rem;
+
+    font-weight:var(--fw-bold);
+
+    letter-spacing:2px;
+
+    color:var(--text-muted);
+
+}
+
+
+/*==================================================
+  SERVICE ICON
+==================================================*/
+
+.service-solution-icon{
+
+    width:60px;
+
+    height:60px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin-bottom:25px;
+
+    border-radius:16px;
+
+    border:1px solid var(--border-primary);
+
+    color:var(--primary-light);
+
+    font-size:1.25rem;
+
+}
+
+
+/*==================================================
+  FEATURE ICON
+==================================================*/
+
+.service-solution-feature
+.service-solution-icon{
+
+    width:76px;
+
+    height:76px;
+
+    font-size:1.55rem;
+
+    margin-bottom:30px;
+
+}
+
+
+/*==================================================
+  SERVICE LABEL
+==================================================*/
+
+.service-solution-label{
+
+    display:block;
+
+    margin-bottom:12px;
+
+    color:var(--primary-light);
+
+    font-size:.65rem;
+
+    font-weight:var(--fw-bold);
+
+    letter-spacing:2px;
+
+}
+
+
+/*==================================================
+  SERVICE TITLE
+==================================================*/
+
+.service-solution-card h3,
+.service-solution-feature h3{
+
+    margin-bottom:14px;
+
+    font-family:var(--heading-font);
+
+    color:var(--text);
+
+    font-size:1.45rem;
+
+    line-height:1.25;
+
+    font-weight:var(--fw-bold);
+
+}
+
+
+.service-solution-feature h3{
+
+    max-width:500px;
+
+    font-size:2.35rem;
+
+    letter-spacing:-1px;
+
+}
+
+
+/*==================================================
+  SERVICE DESCRIPTION
+==================================================*/
+
+.service-solution-card p,
+.service-solution-feature p{
+
+    max-width:520px;
+
+    margin:0;
+
+    color:var(--text-light);
+
+    font-size:.93rem;
+
+    line-height:1.8;
+
+}
+
+
+.service-solution-feature p{
+
+    max-width:560px;
+
+    font-size:1rem;
+
+}
+
+
+/*==================================================
+  STANDARD SERVICE CARD
+==================================================*/
+
+.service-solution-card{
+
+    position:relative;
+
+    min-height:270px;
+
+    padding:35px;
+
+    border-radius:24px;
+
+    overflow:hidden;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+
+/*==================================================
+  CARD LINK
+==================================================*/
+
+.service-solution-link{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:9px;
+
+    margin-top:25px;
+
+    width:max-content;
+
+    color:var(--primary-light);
+
+    font-size:.8rem;
+
+    font-weight:var(--fw-semibold);
+
+    text-decoration:none;
+
+    transition:
+        gap .3s ease,
+        color .3s ease;
+
+}
+
+
+.service-solution-link:hover{
+
+    gap:14px;
+
+    color:var(--white);
+
+}
+
+
+/*==================================================
+  FEATURED LINK
+==================================================*/
+
+.service-solution-feature
+.service-solution-link{
+
+    margin-top:32px;
+
+    padding:11px 17px;
+
+    border:1px solid var(--border-primary);
+
+    border-radius:10px;
+
+    background:var(--glass);
+
+}
+
+
+/*==================================================
+  CARD AMBIENT LIGHT
+==================================================*/
+
+.service-solution-card::before,
+.service-solution-feature::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:300px;
+
+    height:300px;
+
+    right:-150px;
+
+    top:-150px;
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(0,217,255,.08),
+            transparent 70%
+        );
+
+    filter:blur(20px);
+
+    pointer-events:none;
+
+    transition:
+        transform .6s ease,
+        opacity .6s ease;
+
+}
+
+
+.service-solution-card:hover::before,
+.service-solution-feature:hover::before{
+
+    transform:scale(1.4);
+
+}
+
+
+/*==================================================
+  FEATURED ORBIT
+==================================================*/
+
+.service-solution-orbit{
+
+    position:absolute;
+
+    width:360px;
+
+    height:360px;
+
+    right:-80px;
+
+    top:80px;
+
+    border:1px solid var(--border-primary);
+
+    border-radius:50%;
+
+    opacity:.45;
+
+    pointer-events:none;
+
+    animation:
+        solutionOrbit 18s linear infinite;
+
+}
+
+
+.service-solution-orbit::before,
+.service-solution-orbit::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:35px;
+
+    border:1px solid var(--border);
+
+    border-radius:50%;
+
+}
+
+
+.service-solution-orbit::after{
+
+    inset:90px;
+
+    border-color:var(--border-primary);
+
+}
+
+
+.service-solution-orbit span{
+
+    position:absolute;
+
+    width:7px;
+
+    height:7px;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+    box-shadow:var(--glow-primary);
+
+}
+
+
+.service-solution-orbit span:nth-child(1){
+
+    top:-3px;
+
+    left:50%;
+
+}
+
+
+.service-solution-orbit span:nth-child(2){
+
+    right:25px;
+
+    bottom:65px;
+
+}
+
+
+.service-solution-orbit span:nth-child(3){
+
+    left:35px;
+
+    bottom:35px;
+
+}
+
+
+@keyframes solutionOrbit{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+
+/*==================================================
+  PREMIUM HOVER EDGE
+==================================================*/
+
+.service-solution-card,
+.service-solution-feature{
+
+    transition:
+        border-color .4s ease,
+        box-shadow .4s ease;
+
+}
+
+
+.service-solution-card:hover,
+.service-solution-feature:hover{
+
+    border-color:var(--border-primary);
+
+    box-shadow:
+        var(--shadow-md),
+        var(--glow-primary);
+
+}
+
+
+/*==================================================
+  SECTION BOTTOM ACCENT
+==================================================*/
+
+.service-solutions::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:0;
+
+    width:min(900px,80%);
+
+    height:1px;
+
+    transform:translateX(-50%);
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--border-primary),
+            transparent
+        );
+
+}
