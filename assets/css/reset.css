@@ -1,0 +1,133 @@
+/*==================================================
+  RESET.CSS
+  Modern CSS Reset
+  Project: (New Website Name)
+  Author: John Alagwu
+==================================================*/
+
+/*==============================
+  Box Sizing
+==============================*/
+
+*,
+*::before,
+*::after{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/*==============================
+  Root
+==============================*/
+
+html{
+    scroll-behavior:smooth;
+    -webkit-text-size-adjust:100%;
+}
+
+/*==============================
+  Body
+==============================*/
+
+body{
+    min-height:100vh;
+    text-rendering:optimizeLegibility;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+}
+
+/*==============================
+  Media Elements
+==============================*/
+
+img,
+picture,
+video,
+canvas{
+    display:block;
+    max-width:100%;
+}
+
+svg{
+    display:block;
+}
+
+/*==============================
+  Forms
+==============================*/
+
+input,
+button,
+textarea,
+select{
+    font:inherit;
+    border:none;
+    outline:none;
+    background:none;
+}
+
+button{
+    cursor:pointer;
+}
+
+textarea{
+    resize:vertical;
+}
+
+/*==============================
+  Links
+==============================*/
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+/*==============================
+  Lists
+==============================*/
+
+ul,
+ol{
+    list-style:none;
+}
+
+/*==============================
+  Tables
+==============================*/
+
+table{
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/*==============================
+  Headings
+==============================*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font:inherit;
+    font-weight:inherit;
+}
+
+/*==============================
+  Paragraphs
+==============================*/
+
+p{
+    overflow-wrap:break-word;
+}
+
+/*==============================
+  Hidden Attribute
+==============================*/
+
+[hidden]{
+    display:none !important;
+}
