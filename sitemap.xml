@@ -11,43 +11,102 @@
     <!-- About -->
     <url>
         <loc>https://megatech-it-solutions.vercel.app/about.html</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
     </url>
 
     <!-- Services -->
     <url>
         <loc>https://megatech-it-solutions.vercel.app/services.html</loc>
         <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
+        <priority>1.0</priority>
     </url>
 
     <!-- Digital Store -->
     <url>
         <loc>https://megatech-it-solutions.vercel.app/digital-stores.html</loc>
         <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
+        <priority>1.0</priority>
     </url>
 
     <!-- Portfolio -->
     <url>
         <loc>https://megatech-it-solutions.vercel.app/portfolio.html</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
     </url>
 
     <!-- Pricing -->
     <url>
         <loc>https://megatech-it-solutions.vercel.app/pricing-page.html</loc>
         <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
+        <priority>1.0</priority>
     </url>
 
     <!-- Contact -->
     <url>
         <loc>https://megatech-it-solutions.vercel.app/contact.html</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+
+    <!-- ==================================================
+         MEGATECH PRO SKILL LIBRARY
+    =================================================== -->
+
+    <url>
+        <loc>https://megatech-it-solutions.vercel.app/assets-courses/megatech-pro-skill-library/index.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+
+    <!-- ==================================================
+         FREE COURSES
+    =================================================== -->
+
+    <url>
+        <loc>https://megatech-it-solutions.vercel.app/assets-courses/course-pages/free-course-1.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://megatech-it-solutions.vercel.app/assets-courses/course-pages/free-course-2.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://megatech-it-solutions.vercel.app/assets-courses/course-pages/free-course-3.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://megatech-it-solutions.vercel.app/assets-courses/course-pages/free-course-4.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://megatech-it-solutions.vercel.app/assets-courses/course-pages/free-course-5.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://megatech-it-solutions.vercel.app/assets-courses/course-pages/free-course-6.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://megatech-it-solutions.vercel.app/assets-courses/course-pages/free-course-7.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
     </url>
 
 </urlset>
+
