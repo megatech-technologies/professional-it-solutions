@@ -1,0 +1,1180 @@
+/*==================================================
+ABOUT PREVIEW
+==================================================*/
+
+.about-grid{
+
+display:grid;
+
+grid-template-columns:1.05fr .95fr;
+
+gap:70px;
+
+align-items:center;
+
+}
+
+.about-content .section-title{
+
+margin-bottom:25px;
+
+}
+
+.about-content .section-description{
+
+margin:0 0 40px;
+
+max-width:620px;
+
+}
+
+.about-highlights{
+
+display:grid;
+
+gap:20px;
+
+margin-bottom:40px;
+
+}
+
+.highlight-item{
+
+display:flex;
+
+align-items:center;
+
+gap:22px;
+
+padding:22px;
+
+background:var(--card);
+
+border:1px solid var(--border);
+
+border-radius:20px;
+
+box-shadow:var(--shadow-sm);
+
+transition:var(--transition);
+
+}
+
+
+.highlight-item:hover{
+
+transform:translateY(-6px);
+
+border-color:var(--border-primary);
+
+box-shadow:
+
+var(--shadow-md),
+
+var(--glow-primary);
+
+}
+
+
+
+.highlight-item i{
+
+font-size:2rem;
+
+color:var(--primary);
+
+}
+
+.highlight-item h4{
+
+margin-bottom:8px;
+
+}
+
+.highlight-item p{
+
+margin:0;
+
+color:var(--text-light);
+
+}
+
+
+/*==================================================
+ABOUT DISPLAY
+==================================================*/
+
+.about-display{
+
+position:relative;
+
+height:560px;
+
+overflow:hidden;
+
+perspective:1200px;
+
+}
+
+/*==================================================
+ENERGY NETWORK
+==================================================*/
+
+.energy-network{
+
+position:absolute;
+
+inset:0;
+
+pointer-events:none;
+
+}
+
+
+/*==================================================
+ENERGY BEAM
+==================================================*/
+
+.beam{
+
+position:absolute;
+
+left:50%;
+
+top:50%;
+
+height:2px;
+
+transform-origin:left center;
+
+background:
+
+linear-gradient(
+
+90deg,
+
+transparent,
+
+var(--primary),
+
+var(--primary-light),
+
+transparent
+
+);
+
+box-shadow:
+
+0 0 12px rgba(0,217,255,.6);
+
+}
+
+.beam-1{
+
+width:180px;
+
+transform:rotate(-90deg);
+
+}
+
+.beam-2{
+
+width:170px;
+
+transform:rotate(-45deg);
+
+}
+
+.beam-3{
+
+width:170px;
+
+transform:rotate(45deg);
+
+}
+
+.beam-4{
+
+width:180px;
+
+transform:rotate(90deg);
+
+}
+
+.beam-5{
+
+width:170px;
+
+transform:rotate(135deg);
+
+}
+
+.beam-6{
+
+width:170px;
+
+transform:rotate(-135deg);
+
+}
+
+
+.display-grid{
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:
+
+    linear-gradient(var(--border) 1px,transparent 1px),
+
+    linear-gradient(90deg,var(--border) 1px,transparent 1px);
+
+    background-size:40px 40px;
+
+    opacity:.45;
+
+    mask-image:
+    radial-gradient(circle,#000 45%,transparent 95%);
+
+}
+
+.display-core{
+
+position:absolute;
+
+left:50%;
+
+top:50%;
+
+width:120px;
+
+height:120px;
+
+border-radius:50%;
+
+transform:translate(-50%,-50%);
+
+background:
+
+radial-gradient(
+
+circle,
+
+var(--white) 0%,
+
+var(--primary-light) 18%,
+
+var(--primary) 42%,
+
+transparent 72%
+
+);
+
+box-shadow:var(--glow-primary);
+
+animation:reactorPulse 3s infinite;
+
+}
+
+.display-node{
+
+position:absolute;
+
+width:18px;
+
+height:18px;
+
+border-radius:50%;
+
+background:linear-gradient(
+135deg,
+var(--primary-light),
+var(--secondary)
+);
+
+box-shadow:var(--glow-primary);
+
+}
+
+.node-1{
+
+top:18%;
+
+left:20%;
+
+}
+
+.node-2{
+
+top:18%;
+
+right:20%;
+
+}
+
+.node-3{
+
+left:12%;
+
+top:50%;
+
+}
+
+.node-4{
+
+right:12%;
+
+top:50%;
+
+}
+
+.node-5{
+
+bottom:18%;
+
+left:20%;
+
+}
+
+.node-6{
+
+bottom:18%;
+
+right:20%;
+
+}
+
+
+
+/*==================================================
+WHY CHOOSE US
+==================================================*/
+
+.why-us{
+
+position:relative;
+
+overflow:hidden;
+
+background:
+
+radial-gradient(
+
+circle at right center,
+
+rgba(108,99,255,.05),
+
+transparent 50%
+
+),
+
+linear-gradient(
+
+180deg,
+
+transparent,
+
+rgba(0,217,255,.02),
+
+transparent
+
+);
+
+}
+
+
+/*==================================================
+LAYOUT
+==================================================*/
+
+.why-grid{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:80px;
+
+align-items:center;
+
+}
+
+
+/*==================================================
+LEFT CONTENT
+==================================================*/
+
+.why-content{
+
+max-width:650px;
+
+}
+
+
+/*==================================================
+FEATURE GRID
+==================================================*/
+
+.why-features{
+
+display:grid;
+
+grid-template-columns:1fr;
+
+gap:24px;
+
+margin:45px 0;
+
+}
+
+
+/*==================================================
+WHY CARD
+==================================================*/
+
+.why-card{
+
+position:relative;
+
+overflow:hidden;
+
+padding:30px;
+
+transition:.45s ease;
+
+background:var(--card);
+
+border:1px solid var(--border);
+
+border-radius:24px;
+
+box-shadow:var(--shadow-sm);
+
+}
+
+.why-card:hover{
+
+transform:translateY(-8px);
+
+box-shadow:
+
+var(--shadow-md),
+
+var(--glow-primary);
+
+border-color:var(--border-primary);
+
+}
+
+
+/*==================================================
+SCAN EFFECT
+==================================================*/
+
+.why-card::before{
+
+content:"";
+
+position:absolute;
+
+top:-100%;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+background:linear-gradient(
+
+180deg,
+
+transparent,
+
+rgba(99,232,255,.08)
+
+transparent
+
+);
+
+transition:.7s;
+
+}
+
+.why-card:hover::before{
+
+top:100%;
+
+}
+
+
+/*==================================================
+ICON
+==================================================*/
+
+.why-icon{
+
+width:72px;
+
+height:72px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+margin:28px 0 24px;
+
+border-radius:18px;
+
+background:var(--glass);
+
+border:1px solid var(--border-primary);
+
+box-shadow:var(--glow-primary);
+
+font-size:1.8rem;
+
+color:var(--primary);
+
+transition:.4s;
+
+}
+
+.why-card:hover .why-icon{
+
+transform:rotate(-8deg) scale(1.08);
+
+box-shadow:var(--glow-primary);
+
+}
+
+
+/*==================================================
+TEXT
+==================================================*/
+
+.why-card h3{
+
+margin-bottom:15px;
+
+font-size:1.55rem;
+
+}
+
+.why-card p{
+
+color:var(--text-light);
+
+line-height:1.8;
+
+}
+
+
+/*==================================================
+RIGHT DISPLAY
+==================================================*/
+
+.why-display{
+
+position:relative;
+
+height:650px;
+
+min-width:500px;
+
+width:100%;
+
+max-width:650px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+overflow:hidden;
+
+}
+
+
+/*==================================================
+RADAR
+==================================================*/
+
+.display-radar{
+
+position:absolute;
+
+width:520px;
+
+height:520px;
+
+border-radius:50%;
+
+background:
+
+repeating-radial-gradient(
+
+circle,
+
+rgba(99,232,255,.08),
+
+transparent 2px 45px
+
+);
+
+animation:rotateClockwise 25s linear infinite;
+
+}
+
+
+/*==================================================
+CENTER CORE
+==================================================*/
+
+.why-display .display-core{
+
+position:absolute;
+
+width:130px;
+
+height:130px;
+
+border-radius:50%;
+
+background:
+
+radial-gradient(
+
+circle,
+
+var(--white),
+
+var(--primary-light),
+
+var(--primary)
+
+);
+
+box-shadow:
+
+var(--glow-primary),
+
+0 0 90px rgba(0,217,255,.35);
+
+z-index:5;
+
+}
+
+
+/*==================================================
+DISPLAY RINGS
+==================================================*/
+
+/*==================================================
+DISPLAY RINGS
+==================================================*/
+
+.display-ring{
+
+position:absolute;
+
+border-radius:50%;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+overflow:hidden;
+
+}
+
+.display-ring.ring-1{
+
+width:180px;
+
+height:180px;
+
+border:2px solid var(--border-primary);
+
+box-shadow:
+
+0 0 18px rgba(0,217,255,.22),
+
+inset 0 0 18px rgba(0,217,255,.15);
+
+animation:
+
+rotateCounterClockwise 10s linear infinite;
+
+}
+
+
+.display-ring.ring-2{
+
+width:300px;
+
+height:300px;
+
+border:2px dashed var(--border-light);
+
+box-shadow:
+
+0 0 28px rgba(0,217,255,.18),
+
+inset 0 0 20px rgba(0,217,255,.10);
+
+animation:
+
+rotateClockwise 10s linear infinite;
+
+}
+
+.display-ring.ring-3{
+
+width:440px;
+
+height:440px;
+
+border:1px solid var(--border-primary);
+
+box-shadow:var(--glow-primary);
+
+animation:
+
+rotateCounterClockwise 10s linear infinite;
+
+}
+
+.display-ring::before{
+
+content:"";
+
+position:absolute;
+
+width:100%;
+
+height:100%;
+
+border-radius:50%;
+
+background:
+
+repeating-conic-gradient(
+
+from 0deg,
+
+transparent 0deg 8deg,
+
+var(--primary-light) 8deg 10deg,
+
+transparent 10deg 30deg
+
+);
+
+mask:
+
+radial-gradient(
+
+circle,
+
+transparent 47%,
+
+#000 49%,
+
+#000 53%,
+
+transparent 55%
+
+);
+
+opacity:.55;
+
+}
+
+
+/*==================================================
+DISPLAY NODES
+==================================================*/
+
+.why-display .display-node{
+
+position:absolute;
+
+width:14px;
+
+height:14px;
+
+border-radius:50%;
+
+background:
+
+radial-gradient(
+
+circle,
+
+var(--white),
+
+var(--primary-light),
+
+var(--primary)
+
+);
+
+box-shadow:var(--glow-primary);
+
+}
+
+.node-a{
+
+top:16%;
+
+left:50%;
+
+transform:translateX(-50%);
+
+}
+
+.node-d{
+
+bottom:15%;
+
+left:50%;
+
+transform:translateX(-50%);
+
+}
+
+.node-b{
+
+top:32%;
+
+right:16%;
+
+}
+
+.node-c{
+
+bottom:22%;
+
+right:22%;
+
+}
+
+
+
+.node-e{
+
+left:18%;
+
+top:36%;
+
+}
+
+.node-f{
+
+left:22%;
+
+bottom:28%;
+
+}
+
+
+/*==================================================
+TRUSTED TECHNOLOGIES
+==================================================*/
+
+.trusted-tech{
+
+    position:relative;
+
+    padding:120px 0;
+
+    overflow:hidden;
+
+}
+
+.trusted-wrapper{
+
+    display:grid;
+
+    gap:60px;
+
+}
+
+.trusted-heading{
+
+    max-width:720px;
+
+    margin:auto;
+
+    text-align:center;
+
+}
+
+.trusted-heading h2{
+
+    margin-bottom:20px;
+
+}
+
+.trusted-heading p{
+
+    color:var(--text-light);
+
+}
+
+.tech-marquee{
+
+    position:relative;
+
+    overflow:hidden;
+
+    mask-image:linear-gradient(to right,
+
+    transparent,
+
+    black 10%,
+
+    black 90%,
+
+    transparent);
+
+}
+
+.tech-track{
+
+    display:flex;
+
+    gap:30px;
+
+    width:max-content;
+
+}
+
+.tech-item{
+
+    min-width:220px;
+
+    height:90px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:15px;
+
+    border-radius:20px;
+
+    background:var(--glass);
+
+border:1px solid var(--border);
+
+box-shadow:var(--shadow-sm);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+}
+
+
+.tech-item{
+
+transition:var(--transition);
+
+}
+
+.tech-item:hover{
+
+transform:translateY(-8px);
+
+border-color:var(--border-primary);
+
+box-shadow:
+
+var(--shadow-md),
+
+var(--glow-primary);
+
+}
+
+
+
+.tech-item i{
+
+    font-size:2rem;
+
+    color:var(--primary);
+
+}
+
+.tech-item span{
+
+    font-weight:600;
+
+}
+
+.tech-track{
+
+    animation:
+
+    marquee 35s linear infinite;
+
+}
+
+
+/*=================================
+ALL SECTION FONTS
+===============================*/
+
+
+
+.about-content .section-title,
+.solutions .section-title,
+.why-content .section-title{
+
+    font-size:3.5rem;
+
+}
+
+
+
+
+
+
+
+/*==================================================
+HERO SCROLL EFFECTS
+==================================================*/
+
+.hero-scroll-content,
+.hero-scroll-reactor,
+.hero-scroll-grid,
+.hero-scroll-glow,
+.hero-scroll-indicator{
+
+will-change:transform,opacity;
+
+transition:
+
+transform .08s linear,
+
+opacity .08s linear;
+
+}
+
+
+
+
+
+
+
+
+/*UPGRADING FANTACY CARDS*/
+
+
+.display-lines{
+
+position:absolute;
+
+inset:0;
+
+background:
+
+linear-gradient(
+90deg,
+transparent 49.7%,
+rgba(0,217,255,.15),
+transparent 50.3%
+),
+
+linear-gradient(
+transparent 49.7%,
+rgba(0,217,255,.15),
+transparent 50.3%
+);
+
+pointer-events:none;
+
+opacity:.5;
+
+}
+
+
+
+
+.display-ring{
+
+position:absolute;
+
+left:50%;
+
+top:50%;
+
+width:240px;
+
+height:240px;
+
+transform:translate(-50%,-50%);
+
+border-radius:50%;
+
+border:1px solid rgba(0,217,255,.25);
+
+box-shadow:
+
+0 0 25px rgba(0,217,255,.18),
+
+inset 0 0 20px rgba(0,217,255,.18);
+
+}
+
+
+
+.display-glow{
+
+position:absolute;
+
+left:50%;
+
+top:50%;
+
+width:420px;
+
+height:420px;
+
+transform:translate(-50%,-50%);
+
+border-radius:50%;
+
+background:
+
+radial-gradient(
+
+circle,
+
+rgba(0,217,255,.10),
+
+transparent 70%
+
+);
+
+filter:blur(45px);
+
+pointer-events:none;
+
+}
+
+
+
+
+
+

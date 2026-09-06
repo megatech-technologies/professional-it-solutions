@@ -353,40 +353,44 @@ HERO VISUAL
 }
 
 
-
-
 /*==================================================
 REACTOR CONTAINER
 ==================================================*/
 
 /*==================================================
-REACTOR
-PERFORMANCE OPTIMIZED
+REACTOR CONTAINER
 ==================================================*/
 
 .reactor-container{
 
-    position:relative;
+position:relative;
 
-    width:520px;
+width:520px;
 
-    aspect-ratio:1;
+aspect-ratio:1;
 
-    display:flex;
+display:flex;
 
-    align-items:center;
+align-items:center;
 
-    justify-content:center;
-
-    /*
-    Keeps the animated reactor isolated as much
-    as possible from unrelated page rendering.
-    */
-
-    contain:layout style;
+justify-content:center;
 
 }
 
+
+/*==================================================
+SVG
+==================================================*/
+
+.reactor-svg{
+
+width:100%;
+
+height:100%;
+
+overflow:visible;
+
+}
 
 
 
@@ -672,7 +676,25 @@ SCROLL INDICATOR
 }
 
 
+/*==================================================
+REACTOR 
+==================================================*/
 
+.reactor-container{
+
+position:relative;
+
+width:520px;
+
+aspect-ratio:1;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+}
 
 
 /*==================================================
@@ -691,12 +713,6 @@ position:relative;
 
 z-index:5;
 
-  /*
-    Tell the browser this element is animated.
-    */
-
-    will-change:transform;
-
 }
 
 
@@ -704,6 +720,45 @@ z-index:5;
 REACTOR GLOW
 ==================================================*/
 
+.reactor-glow{
+
+position:absolute;
+
+left:50%;
+
+top:50%;
+
+width:220px;
+
+height:220px;
+
+border-radius:50%;
+
+transform:translate(-50%,-50%);
+
+background:
+
+radial-gradient(
+
+circle,
+
+var(--primary-light),
+
+rgba(0,217,255,.20) 45%,
+
+transparent 75%
+
+);
+
+filter:blur(45px);
+
+z-index:1;
+
+pointer-events:none;
+
+animation:coreGlow 4s ease-in-out infinite;
+
+}
 
 
 /*==================================================
@@ -1245,39 +1300,42 @@ filter:drop-shadow(0 0 8px #00d9ff);
 
 
 /*==================================================
-PLASMA CORE
+CORE PULSE
 ==================================================*/
 
 .plasma-core{
 
-    animation:
-        plasmaPulse 2.8s ease-in-out infinite;
-
-    transform-origin:center;
-
-    will-change:transform;
+animation:plasmaPulse 2.8s ease-in-out infinite;
 
 }
 
 @keyframes plasmaPulse{
 
-    0%{
+0%{
 
-        transform:scale(.95);
+transform:scale(.95);
 
-    }
+transform-origin:center;
 
-    50%{
+filter:url(#plasmaGlow);
 
-        transform:scale(1.08);
+}
 
-    }
+50%{
 
-    100%{
+transform:scale(1.08);
 
-        transform:scale(.95);
+transform-origin:center;
 
-    }
+}
+
+100%{
+
+transform:scale(.95);
+
+transform-origin:center;
+
+}
 
 }
 
@@ -1366,32 +1424,29 @@ REACTOR BREATH
 
 .reactor-container{
 
-    animation:
-        reactorBreath 5s ease-in-out infinite;
-
-    will-change:transform;
+animation:reactorBreath 5s ease-in-out infinite;
 
 }
 
 @keyframes reactorBreath{
 
-    0%{
+0%{
 
-        transform:scale(1);
+transform:scale(1);
 
-    }
+}
 
-    50%{
+50%{
 
-        transform:scale(1.02);
+transform:scale(1.02);
 
-    }
+}
 
-    100%{
+100%{
 
-        transform:scale(1);
+transform:scale(1);
 
-    }
+}
 
 }
 
@@ -1403,11 +1458,6 @@ REACTOR BREATH
 
 /*==================================================
 REACTOR GLOW
-==================================================*/
-
-/*==================================================
-REACTOR GLOW
-LIGHTWEIGHT VERSION
 ==================================================*/
 
 .reactor-glow{
@@ -1424,24 +1474,23 @@ LIGHTWEIGHT VERSION
 
     border-radius:50%;
 
-    transform:
-        translate(-50%,-50%)
-        scale(.9);
+    transform:translate(-50%,-50%);
 
     background:
-        radial-gradient(
-            circle,
-            rgba(0,217,255,.42) 0%,
-            rgba(0,217,255,.22) 35%,
-            rgba(0,217,255,.08) 58%,
-            transparent 75%
-        );
 
-    /*
-    Reduced from 45px.
-    */
+    radial-gradient(
 
-    filter:blur(24px);
+        circle,
+
+        rgba(0,217,255,.45),
+
+        rgba(0,217,255,.18) 45%,
+
+        transparent 75%
+
+    );
+
+    filter:blur(45px);
 
     pointer-events:none;
 
@@ -1449,15 +1498,75 @@ LIGHTWEIGHT VERSION
 
     animation:coreGlow 4s ease-in-out infinite;
 
-    will-change:transform, opacity;
+}
+
+@keyframes coreGlow{
+
+    0%{
+
+        transform:translate(-50%,-50%) scale(.9);
+
+        opacity:.65;
+
+    }
+
+    50%{
+
+        transform:translate(-50%,-50%) scale(1.08);
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:translate(-50%,-50%) scale(.9);
+
+        opacity:.65;
+
+    }
 
 }
 
 
 
+/*==================================================
+PLASMA PULSE
+==================================================*/
 
+.plasma-core{
 
+    animation:plasmaPulse 2.8s ease-in-out infinite;
 
+}
+
+@keyframes plasmaPulse{
+
+    0%{
+
+        transform:scale(.95);
+
+        transform-origin:center;
+
+    }
+
+    50%{
+
+        transform:scale(1.08);
+
+        transform-origin:center;
+
+    }
+
+    100%{
+
+        transform:scale(.95);
+
+        transform-origin:center;
+
+    }
+
+}
 
 
 
@@ -1794,8 +1903,6 @@ top .08s linear;
 
 position:relative;
 
-overflow:hidden;
-
 transform-style:preserve-3d;
 
 transform-origin:center;
@@ -1816,8 +1923,63 @@ filter .25s ease;
 
 
 
+/*==================================================
+CARD SPOTLIGHT
+==================================================*/
 
+.card-spotlight{
 
+position:absolute;
+
+left:50%;
+
+top:50%;
+
+width:0;
+
+height:0;
+
+border-radius:50%;
+
+pointer-events:none;
+
+transform:translate(-50%,-50%);
+
+background:
+
+radial-gradient(
+
+circle,
+
+rgba(99,232,255,.18),
+
+rgba(108,99,255,.08),
+
+transparent 72%
+
+);
+
+transition:
+
+width .25s ease,
+
+height .25s ease,
+
+left .08s linear,
+
+top .08s linear;
+
+z-index:1;
+
+}
+
+.tilt-card{
+
+position:relative;
+
+overflow:hidden;
+
+}
 
 /*==================================================
 CARD SPOTLIGHT
