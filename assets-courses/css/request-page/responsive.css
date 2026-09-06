@@ -1,0 +1,612 @@
+@media (max-width: 1200px) {
+
+    .container {
+        max-width: 1100px;
+        padding-left: 28px;
+        padding-right: 28px;
+    }
+
+    .request-course-layout {
+        grid-template-columns: minmax(0, 1.1fr) minmax(330px, 0.9fr);
+        gap: 32px;
+    }
+
+    .course-hero h1 {
+        font-size: 42px;
+    }
+
+    .course-request-card {
+        padding: 28px;
+    }
+
+}
+
+
+/* =========================================================
+   992px
+========================================================= */
+
+@media (max-width: 992px) {
+
+    .container {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .navbar {
+        min-height: 68px;
+    }
+
+    .nav-links {
+        gap: 20px;
+    }
+
+    .course-hero {
+        padding: 46px 0 45px;
+    }
+
+    .course-hero h1 {
+        max-width: 800px;
+        font-size: 38px;
+    }
+
+    .course-intro {
+        font-size: 16px;
+    }
+
+    .request-course-section {
+        padding: 50px 0 70px;
+    }
+
+    .request-course-layout {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .course-image-container {
+        max-width: 850px;
+        margin: 0 auto;
+    }
+
+    .course-request-card {
+        max-width: 850px;
+        margin: 0 auto;
+    }
+
+    .course-timeline {
+        margin-top: 35px;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr 1fr;
+        gap: 45px;
+    }
+
+}
+
+
+/* =========================================================
+   768px
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .navbar {
+        min-height: 64px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    .brand-logo {
+        width: 36px;
+        height: 36px;
+        font-size: 17px;
+    }
+
+    .brand-name strong {
+        font-size: 15px;
+    }
+
+    .course-hero {
+        padding: 38px 0 38px;
+    }
+
+    .course-breadcrumb {
+        margin-bottom: 15px;
+        font-size: 12px;
+    }
+
+    .course-badge {
+        margin-bottom: 13px;
+    }
+
+    .course-hero h1 {
+        font-size: 32px;
+        line-height: 1.18;
+    }
+
+    .course-intro {
+        margin-bottom: 18px;
+        font-size: 15px;
+    }
+
+    .course-meta {
+        gap: 7px;
+    }
+
+    .course-meta span {
+        min-height: 30px;
+        padding: 5px 9px;
+        font-size: 11px;
+    }
+
+    .request-course-section {
+        padding: 40px 0 60px;
+    }
+
+    .course-request-card {
+        padding: 24px;
+    }
+
+    .course-request-card h2 {
+        font-size: 25px;
+    }
+
+    .course-timeline-header {
+        padding: 23px;
+    }
+
+    .course-timeline-header h2 {
+        font-size: 22px;
+    }
+
+    .lesson-item {
+        min-height: 67px;
+        padding: 13px 19px;
+    }
+
+    .timeline-notice {
+        margin: 19px 20px 23px;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 45px 0 35px;
+    }
+
+    .footer-bottom {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+}
+
+
+/* =========================================================
+   576px
+========================================================= */
+
+@media (max-width: 576px) {
+
+    .container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .navbar {
+        min-height: 60px;
+    }
+
+    .nav-links {
+        gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .brand {
+        gap: 8px;
+    }
+
+    .brand-logo {
+        width: 34px;
+        height: 34px;
+        border-radius: 8px;
+    }
+
+    .brand-name strong {
+        font-size: 14px;
+    }
+
+    .brand-name span {
+        font-size: 9px;
+    }
+
+    .course-hero {
+        padding: 32px 0 34px;
+    }
+
+    .course-breadcrumb {
+        margin-bottom: 13px;
+    }
+
+    .course-hero h1 {
+        margin-bottom: 14px;
+        font-size: 27px;
+    }
+
+    .course-intro {
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+    .course-meta {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .course-meta span {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .request-course-section {
+        padding: 32px 0 50px;
+    }
+
+    .course-image-container {
+        border-radius: 12px;
+    }
+
+    .course-request-card {
+        padding: 20px;
+        border-radius: 12px;
+    }
+
+    .course-request-card h2 {
+        font-size: 23px;
+    }
+
+    .course-request-card p {
+        font-size: 13px;
+    }
+
+    .request-details {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .request-detail {
+        padding: 12px;
+    }
+
+    .request-course-btn {
+        min-height: 51px;
+        font-size: 13px;
+    }
+
+    .course-timeline {
+        margin-top: 30px;
+        border-radius: 12px;
+    }
+
+    .course-timeline-header {
+        padding: 20px;
+    }
+
+    .course-timeline-header h2 {
+        font-size: 20px;
+    }
+
+    .lesson-item {
+        grid-template-columns: 38px minmax(0, 1fr) 24px;
+        gap: 10px;
+        padding: 13px 15px;
+    }
+
+    .lesson-number {
+        width: 30px;
+        height: 30px;
+        font-size: 10px;
+    }
+
+    .lesson-info strong {
+        font-size: 13px;
+    }
+
+    .lesson-info small {
+        font-size: 11px;
+    }
+
+    .lesson-arrow {
+        width: 24px;
+        font-size: 10px;
+    }
+
+    .timeline-notice {
+        margin: 17px 15px 19px;
+        padding: 13px 14px;
+        font-size: 11px;
+    }
+
+    .footer-main {
+        padding: 38px 0 30px;
+    }
+
+}
+
+
+/* =========================================================
+   480px
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .container {
+        padding-left: 13px;
+        padding-right: 13px;
+    }
+
+    .nav-links a:first-child {
+        display: none;
+    }
+
+    .course-hero {
+        padding: 28px 0 30px;
+    }
+
+    .course-breadcrumb {
+        font-size: 11px;
+    }
+
+    .course-badge {
+        padding: 6px 9px;
+        font-size: 10px;
+    }
+
+    .course-hero h1 {
+        font-size: 24px;
+        line-height: 1.2;
+    }
+
+    .course-intro {
+        font-size: 13px;
+    }
+
+    .course-meta {
+        gap: 6px;
+    }
+
+    .course-meta span {
+        min-height: 28px;
+        padding: 4px 7px;
+        font-size: 10px;
+    }
+
+    .request-course-section {
+        padding: 27px 0 43px;
+    }
+
+    .course-request-card {
+        padding: 18px;
+    }
+
+    .course-request-card h2 {
+        font-size: 21px;
+    }
+
+    .course-request-card p {
+        font-size: 12px;
+        line-height: 1.65;
+    }
+
+    .request-detail span {
+        font-size: 10px;
+    }
+
+    .request-detail strong {
+        font-size: 12px;
+    }
+
+    .request-course-btn {
+        min-height: 49px;
+        padding: 12px 15px;
+        font-size: 12px;
+    }
+
+    .course-timeline-header {
+        padding: 18px;
+    }
+
+    .course-timeline-header .section-label {
+        font-size: 10px;
+    }
+
+    .course-timeline-header h2 {
+        font-size: 18px;
+    }
+
+    .lesson-item {
+        min-height: 62px;
+        grid-template-columns: 34px minmax(0, 1fr) 20px;
+        gap: 8px;
+        padding: 11px 12px;
+    }
+
+    .lesson-number {
+        width: 28px;
+        height: 28px;
+        border-radius: 7px;
+    }
+
+    .lesson-info strong {
+        font-size: 12px;
+    }
+
+    .lesson-info small {
+        font-size: 10px;
+    }
+
+    .lesson-arrow {
+        width: 20px;
+        font-size: 9px;
+    }
+
+    .timeline-notice {
+        margin: 15px 12px 17px;
+        padding: 12px;
+        font-size: 10px;
+    }
+
+    .footer-bottom-links {
+        gap: 15px;
+    }
+
+}
+
+
+/* =========================================================
+   360px
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .navbar {
+        min-height: 56px;
+    }
+
+    .brand-logo {
+        width: 31px;
+        height: 31px;
+        font-size: 15px;
+    }
+
+    .brand-name strong {
+        font-size: 13px;
+    }
+
+    .brand-name span {
+        font-size: 8px;
+    }
+
+    .nav-links {
+        gap: 7px;
+    }
+
+    .nav-links a {
+        font-size: 10px;
+    }
+
+    .course-hero {
+        padding: 25px 0 27px;
+    }
+
+    .course-hero h1 {
+        font-size: 21px;
+    }
+
+    .course-intro {
+        font-size: 12px;
+    }
+
+    .course-meta {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .course-meta span {
+        font-size: 9px;
+    }
+
+    .course-request-card {
+        padding: 15px;
+    }
+
+    .course-request-card h2 {
+        font-size: 19px;
+    }
+
+    .course-request-card p {
+        font-size: 11px;
+    }
+
+    .request-detail {
+        padding: 10px;
+    }
+
+    .request-course-btn {
+        min-height: 46px;
+        font-size: 11px;
+    }
+
+    .course-timeline-header {
+        padding: 16px;
+    }
+
+    .course-timeline-header h2 {
+        font-size: 17px;
+    }
+
+    .lesson-item {
+        grid-template-columns: 31px minmax(0, 1fr) 18px;
+        gap: 7px;
+        padding: 10px;
+    }
+
+    .lesson-number {
+        width: 27px;
+        height: 27px;
+        font-size: 9px;
+    }
+
+    .lesson-info strong {
+        font-size: 11px;
+    }
+
+    .lesson-info small {
+        font-size: 9px;
+    }
+
+    .lesson-arrow {
+        width: 18px;
+        font-size: 8px;
+    }
+
+    .timeline-notice {
+        margin: 13px 10px 15px;
+        font-size: 9px;
+    }
+
+    .footer-main {
+        padding: 32px 0 25px;
+    }
+
+    .footer-description {
+        font-size: 11px;
+    }
+
+    .footer-links a,
+    .footer-copyright,
+    .footer-bottom-links a {
+        font-size: 10px;
+    }
+
+}

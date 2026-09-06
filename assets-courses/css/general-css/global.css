@@ -1,0 +1,181 @@
+/* =========================================================
+   GLOBAL CSS
+   MegaTech Course Library
+========================================================= */
+
+
+/* ---------------------------------------------------------
+   CSS VARIABLES
+--------------------------------------------------------- */
+
+:root {
+    /* Brand */
+    --primary-color: #2563eb;
+    --primary-dark: #1d4ed8;
+    --accent-color: #06b6d4;
+
+    /* Text */
+    --text-dark: #0f172a;
+    --text-color: #334155;
+    --text-muted: #64748b;
+
+    /* Backgrounds */
+    --bg-color: #f8fafc;
+    --white: #ffffff;
+
+    /* Borders */
+    --border-color: #e2e8f0;
+
+    /* Typography */
+    --font-body: "Inter", sans-serif;
+    --font-heading: "Manrope", sans-serif;
+
+    /* Layout */
+    --container-width: 1180px;
+
+    /* Radius */
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 18px;
+
+    /* Shadows */
+    --shadow-sm: 0 4px 12px rgba(15, 23, 42, 0.06);
+    --shadow-md: 0 10px 30px rgba(15, 23, 42, 0.08);
+
+    /* Transitions */
+    --transition: 0.25s ease;
+}
+
+
+/* ---------------------------------------------------------
+   RESET
+--------------------------------------------------------- */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    margin: 0;
+
+    min-height: 100vh;
+
+    background: var(--bg-color);
+
+    color: var(--text-color);
+
+    font-family: var(--font-body);
+
+    font-size: 16px;
+
+    line-height: 1.6;
+
+    overflow-x: hidden;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+
+    color: var(--text-dark);
+
+    font-family: var(--font-heading);
+
+    line-height: 1.2;
+}
+
+
+p {
+    margin: 0;
+}
+
+
+ul,
+ol {
+    margin: 0;
+
+    padding: 0;
+
+    list-style: none;
+}
+
+
+a {
+    color: inherit;
+
+    text-decoration: none;
+}
+
+
+img {
+    display: block;
+
+    max-width: 100%;
+
+    height: auto;
+}
+
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+
+button {
+    cursor: pointer;
+}
+
+
+/* ---------------------------------------------------------
+   GLOBAL CONTAINER
+--------------------------------------------------------- */
+
+.container {
+    width: min(
+        calc(100% - 40px),
+        var(--container-width)
+    );
+
+    margin-inline: auto;
+}
+
+
+/* ---------------------------------------------------------
+   ACCESSIBILITY
+--------------------------------------------------------- */
+
+:focus-visible {
+    outline: 3px solid rgba(37, 99, 235, 0.25);
+
+    outline-offset: 3px;
+}
+
+
+/* ---------------------------------------------------------
+   UTILITY CLASSES
+--------------------------------------------------------- */
+
+.text-center {
+    text-align: center;
+}
+
+
+.text-muted {
+    color: var(--text-muted);
+}

@@ -1,0 +1,951 @@
+/* =========================================================
+   COURSE PLAYER LAYOUT
+========================================================= */
+
+.course-player-layout {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        360px;
+
+    gap: 24px;
+
+    align-items: start;
+}
+
+
+/* =========================================================
+   CUSTOM VIDEO PLAYER
+========================================================= */
+
+.custom-video-player {
+    position: relative;
+
+    width: 100%;
+
+    aspect-ratio: 16 / 9;
+
+    overflow: hidden;
+
+    background: #000;
+
+    border-radius: 8px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   VIDEO WRAPPER
+========================================================= */
+
+.custom-video-player .video-wrapper {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    background: #000;
+}
+
+
+.custom-video-player #youtube-player,
+.custom-video-player #youtube-player iframe {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100% !important;
+    height: 100% !important;
+
+    margin: 0;
+    padding: 0;
+
+    border: 0;
+}
+
+
+/* =========================================================
+   CENTER PLAY OVERLAY
+========================================================= */
+
+.video-play-overlay {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: 76px;
+    height: 76px;
+
+    padding: 15px;
+
+    margin: 0;
+
+    transform:
+        translate(-50%, -50%)
+        scale(1.25);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 0;
+
+    border-radius: 50%;
+
+    background: #4c46ec;
+
+    color: #fff;
+
+    opacity: .9;
+
+    cursor: pointer;
+
+    z-index: 20;
+
+    box-shadow:
+        0 6px 20px rgba(0, 0, 0, .30);
+
+    transition:
+        transform .3s ease,
+        opacity .3s ease,
+        background .3s ease,
+        visibility .3s ease;
+}
+
+
+/* SVG IS THE ACTUAL PLAY ICON */
+
+.video-play-overlay svg {
+    width: 30px;
+    height: 30px;
+
+    display: block;
+
+    fill: currentColor;
+}
+
+
+/* Hover */
+
+.video-play-overlay:hover {
+    transform:
+        translate(-50%, -50%)
+        scale(1.32);
+
+    opacity: 1;
+
+    background: #3d38d4;
+}
+
+
+/* Click */
+
+.video-play-overlay:active {
+    transform:
+        translate(-50%, -50%)
+        scale(1.25);
+}
+
+
+/* =========================================================
+   HIDE CENTER PLAY WHEN PLAYING
+========================================================= */
+
+.custom-video-player.is-playing
+.video-play-overlay {
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   VIDEO CONTROLS
+========================================================= */
+
+.video-controls {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    min-height: 54px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 8px 12px;
+
+    box-sizing: border-box;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0, 0, 0, .88),
+            rgba(0, 0, 0, .45),
+            transparent
+        );
+
+    z-index: 15;
+
+    opacity: 0;
+
+    transition:
+        opacity .25s ease;
+}
+
+
+/* Controls visible after playback */
+
+.custom-video-player.is-playing
+.video-controls {
+    opacity: 1;
+}
+
+
+/* Also show when hovering */
+
+.custom-video-player:hover
+.video-controls {
+    opacity: 1;
+}
+
+
+/* =========================================================
+   CONTROL BUTTONS
+========================================================= */
+
+.video-control-btn {
+    width: 38px;
+    height: 38px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 7px;
+
+    border: 0;
+
+    border-radius: 4px;
+
+    background: transparent;
+
+    color: #fff;
+
+    cursor: pointer;
+
+    transition:
+        background .2s ease,
+        transform .2s ease;
+}
+
+
+.video-control-btn:hover {
+    background:
+        rgba(255, 255, 255, .15);
+}
+
+
+.video-control-btn:active {
+    transform:
+        scale(.92);
+}
+
+
+.video-control-btn svg {
+    width: 20px;
+    height: 20px;
+
+    display: block;
+
+    fill: currentColor;
+}
+
+
+/* =========================================================
+   PLAY / PAUSE ICONS
+========================================================= */
+
+.pause-icon {
+    display: none !important;
+}
+
+
+.custom-video-player.is-playing
+.play-icon {
+    display: none !important;
+}
+
+
+.custom-video-player.is-playing
+.pause-icon {
+    display: block !important;
+}
+
+
+/* =========================================================
+   PROGRESS CONTAINER
+========================================================= */
+
+.video-progress-container {
+    flex: 1;
+
+    display: flex;
+
+    align-items: center;
+
+    min-width: 0;
+}
+
+
+/* =========================================================
+   PROGRESS RANGE
+========================================================= */
+
+#videoProgress {
+    width: 100%;
+
+    height: 5px;
+
+    margin: 0;
+
+    appearance: none;
+
+    -webkit-appearance: none;
+
+    background:
+        rgba(255, 255, 255, .30);
+
+    border-radius: 10px;
+
+    cursor: pointer;
+}
+
+
+/* Chrome / Edge / Safari */
+
+#videoProgress::-webkit-slider-thumb {
+    appearance: none;
+
+    -webkit-appearance: none;
+
+    width: 13px;
+    height: 13px;
+
+    background: #4c46ec;
+
+    border: 0;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+}
+
+
+#videoProgress::-webkit-slider-runnable-track {
+    height: 5px;
+
+    border-radius: 10px;
+}
+
+
+/* Firefox */
+
+#videoProgress::-moz-range-thumb {
+    width: 13px;
+    height: 13px;
+
+    background: #4c46ec;
+
+    border: 0;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+}
+
+
+#videoProgress::-moz-range-track {
+    height: 5px;
+
+    background:
+        rgba(255, 255, 255, .30);
+
+    border-radius: 10px;
+}
+
+
+/* =========================================================
+   VIDEO TIME
+========================================================= */
+
+.video-time {
+    flex-shrink: 0;
+
+    min-width: 65px;
+
+    color: #fff;
+
+    font-size: 13px;
+
+    line-height: 1;
+
+    text-align: center;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   VOLUME
+========================================================= */
+
+.video-volume {
+    display: flex;
+
+    align-items: center;
+
+    gap: 3px;
+}
+
+
+.video-volume input {
+    width: 70px;
+
+    height: 4px;
+
+    appearance: none;
+
+    -webkit-appearance: none;
+
+    background:
+        rgba(255, 255, 255, .30);
+
+    border-radius: 10px;
+
+    cursor: pointer;
+}
+
+
+.video-volume input::-webkit-slider-thumb {
+    appearance: none;
+
+    -webkit-appearance: none;
+
+    width: 11px;
+    height: 11px;
+
+    background: #fff;
+
+    border-radius: 50%;
+}
+
+
+.video-volume input::-moz-range-thumb {
+    width: 11px;
+    height: 11px;
+
+    border: 0;
+
+    background: #fff;
+
+    border-radius: 50%;
+}
+
+
+/* =========================================================
+   VOLUME ICONS
+========================================================= */
+
+.volume-off {
+    display: none !important;
+}
+
+
+.video-volume.is-muted
+.volume-on {
+    display: none !important;
+}
+
+
+.video-volume.is-muted
+.volume-off {
+    display: block !important;
+}
+
+
+/* =========================================================
+   SETTINGS
+========================================================= */
+
+.video-settings {
+    position: relative;
+}
+
+
+.video-settings-menu {
+    position: absolute;
+
+    right: 0;
+
+    bottom: 48px;
+
+    width: 180px;
+
+    overflow: hidden;
+
+    padding: 6px 0;
+
+    border-radius: 6px;
+
+    background: #181818;
+
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, .35);
+
+    z-index: 100;
+}
+
+
+.settings-option,
+.settings-back,
+.speed-option {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 10px;
+
+    padding: 11px 14px;
+
+    border: 0;
+
+    background: transparent;
+
+    color: #fff;
+
+    font-size: 13px;
+
+    text-align: left;
+
+    cursor: pointer;
+}
+
+
+.settings-option:hover,
+.settings-back:hover,
+.speed-option:hover {
+    background:
+        rgba(255, 255, 255, .10);
+}
+
+
+.settings-value {
+    opacity: .65;
+}
+
+
+.settings-back {
+    border-bottom:
+        1px solid rgba(255, 255, 255, .10);
+}
+
+
+/* =========================================================
+   SPEED ACTIVE
+========================================================= */
+
+.speed-option.active {
+    background:
+        rgba(76, 70, 236, .30);
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   FULLSCREEN ICONS
+========================================================= */
+
+.fullscreen-exit {
+    display: none !important;
+}
+
+
+.custom-video-player.is-fullscreen
+.fullscreen-enter {
+    display: none !important;
+}
+
+
+.custom-video-player.is-fullscreen
+.fullscreen-exit {
+    display: block !important;
+}
+
+
+/* =========================================================
+   COURSE TIMELINE
+========================================================= */
+
+.course-timeline {
+    background: #fff;
+
+    border:
+        1px solid #e5e7eb;
+
+    border-radius: 14px;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   TIMELINE HEADER
+========================================================= */
+
+.course-timeline-header {
+    padding: 20px;
+
+    border-bottom:
+        1px solid #e5e7eb;
+}
+
+
+.course-timeline-header h2 {
+    margin: 6px 0 0;
+
+    font-size: 20px;
+}
+
+
+/* =========================================================
+   PLAY ALL
+========================================================= */
+
+.classroom-playlist-toggle {
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        42px;
+
+    gap: 10px;
+
+    align-items: start;
+
+    padding: 16px;
+
+    border-bottom:
+        1px solid #ededed;
+}
+
+
+.toggle-label {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #06213d;
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+
+.classroom-playlist-toggle p {
+    margin: 0;
+
+    color: #6b7280;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   TOGGLE
+========================================================= */
+
+.toggle-switch {
+    position: relative;
+
+    width: 38px;
+    height: 22px;
+
+    padding: 0;
+
+    border: 0;
+
+    border-radius: 20px;
+
+    background: #cbd5e1;
+
+    cursor: pointer;
+
+    transition:
+        background .2s ease;
+}
+
+
+.toggle-indicator {
+    position: absolute;
+
+    top: 3px;
+    left: 3px;
+
+    width: 16px;
+    height: 16px;
+
+    border-radius: 50%;
+
+    background: #fff;
+
+    box-shadow:
+        0 1px 3px rgba(0, 0, 0, .2);
+
+    transition:
+        transform .2s ease;
+}
+
+
+.toggle-switch[aria-checked="true"] {
+    background: #244dcb;
+}
+
+
+.toggle-switch[aria-checked="true"]
+.toggle-indicator {
+    transform:
+        translateX(16px);
+}
+
+
+/* =========================================================
+   LESSON LIST
+========================================================= */
+
+.lesson-list {
+    max-height: 520px;
+
+    overflow-y: auto;
+}
+
+
+/* =========================================================
+   LESSON ITEM
+========================================================= */
+
+.lesson-item {
+    position: relative;
+
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        42px
+        minmax(0, 1fr)
+        42px;
+
+    align-items: center;
+
+    padding: 14px 16px;
+
+    gap: 10px;
+
+    border: 0;
+
+    border-bottom:
+        1px solid #ededed;
+
+    background: #fff;
+
+    color: #253746;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+        background .2s ease;
+}
+
+
+.lesson-item:last-child {
+    border-bottom: 0;
+}
+
+
+.lesson-item:hover {
+    background: #f6f8fb;
+}
+
+
+.lesson-item.active {
+    background: #eff9ff;
+}
+
+
+/* =========================================================
+   LESSON NUMBER
+========================================================= */
+
+.lesson-number {
+    width: 28px;
+    height: 28px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 6px;
+
+    background: #dbdbe1;
+
+    color: #253746;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+
+.lesson-item.active
+.lesson-number {
+    background: #0a2540;
+
+    color: #fff;
+}
+
+
+/* =========================================================
+   LESSON INFO
+========================================================= */
+
+.lesson-info {
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+
+.lesson-info strong {
+    overflow: hidden;
+
+    color: #253746;
+
+    font-size: 14px;
+
+    line-height: 1.4;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+}
+
+
+.lesson-info small {
+    color: #6b7280;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   LESSON ARROW
+========================================================= */
+
+.lesson-arrow {
+    color: #6b7280;
+
+    font-size: 12px;
+
+    text-align: center;
+}
+
+
+.lesson-item.active
+.lesson-arrow {
+    color: #244dcb;
+}
+
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+.lesson-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+
+.lesson-list::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+
+    border-radius: 10px;
+}
+
+
+.lesson-list::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+
+/* =========================================================
+   FULLSCREEN
+========================================================= */
+
+.custom-video-player:fullscreen {
+    width: 100vw;
+
+    height: 100vh;
+
+    aspect-ratio: auto;
+
+    border-radius: 0;
+}
+
+
+.custom-video-player:-webkit-full-screen {
+    width: 100vw;
+
+    height: 100vh;
+
+    aspect-ratio: auto;
+
+    border-radius: 0;
+}
+
+

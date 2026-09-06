@@ -1,0 +1,246 @@
+/* =========================================================
+   RESPONSIVE — 1200px
+========================================================= */
+
+@media (max-width: 1200px) {
+
+    .course-price {
+        left: 10px;
+        bottom: 10px;
+        padding: 7px 10px;
+        font-size: 0.74rem;
+    }
+
+    .course-learn {
+        margin-top: 18px;
+        padding-top: 17px;
+    }
+
+    .course-learn h4 {
+        margin-bottom: 11px;
+        font-size: 0.81rem;
+    }
+
+    .course-learn ul {
+        gap: 8px;
+    }
+
+    .course-learn li {
+        gap: 7px;
+        font-size: 0.71rem;
+        line-height: 1.5;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — 992px
+========================================================= */
+
+@media (max-width: 992px) {
+
+    .course-price {
+        left: 10px;
+        bottom: 10px;
+        padding: 7px 10px;
+        font-size: 0.73rem;
+    }
+
+    .course-learn {
+        margin-top: 18px;
+        padding-top: 16px;
+    }
+
+    .course-learn h4 {
+        margin-bottom: 10px;
+        font-size: 0.8rem;
+    }
+
+    .course-learn ul {
+        gap: 7px;
+    }
+
+    .course-learn li {
+        gap: 7px;
+        font-size: 0.7rem;
+        line-height: 1.5;
+    }
+
+    .course-learn li span {
+        width: 16px;
+        height: 16px;
+        font-size: 0.58rem;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — 768px
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .course-price {
+        left: 9px;
+        bottom: 9px;
+        padding: 7px 10px;
+        border-radius: 6px;
+        font-size: 0.72rem;
+    }
+
+    .course-learn {
+        margin-top: 17px;
+        padding-top: 15px;
+    }
+
+    .course-learn h4 {
+        margin-bottom: 10px;
+        font-size: 0.79rem;
+    }
+
+    .course-learn ul {
+        gap: 7px;
+    }
+
+    .course-learn li {
+        gap: 7px;
+        font-size: 0.7rem;
+        line-height: 1.5;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — 576px
+========================================================= */
+
+@media (max-width: 576px) {
+
+    .course-price {
+        left: 8px;
+        bottom: 8px;
+        padding: 6px 9px;
+        border-radius: 6px;
+        font-size: 0.7rem;
+    }
+
+    .course-learn {
+        margin-top: 16px;
+        padding-top: 14px;
+    }
+
+    .course-learn h4 {
+        margin-bottom: 9px;
+        font-size: 0.78rem;
+    }
+
+    .course-learn ul {
+        gap: 6px;
+    }
+
+    .course-learn li {
+        gap: 6px;
+        font-size: 0.69rem;
+        line-height: 1.5;
+    }
+
+    .course-learn li span {
+        width: 15px;
+        height: 15px;
+        font-size: 0.56rem;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — 480px
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .course-price {
+        left: 7px;
+        bottom: 7px;
+        padding: 6px 8px;
+        border-radius: 5px;
+        font-size: 0.68rem;
+        box-shadow: 0 3px 9px rgba(0, 0, 0, 0.16);
+    }
+
+    .course-learn {
+        margin-top: 15px;
+        padding-top: 13px;
+    }
+
+    .course-learn h4 {
+        margin-bottom: 9px;
+        font-size: 0.77rem;
+    }
+
+    .course-learn ul {
+        gap: 6px;
+    }
+
+    .course-learn li {
+        gap: 6px;
+        font-size: 0.68rem;
+        line-height: 1.48;
+    }
+
+    .course-learn li span {
+        width: 15px;
+        height: 15px;
+        margin-top: 1px;
+        font-size: 0.55rem;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — 360px
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .course-price {
+        left: 6px;
+        bottom: 6px;
+        padding: 5px 7px;
+        border-radius: 5px;
+        font-size: 0.65rem;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .course-learn {
+        margin-top: 14px;
+        padding-top: 12px;
+    }
+
+    .course-learn h4 {
+        margin-bottom: 8px;
+        font-size: 0.75rem;
+    }
+
+    .course-learn ul {
+        gap: 5px;
+    }
+
+    .course-learn li {
+        gap: 5px;
+        font-size: 0.66rem;
+        line-height: 1.45;
+    }
+
+    .course-learn li span {
+        width: 14px;
+        height: 14px;
+        margin-top: 1px;
+        font-size: 0.52rem;
+    }
+
+}

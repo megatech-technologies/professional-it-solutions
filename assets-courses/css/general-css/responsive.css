@@ -1,0 +1,433 @@
+/* =========================================================
+   RESPONSIVE CSS
+   MegaTech Course Library
+   Breakpoints:
+   1200px
+   992px
+   768px
+   576px
+   480px
+   360px
+========================================================= */
+
+
+/* =========================================================
+   1200px — LARGE LAPTOPS
+========================================================= */
+
+@media (max-width: 1200px) {
+
+    .container {
+        width: min(
+            calc(100% - 40px),
+            1100px
+        );
+    }
+
+    .course-grid {
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+
+        gap: 22px;
+    }
+
+}
+
+
+/* =========================================================
+   992px — TABLETS / SMALL LAPTOPS
+========================================================= */
+
+@media (max-width: 992px) {
+
+    .container {
+        width: min(
+            calc(100% - 36px),
+            900px
+        );
+    }
+
+
+    /* Course catalog */
+
+    .course-grid {
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+
+        gap: 20px;
+    }
+
+
+    .course-controls {
+        grid-template-columns:
+            minmax(0, 1fr)
+            210px;
+    }
+
+
+    .about-card {
+        gap: 35px;
+
+        padding: 35px;
+    }
+
+}
+
+
+/* =========================================================
+   768px — TABLETS
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .container {
+        width: min(
+            calc(100% - 32px),
+            720px
+        );
+    }
+
+
+    /* Navigation */
+
+    .navbar {
+        min-height: 68px;
+    }
+
+
+    /* Course catalog */
+
+    .course-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 18px;
+    }
+
+
+    .course-controls {
+        grid-template-columns: 1fr;
+    }
+
+
+    .about-card {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+
+        padding: 30px;
+    }
+
+
+    .about-section {
+        padding: 65px 0;
+    }
+
+
+    .cta-card {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        padding: 30px;
+    }
+
+
+
+    /* Section headings */
+
+    .section-header {
+        margin-bottom: 26px;
+    }
+
+}
+
+
+/* =========================================================
+   576px — LARGE MOBILE
+========================================================= */
+
+@media (max-width: 576px) {
+
+    .container {
+        width: calc(100% - 30px);
+    }
+
+
+    /* Navigation */
+
+    .navbar {
+        min-height: 64px;
+
+        gap: 15px;
+    }
+
+
+    .main-nav {
+        gap: 2px;
+    }
+
+
+    .nav-link {
+        min-height: 36px;
+
+        padding: 7px 9px;
+
+        font-size: 0.76rem;
+    }
+
+
+    /* Course catalog */
+
+     .course-grid {
+        grid-template-columns:
+            repeat(1, minmax(0, 1fr));
+
+        gap: 14px;
+    }
+
+
+    .course-controls {
+        gap: 10px;
+
+        margin-bottom: 22px;
+    }
+
+
+    .about-section {
+        padding: 55px 0;
+    }
+
+
+    .about-card {
+        padding: 24px;
+
+        border-radius: var(--radius-md);
+    }
+
+
+    .about-highlight {
+        padding: 20px;
+    }
+
+
+    .cta-section {
+        padding-bottom: 55px;
+    }
+
+
+    .cta-card {
+        padding: 25px;
+
+        border-radius: var(--radius-md);
+    }
+
+
+    .cta-card .btn {
+        width: 100%;
+    }
+
+
+    /* Course card */
+
+    .course-content {
+        padding: 18px;
+    }
+
+
+    /* Buttons */
+
+    .btn {
+        min-height: 43px;
+
+        padding: 10px 16px;
+    }
+
+
+    /* Section headings */
+
+    .section-header {
+        margin-bottom: 22px;
+    }
+
+
+    .section-header h2 {
+        font-size: 1.75rem;
+    }
+
+}
+
+
+/* =========================================================
+   480px — SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .container {
+        width: calc(100% - 26px);
+    }
+
+
+    /* Navigation */
+
+    .navbar {
+        gap: 10px;
+    }
+
+    .course-grid {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+
+    .course-controls {
+        margin-bottom: 20px;
+    }
+
+
+    .about-card {
+        padding: 20px;
+    }
+
+
+    .cta-card {
+        padding: 22px;
+    }
+
+
+    .brand-logo {
+        width: 36px;
+
+        height: 36px;
+    }
+
+
+    .brand-name strong {
+        font-size: 0.85rem;
+    }
+
+
+    .brand-name span {
+        font-size: 0.58rem;
+    }
+
+
+    .nav-link {
+        padding: 7px 8px;
+
+        font-size: 0.72rem;
+    }
+
+
+    /* Course cards */
+
+    .course-content {
+        padding: 16px;
+    }
+
+
+    .course-content h3 {
+        font-size: 0.98rem;
+    }
+
+
+    .course-content p {
+        font-size: 0.78rem;
+    }
+
+
+    .course-meta {
+        font-size: 0.68rem;
+    }
+
+
+    /* Buttons */
+
+    .btn {
+        width: 100%;
+    }
+
+}
+
+
+/* =========================================================
+   360px — VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .container {
+        width: calc(100% - 22px);
+    }
+
+
+    /* Navigation */
+
+    .brand-name {
+        display: none;
+    }
+
+
+    .main-nav {
+        margin-left: auto;
+    }
+
+
+    .nav-link {
+        padding: 7px 8px;
+
+        font-size: 0.7rem;
+    }
+
+
+    /* Course cards */
+
+    .course-content {
+        padding: 15px;
+    }
+
+
+    .course-content h3 {
+        font-size: 0.95rem;
+    }
+
+
+    .course-meta {
+        gap: 6px 10px;
+    }
+
+
+    /* Buttons */
+
+    .btn {
+        min-height: 42px;
+
+        padding: 9px 14px;
+
+        font-size: 0.78rem;
+    }
+
+   .course-grid {
+        grid-template-columns: 1fr;
+
+        gap: 14px;
+    }
+
+
+    .about-card {
+        padding: 18px;
+    }
+
+
+    .about-highlight {
+        padding: 18px;
+    }
+
+
+    .cta-card {
+        padding: 20px;
+    }
+
+}

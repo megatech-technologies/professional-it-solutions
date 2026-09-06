@@ -1,0 +1,206 @@
+/* =========================================================
+   COURSE PAGE RESPONSIVE
+   Video + Course Timeline
+========================================================= */
+
+
+/* =========================================================
+   1200px
+========================================================= */
+
+@media (max-width: 1200px) {
+
+    .course-player-layout {
+        grid-template-columns: minmax(0, 1fr) 320px;
+        gap: 20px;
+    }
+
+}
+
+
+/* =========================================================
+   992px
+========================================================= */
+
+@media (max-width: 992px) {
+
+    .course-player-layout {
+        grid-template-columns: minmax(0, 1fr) 290px;
+        gap: 18px;
+    }
+
+
+    .course-timeline-header {
+        padding: 18px;
+    }
+
+
+    .course-timeline-header h2 {
+        font-size: 19px;
+    }
+
+}
+
+
+/* =========================================================
+   768px
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .course-player-layout {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+
+    .course-video {
+        width: 100%;
+    }
+
+
+    .video-wrapper {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+    }
+
+
+    .course-timeline {
+        width: 100%;
+    }
+
+
+    .course-timeline .lesson-list {
+        max-height: none;
+        overflow-y: visible;
+    }
+
+}
+
+
+/* =========================================================
+   576px
+========================================================= */
+
+@media (max-width: 576px) {
+
+    .course-player-layout {
+        gap: 16px;
+    }
+
+
+    .video-wrapper {
+        border-radius: 10px;
+    }
+
+
+    .course-timeline-header {
+        padding: 16px;
+    }
+
+
+    .course-timeline-header h2 {
+        font-size: 18px;
+    }
+
+
+    .course-timeline .lesson-item {
+        padding: 13px 14px;
+    }
+
+}
+
+
+/* =========================================================
+   480px
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .course-player-layout {
+        gap: 14px;
+    }
+
+
+    .video-wrapper {
+        border-radius: 8px;
+    }
+
+
+    .course-timeline-header {
+        padding: 15px;
+    }
+
+
+    .course-timeline .lesson-item {
+        grid-template-columns: 32px minmax(0, 1fr) 20px;
+        gap: 9px;
+        padding: 12px;
+    }
+
+
+    .course-timeline .lesson-info strong {
+        font-size: 13px;
+    }
+
+
+    .course-timeline .lesson-info small {
+        font-size: 11px;
+    }
+
+
+    .course-timeline .lesson-number {
+        font-size: 12px;
+    }
+
+
+    .course-timeline .lesson-arrow {
+        font-size: 11px;
+    }
+
+}
+
+
+/* =========================================================
+   360px
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .course-player-layout {
+        gap: 12px;
+    }
+
+
+    .course-timeline-header {
+        padding: 14px;
+    }
+
+
+    .course-timeline-header h2 {
+        font-size: 17px;
+    }
+
+
+    .course-timeline .lesson-item {
+        grid-template-columns: 28px minmax(0, 1fr) 18px;
+        gap: 8px;
+        padding: 11px;
+    }
+
+
+    .course-timeline .lesson-info strong {
+        font-size: 12px;
+    }
+
+
+    .course-timeline .lesson-info small {
+        font-size: 10px;
+    }
+
+
+    .course-timeline .lesson-number {
+        font-size: 11px;
+    }
+
+}
