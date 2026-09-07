@@ -1340,30 +1340,87 @@
            MOBILE MENU
            ===================================================== */
 
-        const mobileMenu = $(
-            "#mobileMenu"
-        );
+const mobileMenu = $("#mobileMenu");
+const mobileNav = $("#mobileNav");
 
-        if (mobileMenu) {
+if (mobileMenu && mobileNav) {
 
-            mobileMenu.addEventListener(
+    mobileMenu.setAttribute(
+        "aria-expanded",
+        "false"
+    );
+
+    mobileMenu.addEventListener(
+        "click",
+        () => {
+
+            const isOpen =
+                mobileNav.classList.toggle("open");
+
+            mobileMenu.setAttribute(
+                "aria-expanded",
+                String(isOpen)
+            );
+
+            document.body.classList.toggle(
+                "menu-open",
+                isOpen
+            );
+        }
+    );
+
+
+    /* Close menu when a navigation link is clicked */
+
+    mobileNav
+        .querySelectorAll("a")
+        .forEach((link) => {
+
+            link.addEventListener(
                 "click",
                 () => {
 
-                    const mobileNav = $(
-                        "#mobileNav"
+                    mobileNav.classList.remove(
+                        "open"
                     );
 
+                    mobileMenu.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
 
-                    if (mobileNav) {
-
-                        mobileNav.classList.toggle(
-                            "open"
-                        );
-                    }
+                    document.body.classList.remove(
+                        "menu-open"
+                    );
                 }
             );
+        });
+
+
+    /* Close menu with Escape */
+
+    document.addEventListener(
+        "keydown",
+        (event) => {
+
+            if (event.key === "Escape") {
+
+                mobileNav.classList.remove(
+                    "open"
+                );
+
+                mobileMenu.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+                document.body.classList.remove(
+                    "menu-open"
+                );
+            }
         }
+    );
+}
 
 
         /* =====================================================
