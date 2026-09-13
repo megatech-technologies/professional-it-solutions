@@ -1,0 +1,151 @@
+/* =========================================================
+REQUEST CARD
+========================================================= */
+
+.course-request-card {
+width: 100%;
+background: #ffffff;
+border: 1px solid #e3e6eb;
+border-radius: 16px;
+padding: 31px;
+box-shadow: 0 10px 35px rgba(16, 24, 40, 0.06);
+}
+
+.course-request-card h2 {
+margin-bottom: 11px;
+font-family: "Manrope", sans-serif;
+color: #101828;
+font-size: 28px;
+line-height: 1.2;
+letter-spacing: -0.02em;
+}
+
+.course-request-card p {
+margin-bottom: 24px;
+color: #667085;
+font-size: 14px;
+line-height: 1.7;
+}
+
+/* =========================================================
+REQUEST DETAILS
+========================================================= */
+
+.request-details {
+display: grid;
+grid-template-columns: repeat(2, minmax(0, 1fr));
+gap: 10px;
+margin-bottom: 24px;
+}
+
+.request-detail {
+min-width: 0;
+padding: 13px 14px;
+border: 1px solid #eaecf0;
+border-radius: 9px;
+background: #f8f9fb;
+}
+
+.request-detail span {
+display: block;
+margin-bottom: 4px;
+color: #667085;
+font-size: 11px;
+line-height: 1.3;
+}
+
+.request-detail strong {
+display: block;
+overflow: hidden;
+color: #1d2939;
+font-size: 13px;
+line-height: 1.4;
+text-overflow: ellipsis;
+}
+
+/* =========================================================
+COURSE PRICE
+========================================================= */
+
+.course-price {
+width: 100%;
+margin: 22px 0 20px;
+padding: 18px 20px;
+
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 20px;
+
+background: #f8f9fb;
+border: 1px solid #e4e7ec;
+border-radius: 10px;
+
+
+}
+
+.price-label {
+color: #667085;
+font-size: 12px;
+font-weight: 600;
+}
+
+.price-values {
+display: flex;
+align-items: baseline;
+gap: 7px;
+white-space: nowrap;
+}
+
+.price-naira {
+color: #111827;
+font-family: "Manrope", sans-serif;
+font-size: 25px;
+font-weight: 800;
+line-height: 1;
+}
+
+.price-dollar {
+color: #667085;
+font-size: 15px;
+font-weight: 700;
+}
+
+.price-divider {
+color: #98a2b3;
+font-size: 14px;
+}
+
+/* =========================================================
+REQUEST BUTTON
+========================================================= */
+
+.request-course-btn {
+width: 100%;
+min-height: 54px;
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 14px 20px;
+border-radius: 9px;
+background: #111827;
+color: #ffffff;
+text-align: center;
+text-decoration: none;
+font-size: 14px;
+font-weight: 700;
+transition:
+transform 0.2s ease,
+background 0.2s ease,
+box-shadow 0.2s ease;
+}
+
+.request-course-btn:hover {
+background: #1f2937;
+transform: translateY(-2px);
+box-shadow: 0 8px 18px rgba(17, 24, 39, 0.18);
+}
+
+.request-course-btn:active {
+transform: translateY(0);
+}

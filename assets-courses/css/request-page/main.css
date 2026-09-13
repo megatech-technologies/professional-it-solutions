@@ -672,168 +672,498 @@ a {
 }
 
 
-/* =========================================================
-   1200px
-========================================================= */
+/* =====================================================
+   COURSE VIDEO PLAYER ONLY
+===================================================== */
 
-@media (max-width: 1200px) {
-
-    .course-price {
-        padding: 17px 18px;
-    }
-
-    .price-naira {
-        font-size: 24px;
-    }
-
+.course-video {
+    width: 100%;
+    min-width: 0;
 }
 
 
-/* =========================================================
-   992px
-========================================================= */
+/* =====================================================
+   CUSTOM VIDEO PLAYER
+===================================================== */
 
-@media (max-width: 992px) {
-
-    .course-price {
-        max-width: 850px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .price-naira {
-        font-size: 25px;
-    }
-
+.custom-video-player {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #000;
+    overflow: hidden;
+    border-radius: 14px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
 }
 
 
-/* =========================================================
-   768px
-========================================================= */
+/* =====================================================
+   VIDEO WRAPPER
+===================================================== */
 
-@media (max-width: 768px) {
-
-    .course-price {
-        padding: 17px 18px;
-        margin-top: 20px;
-        margin-bottom: 19px;
-    }
-
-    .price-label {
-        font-size: 11px;
-    }
-
-    .price-naira {
-        font-size: 23px;
-    }
-
-    .price-dollar {
-        font-size: 14px;
-    }
-
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #000;
 }
 
 
-/* =========================================================
-   576px
-========================================================= */
+/* YouTube player */
 
-@media (max-width: 576px) {
+#youtube-player {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
 
-    .course-price {
-        padding: 15px 16px;
-        margin-top: 18px;
-        margin-bottom: 17px;
-        border-radius: 9px;
-    }
-
-    .price-label {
-        font-size: 10px;
-    }
-
-    .price-values {
-        gap: 5px;
-    }
-
-    .price-naira {
-        font-size: 22px;
-    }
-
-    .price-dollar {
-        font-size: 13px;
-    }
-
-    .price-divider {
-        font-size: 12px;
-    }
-
+#youtube-player iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
 }
 
 
-/* =========================================================
-   480px
-========================================================= */
+/* =====================================================
+   CENTER PLAY BUTTON
+===================================================== */
 
-@media (max-width: 480px) {
+.video-play-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 5;
 
-    .course-price {
-        padding: 14px;
-        gap: 10px;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    .price-label {
-        font-size: 10px;
-    }
+    width: 72px;
+    height: 72px;
 
-    .price-naira {
-        font-size: 20px;
-    }
+    padding: 0;
 
-    .price-dollar {
-        font-size: 12px;
-    }
+    transform: translate(-50%, -50%);
 
-    .price-divider {
-        font-size: 11px;
-    }
+    border: 0;
+    border-radius: 50%;
 
+    background: rgba(0, 188, 212, 0.95);
+    color: #fff;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 0 0 8px rgba(255, 255, 255, 0.12),
+        0 8px 25px rgba(0, 0, 0, 0.35);
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.video-play-overlay:hover {
+    transform: translate(-50%, -50%) scale(1.08);
+
+    background: #00bcd4;
+
+    box-shadow:
+        0 0 0 12px rgba(255, 255, 255, 0.12),
+        0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.video-play-overlay svg {
+    width: 30px;
+    height: 30px;
+
+    fill: currentColor;
 }
 
 
-/* =========================================================
-   360px
-========================================================= */
+/* =====================================================
+   VIDEO CONTROLS
+===================================================== */
 
-@media (max-width: 360px) {
+.video-controls {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
 
-    .course-price {
-        padding: 13px;
-        margin-top: 16px;
-        margin-bottom: 15px;
-    }
+    z-index: 10;
 
-    .price-label {
-        font-size: 9px;
-    }
+    display: flex;
+    align-items: center;
+    gap: 10px;
 
-    .price-values {
-        gap: 4px;
-    }
+    min-height: 58px;
+    padding: 10px 14px;
 
-    .price-naira {
-        font-size: 18px;
-    }
-
-    .price-dollar {
-        font-size: 11px;
-    }
-
-    .price-divider {
-        font-size: 10px;
-    }
-
+    background:
+        linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.92),
+            rgba(0, 0, 0, 0.65),
+            transparent
+        );
 }
 
 
+/* =====================================================
+   CONTROL BUTTONS
+===================================================== */
+
+.video-control-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 0 0 auto;
+
+    width: 38px;
+    height: 38px;
+
+    padding: 0;
+
+    border: 0;
+    border-radius: 8px;
+
+    background: transparent;
+    color: #fff;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.video-control-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.video-control-btn svg {
+    width: 21px;
+    height: 21px;
+
+    fill: currentColor;
+}
+
+
+/* =====================================================
+   PLAY / PAUSE ICONS
+===================================================== */
+
+.pause-icon {
+    display: none;
+}
+
+.video-control-btn.is-playing .play-icon {
+    display: none;
+}
+
+.video-control-btn.is-playing .pause-icon {
+    display: block;
+}
+
+
+/* =====================================================
+   PROGRESS BAR
+===================================================== */
+
+.video-progress-container {
+    flex: 1;
+    min-width: 50px;
+    display: flex;
+    align-items: center;
+}
+
+
+/* Range input */
+
+#videoProgress {
+    width: 100%;
+    height: 5px;
+
+    margin: 0;
+
+    appearance: none;
+    -webkit-appearance: none;
+
+    background: rgba(255, 255, 255, 0.3);
+
+    border-radius: 10px;
+
+    cursor: pointer;
+}
+
+
+/* Chrome / Edge / Safari */
+
+#videoProgress::-webkit-slider-thumb {
+    appearance: none;
+    -webkit-appearance: none;
+
+    width: 13px;
+    height: 13px;
+
+    border: 0;
+    border-radius: 50%;
+
+    background: #00bcd4;
+
+    cursor: pointer;
+}
+
+
+/* Firefox */
+
+#videoProgress::-moz-range-thumb {
+    width: 13px;
+    height: 13px;
+
+    border: 0;
+    border-radius: 50%;
+
+    background: #00bcd4;
+
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   VIDEO TIME
+===================================================== */
+
+.video-time {
+    flex: 0 0 auto;
+
+    min-width: 58px;
+
+    color: #fff;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    text-align: center;
+
+    white-space: nowrap;
+}
+
+
+/* =====================================================
+   VOLUME
+===================================================== */
+
+.video-volume {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    flex: 0 0 auto;
+}
+
+#volumeRange {
+    width: 70px;
+    height: 4px;
+
+    appearance: none;
+    -webkit-appearance: none;
+
+    background: rgba(255, 255, 255, 0.3);
+
+    border-radius: 10px;
+
+    cursor: pointer;
+}
+
+
+#volumeRange::-webkit-slider-thumb {
+    appearance: none;
+    -webkit-appearance: none;
+
+    width: 11px;
+    height: 11px;
+
+    border: 0;
+    border-radius: 50%;
+
+    background: #00bcd4;
+
+    cursor: pointer;
+}
+
+
+#volumeRange::-moz-range-thumb {
+    width: 11px;
+    height: 11px;
+
+    border: 0;
+    border-radius: 50%;
+
+    background: #00bcd4;
+
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   VOLUME ICONS
+===================================================== */
+
+.volume-off {
+    display: none;
+}
+
+.video-volume.is-muted .volume-on {
+    display: none;
+}
+
+.video-volume.is-muted .volume-off {
+    display: block;
+}
+
+
+/* =====================================================
+   SETTINGS
+===================================================== */
+
+.video-settings {
+    position: relative;
+    flex: 0 0 auto;
+}
+
+
+/* Settings menu */
+
+.video-settings-menu {
+    position: absolute;
+    right: 0;
+    bottom: 48px;
+
+    width: 190px;
+
+    padding: 8px;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 10px;
+
+    background: rgba(20, 20, 20, 0.97);
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+
+    color: #fff;
+}
+
+
+/* Settings options */
+
+.settings-option,
+.settings-back,
+.speed-option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+
+    padding: 10px 12px;
+
+    border: 0;
+    border-radius: 7px;
+
+    background: transparent;
+
+    color: #fff;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    transition: background 0.2s ease;
+}
+
+.settings-option:hover,
+.settings-back:hover,
+.speed-option:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+
+.settings-value {
+    opacity: 0.65;
+}
+
+
+/* Speed menu */
+
+.settings-speed {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.settings-speed[hidden],
+.video-settings-menu[hidden] {
+    display: none;
+}
+
+.settings-back {
+    justify-content: flex-start;
+    margin-bottom: 4px;
+}
+
+
+/* Active speed */
+
+.speed-option.active {
+    background: rgba(0, 188, 212, 0.2);
+    color: #00bcd4;
+}
+
+
+/* =====================================================
+   FULLSCREEN
+===================================================== */
+
+.fullscreen-exit {
+    display: none;
+}
+
+#fullscreenBtn.is-fullscreen .fullscreen-enter {
+    display: none;
+}
+
+#fullscreenBtn.is-fullscreen .fullscreen-exit {
+    display: block;
+}
+
+
+/* =====================================================
+   VIDEO PLAYER FULLSCREEN
+===================================================== */
+
+.custom-video-player:fullscreen {
+    width: 100vw;
+    height: 100vh;
+
+    aspect-ratio: auto;
+
+    border-radius: 0;
+}
+
+.custom-video-player:-webkit-full-screen {
+    width: 100vw;
+    height: 100vh;
+
+    border-radius: 0;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
 

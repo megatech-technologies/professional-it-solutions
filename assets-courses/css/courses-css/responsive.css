@@ -29,11 +29,9 @@
         gap: 18px;
     }
 
-
     .course-timeline-header {
         padding: 18px;
     }
-
 
     .course-timeline-header h2 {
         font-size: 19px;
@@ -53,22 +51,29 @@
         gap: 20px;
     }
 
-
     .course-video {
         width: 100%;
+        min-width: 0;
     }
-
 
     .video-wrapper {
         width: 100%;
+        max-width: 100%;
         aspect-ratio: 16 / 9;
     }
 
+    .video-wrapper iframe {
+        display: block;
+        width: 100%;
+        height: 100%;
+        min-width: 0;
+        border: 0;
+    }
 
     .course-timeline {
         width: 100%;
+        min-width: 0;
     }
-
 
     .course-timeline .lesson-list {
         max-height: none;
@@ -88,21 +93,30 @@
         gap: 16px;
     }
 
+    .course-video {
+        width: 100%;
+        min-width: 0;
+    }
 
     .video-wrapper {
+        width: 100%;
+        aspect-ratio: 16 / 9;
         border-radius: 10px;
     }
 
+    .video-wrapper iframe {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
 
     .course-timeline-header {
         padding: 16px;
     }
 
-
     .course-timeline-header h2 {
         font-size: 18px;
     }
-
 
     .course-timeline .lesson-item {
         padding: 13px 14px;
@@ -121,16 +135,34 @@
         gap: 14px;
     }
 
-
-    .video-wrapper {
-        border-radius: 8px;
+    .course-video {
+        width: 100%;
+        min-width: 0;
     }
 
+    /*
+       Keep the YouTube player at its natural
+       16:9 ratio so the full control bar has
+       enough vertical space.
+    */
+    .video-wrapper {
+        width: 100%;
+        max-width: 100%;
+        aspect-ratio: 16 / 9;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .video-wrapper iframe {
+        display: block;
+        width: 100%;
+        height: 100%;
+        border: 0;
+    }
 
     .course-timeline-header {
         padding: 15px;
     }
-
 
     .course-timeline .lesson-item {
         grid-template-columns: 32px minmax(0, 1fr) 20px;
@@ -138,21 +170,17 @@
         padding: 12px;
     }
 
-
     .course-timeline .lesson-info strong {
         font-size: 13px;
     }
-
 
     .course-timeline .lesson-info small {
         font-size: 11px;
     }
 
-
     .course-timeline .lesson-number {
         font-size: 12px;
     }
-
 
     .course-timeline .lesson-arrow {
         font-size: 11px;
@@ -162,25 +190,99 @@
 
 
 /* =========================================================
-   360px
+   400px
+   YouTube player optimization
 ========================================================= */
 
-@media (max-width: 360px) {
+@media (max-width: 400px) {
 
     .course-player-layout {
         gap: 12px;
     }
 
+    .course-video {
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    .video-wrapper {
+        width: 100%;
+        max-width: 100%;
+        aspect-ratio: 16 / 9;
+        border-radius: 6px;
+        overflow: hidden;
+    }
+
+    .video-wrapper iframe {
+        display: block;
+        width: 100%;
+        height: 100%;
+        min-width: 0;
+        border: 0;
+    }
+
+    /*
+       Prevent surrounding elements from forcing
+       the video wider than the screen.
+    */
+    .course-player-layout,
+    .course-video,
+    .video-wrapper {
+        box-sizing: border-box;
+    }
 
     .course-timeline-header {
         padding: 14px;
     }
 
-
     .course-timeline-header h2 {
         font-size: 17px;
     }
 
+}
+
+
+/* =========================================================
+   360px
+   Extra-small phones
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .course-player-layout {
+        gap: 10px;
+    }
+
+    .course-video {
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    .video-wrapper {
+        width: 100%;
+        max-width: 100%;
+        aspect-ratio: 16 / 9;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+
+    .video-wrapper iframe {
+        display: block;
+        width: 100%;
+        height: 100%;
+        min-width: 0;
+        border: 0;
+    }
+
+    .course-timeline-header {
+        padding: 14px;
+    }
+
+    .course-timeline-header h2 {
+        font-size: 17px;
+    }
 
     .course-timeline .lesson-item {
         grid-template-columns: 28px minmax(0, 1fr) 18px;
@@ -188,19 +290,51 @@
         padding: 11px;
     }
 
-
     .course-timeline .lesson-info strong {
         font-size: 12px;
     }
-
 
     .course-timeline .lesson-info small {
         font-size: 10px;
     }
 
-
     .course-timeline .lesson-number {
         font-size: 11px;
+    }
+
+}
+
+
+
+
+
+/* =========================================================
+   332px - Extra Small YouTube Player
+========================================================= */
+
+@media (max-width: 332px) {
+
+    .course-video,
+    .video-wrapper {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+    .video-wrapper {
+        aspect-ratio: 16 / 9;
+        overflow: hidden;
+        border-radius: 4px;
+    }
+
+    .video-wrapper iframe {
+        display: block;
+        width: 100%;
+        height: 100%;
+        min-width: 0;
+        max-width: 100%;
+        border: 0;
     }
 
 }
