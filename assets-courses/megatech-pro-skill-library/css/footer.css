@@ -1,0 +1,176 @@
+/* =========================================================
+   MEGATECH COURSE LIBRARY — FOOTER
+========================================================= */
+
+.site-footer {
+    background: #d5dfe5;
+    border-top: 1px solid #c3cfd6;
+    color: #172a3b;
+}
+
+
+/* =========================================================
+   FOOTER MAIN
+========================================================= */
+
+.footer-main {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.5fr)
+        minmax(150px, 0.7fr)
+        minmax(150px, 0.7fr);
+
+    gap: 50px;
+
+    padding: 48px 0 40px;
+}
+
+
+/* =========================================================
+   FOOTER BRAND
+========================================================= */
+
+.footer-brand {
+    max-width: 420px;
+}
+
+.footer-brand .brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 16px;
+
+    color: #17324d;
+
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.footer-brand .brand b {
+    color: #28717a;
+}
+
+
+/* =========================================================
+   FOOTER DESCRIPTION
+========================================================= */
+
+.footer-description {
+    max-width: 400px;
+
+    margin: 0;
+
+    color: #5f707d;
+
+    font-size: 13px;
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   FOOTER COLUMNS
+========================================================= */
+
+.footer-column h3 {
+    margin: 0 0 16px;
+
+    color: #17324d;
+
+    font-size: 14px;
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   FOOTER LINKS
+========================================================= */
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+
+    gap: 11px;
+}
+
+.footer-links a {
+    width: fit-content;
+
+    color: #627482;
+
+    font-size: 13px;
+    line-height: 1.4;
+
+    text-decoration: none;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: #28717a;
+    transform: translateX(2px);
+}
+
+
+/* =========================================================
+   FOOTER BOTTOM
+========================================================= */
+
+.footer-bottom {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 19px 0;
+
+    border-top: 1px solid #e3e8eb;
+}
+
+
+/* =========================================================
+   COPYRIGHT
+========================================================= */
+
+.footer-copyright {
+    margin: 0;
+
+    color: #71818d;
+
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   FOOTER BOTTOM LINKS
+========================================================= */
+
+.footer-bottom-links {
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+.footer-bottom-links a {
+    color: #71818d;
+
+    font-size: 11px;
+
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+}
+
+.footer-bottom-links a:hover {
+    color: #28717a;
+}
+
+
