@@ -121,6 +121,8 @@
             max-height 0.25s ease,
             opacity 0.2s ease,
             visibility 0.2s ease;
+
+        z-index: 101;
     }
 
 
@@ -353,7 +355,17 @@
         flex-wrap: wrap;
 
         padding: 9px 0;
+
+
+        position: sticky;
+        top: 60px;
+        z-index: 30;
+        background: #ffffff;
     }
+
+
+
+   
 
 
     .toolbar > div {
@@ -386,29 +398,22 @@
        ===================================================== */
 
     .filter-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #d5dfe4;
+    background: #ffffff;
+    color: #31566a;
+    border-radius: 6px;
+    padding: 8px 11px;
+    font-size: 11px;
+    font-weight: 700;
+    cursor: pointer;
 
-        display: inline-flex;
-
-        align-items: center;
-
-        justify-content: center;
-
-        border: 1px solid #d5dfe4;
-
-        background: #ffffff;
-
-        color: #31566a;
-
-        border-radius: 6px;
-
-        padding: 8px 11px;
-
-        font-size: 11px;
-
-        font-weight: 700;
-
-        cursor: pointer;
-    }
+    position: sticky;
+    top: 70px;
+    z-index: 30;
+}
 
 
     /* =====================================================
@@ -426,35 +431,37 @@
 
     .filters {
 
-        position: fixed;
+    position: fixed;
 
-        z-index: 60;
+    z-index: 200;
 
-        top: 0;
-        left: 0;
-        bottom: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
 
-        width: min(330px, 88vw);
+    width: min(330px, 88vw);
 
-        max-width: 100%;
+    max-width: 100%;
 
-        overflow-y: auto;
+    height: 100vh;
 
-        padding:
-            24px 20px 30px;
+    overflow-y: auto;
 
-        background: #ffffff;
+    padding:
+        24px 20px 30px;
 
-        box-shadow:
-            10px 0 30px
-            rgba(20, 43, 60, 0.15);
+    background: #ffffff;
 
-        transform:
-            translateX(-105%);
+    box-shadow:
+        10px 0 30px
+        rgba(20, 43, 60, 0.15);
 
-        transition:
-            transform 0.25s ease;
-    }
+    transform:
+        translateX(-105%);
+
+    transition:
+        transform 0.25s ease;
+}
 
 
     .filters.open {

@@ -9,7 +9,8 @@
         durations: [],
         subjects: [],
         languages: [],
-        sort: "relevance"
+        sort: "relevance",
+        savedOnly: false
     };
 
 
@@ -85,30 +86,85 @@
 
     function getSavedCourses() {
 
-        try {
+    try {
 
-            const saved = localStorage.getItem(
-                "megatechSaved"
-            );
+        const saved = localStorage.getItem(
+            "megatechSaved"
+        );
 
-            const parsed = saved
-                ? JSON.parse(saved)
-                : [];
+        const parsed = saved
+            ? JSON.parse(saved)
+            : [];
 
-            return Array.isArray(parsed)
-                ? parsed
-                : [];
-
-        } catch (error) {
-
-            console.warn(
-                "Could not read saved courses:",
-                error
-            );
-
+        if (!Array.isArray(parsed)) {
             return [];
         }
+
+        /*
+         * Convert all IDs to strings,
+         * remove duplicates,
+         * and keep only courses that
+         * currently exist in the HTML.
+         */
+
+        const storedIds = [
+            ...new Set(
+                parsed
+                    .map(id => String(id))
+                    .filter(Boolean)
+            )
+        ];
+
+
+        const currentCourseIds = getCourseCards()
+            .map((card) => {
+
+                const button =
+                    card.querySelector("[data-save]");
+
+                return button
+                    ? String(button.dataset.save || "")
+                    : "";
+
+            })
+            .filter(Boolean);
+
+
+        const currentSavedIds =
+            storedIds.filter((id) =>
+                currentCourseIds.includes(id)
+            );
+
+
+        /*
+         * Clean old/non-existing course IDs
+         * from localStorage.
+         */
+
+        if (
+            currentSavedIds.length !==
+            storedIds.length
+        ) {
+
+            localStorage.setItem(
+                "megatechSaved",
+                JSON.stringify(currentSavedIds)
+            );
+        }
+
+
+        return currentSavedIds;
+
+    } catch (error) {
+
+        console.warn(
+            "Could not read saved courses:",
+            error
+        );
+
+        return [];
     }
+}
 
 
     function setSavedCourses(ids) {
@@ -144,38 +200,43 @@
 
     function updateSavedButtons() {
 
-        const saved = getSavedCourses();
+    const saved = getSavedCourses();
 
-        $$("[data-save]").forEach((button) => {
+    $$("[data-save]").forEach((button) => {
 
-            const courseId = button.dataset.save;
+        const courseId =
+            String(button.dataset.save || "");
 
-            const isSaved = saved.includes(courseId);
+        const isSaved =
+            saved.includes(courseId);
 
-            button.classList.toggle(
-                "saved",
-                isSaved
-            );
+        button.classList.toggle(
+            "saved",
+            isSaved
+        );
 
-            button.textContent = isSaved
-                ? "✓ Saved"
-                : "+ Add to list";
+        button.textContent = isSaved
+            ? "✓ Saved"
+            : "+ Add to list";
 
-            button.setAttribute(
-                "aria-pressed",
-                String(isSaved)
-            );
-        });
+        button.setAttribute(
+            "aria-pressed",
+            String(isSaved)
+        );
+    });
 
 
-        /* Update saved course counters */
+    /*
+     * Update every saved counter.
+     */
 
-        $$(".saved-count").forEach((counter) => {
+    $$(".saved-count").forEach((counter) => {
 
-            counter.textContent = saved.length;
+        counter.textContent =
+            saved.length;
 
-        });
-    }
+    });
+}
 
 
     /* =========================================================
@@ -865,48 +926,48 @@
        ADD / REMOVE COURSE FROM LIST
        ========================================================= */
 
-    function toggleSavedCourse(
-        courseId
-    ) {
+    function toggleSavedCourse(courseId) {
 
-        const saved =
-            getSavedCourses();
+    const id = String(courseId || "");
 
-
-        const index =
-            saved.indexOf(courseId);
-
-
-        if (index >= 0) {
-
-            saved.splice(
-                index,
-                1
-            );
-
-            showToast(
-                "Removed from your list"
-            );
-
-        } else {
-
-            saved.push(
-                courseId
-            );
-
-            showToast(
-                "Course added to your list"
-            );
-        }
-
-
-        if (
-            setSavedCourses(saved)
-        ) {
-
-            updateSavedButtons();
-        }
+    if (!id) {
+        return;
     }
+
+
+    const saved = getSavedCourses();
+
+    const index =
+        saved.indexOf(id);
+
+
+    if (index >= 0) {
+
+        saved.splice(
+            index,
+            1
+        );
+
+        showToast(
+            "Removed from your list"
+        );
+
+    } else {
+
+        saved.push(id);
+
+        showToast(
+            "Course added to your list"
+        );
+    }
+
+
+    if (setSavedCourses(saved)) {
+
+        updateSavedButtons();
+
+    }
+}
 
 
     /* =========================================================
@@ -1336,6 +1397,41 @@
         }
 
 
+
+            /*=====================================================
+        CLOSE MOBILE FILTER WHEN BODY IS CLICKED
+        =====================================================*/
+
+    document.body.addEventListener(
+        "click",
+        (event) => {
+
+            const filters = $("#filters");
+            const filterOpen = $("#filterOpen");
+            const overlay = $("#overlay");
+
+            if (
+                filters &&
+                filters.classList.contains("open") &&
+                !filters.contains(event.target) &&
+                filterOpen &&
+                !filterOpen.contains(event.target)
+            ) {
+
+                filters.classList.remove("open");
+
+                if (overlay) {
+
+                    overlay.classList.remove("open");
+
+                }
+
+            }
+
+        }
+    );
+
+
         /* =====================================================
            MOBILE MENU
            ===================================================== */
@@ -1423,6 +1519,41 @@ if (mobileMenu && mobileNav) {
 }
 
 
+    /*=====================================================
+        CLOSE MOBILE MENU WHEN BODY IS CLICKED
+        =====================================================*/
+
+    document.body.addEventListener(
+        "click",
+        (event) => {
+
+            if (
+                mobileNav &&
+                mobileNav.classList.contains("open") &&
+                !mobileNav.contains(event.target) &&
+                mobileMenu &&
+                !mobileMenu.contains(event.target)
+            ) {
+
+                mobileNav.classList.remove(
+                    "open"
+                );
+
+                mobileMenu.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+                document.body.classList.remove(
+                    "menu-open"
+                );
+
+            }
+
+        }
+    );
+
+
         /* =====================================================
            SEARCH OPEN BUTTON
            ===================================================== */
@@ -1479,75 +1610,118 @@ if (mobileMenu && mobileNav) {
            VIEW SAVED COURSES
            ===================================================== */
 
-        const viewSaved = $(
-            "#viewSaved"
-        );
+        /* =====================================================
+   VIEW SAVED COURSES
+   ===================================================== */
 
-        if (viewSaved) {
+const viewSaved = $(
+    "#viewSaved"
+);
 
-            viewSaved.addEventListener(
-                "click",
-                () => {
+if (viewSaved) {
 
-                    const saved =
-                        getSavedCourses();
+    viewSaved.addEventListener(
+        "click",
+        () => {
 
-
-                    const cards =
-                        getCourseCards();
-
-
-                    cards.forEach(
-                        (card) => {
-
-                            card.style.display =
-                                saved.includes(
-                                    card.dataset.id
-                                )
-                                    ? ""
-                                    : "none";
-                        }
-                    );
+            const saved =
+                getSavedCourses();
 
 
-                    const results = $(
-                        "#resultsCount"
-                    );
+            const cards =
+                getCourseCards();
 
 
-                    const showing = $(
-                        "#showing"
-                    );
+            let visibleSavedCount = 0;
 
 
-                    if (results) {
+            cards.forEach(
+                (card) => {
 
-                        results.textContent =
-                            `${saved.length} saved courses`;
+                    const saveButton =
+                        card.querySelector(
+                            "[data-save]"
+                        );
+
+
+                    const courseId =
+                        saveButton
+                            ? String(
+                                saveButton.dataset.save
+                            )
+                            : "";
+
+
+                    const isSaved =
+                        saved.includes(
+                            courseId
+                        );
+
+
+                    card.style.display =
+                        isSaved
+                            ? ""
+                            : "none";
+
+
+                    if (isSaved) {
+                        visibleSavedCount++;
                     }
 
-
-                    if (showing) {
-
-                        showing.textContent =
-                            `Showing ${saved.length} saved courses`;
-                    }
-
-
-                    const courses = $(
-                        "#courses"
-                    );
-
-
-                    if (courses) {
-
-                        courses.scrollIntoView({
-                            behavior: "smooth"
-                        });
-                    }
                 }
             );
+
+
+            const results = $(
+                "#resultsCount"
+            );
+
+
+            const showing = $(
+                "#showing"
+            );
+
+
+            if (results) {
+
+                results.textContent =
+                    `${visibleSavedCount} saved courses`;
+
+            }
+
+
+            if (showing) {
+
+                showing.textContent =
+                    `Showing ${visibleSavedCount} saved courses`;
+
+            }
+
+
+            const courses = $(
+                "#courses"
+            );
+
+
+            if (courses) {
+
+                courses.scrollIntoView({
+                    behavior: "smooth"
+                });
+
+            }
+
+
+            /*
+             * Make sure buttons and counters
+             * are synchronized too.
+             */
+
+            updateSavedButtons();
+
         }
+    );
+}
     }
 
 

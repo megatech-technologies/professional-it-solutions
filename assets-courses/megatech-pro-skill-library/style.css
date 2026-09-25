@@ -44,7 +44,7 @@ select {
     background: #ffffff;
     position: sticky;
     top: 0;
-    z-index: 20;
+    z-index: 100;
 }
 
 .nav {
@@ -223,6 +223,9 @@ select {
 
 .filters {
     padding-top: 22px;
+    position: sticky;
+    top: 92px;
+    align-self: start;
 }
 
 .filter-title {
@@ -654,6 +657,7 @@ select {
 /* =========================================================
    FOOTER
    ========================================================= */
+/*
 
 footer {
     background: #142b3c;
@@ -687,6 +691,7 @@ footer p {
     font-size: 10px;
     color: #8195a1;
 }
+*/
 
 
 /* =========================================================
