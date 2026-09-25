@@ -8,6 +8,13 @@
    COURSE HERO
 --------------------------------------------------------- */
 
+body {
+    margin: 0;
+    font-family: Inter, Arial, sans-serif;
+    color: #172a3b;
+    background: #eef2f5;
+}
+
 .course-hero {
     padding: 65px 0 45px;
 
