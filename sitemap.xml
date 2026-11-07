@@ -50,9 +50,16 @@
         <priority>0.8</priority>
     </url>
 
-    <!-- MegaTech Academy Project -->
+    <!-- Computer Software Repair Academy Owerri -->
     <url>
-        <loc>https://megatech-it-solutions.pages.dev/academy/project/index.html</loc>
+        <loc>https://megatech-it-solutions.pages.dev/academy/project/Computer-Software-Repair-Academy-Owerri/index.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- Get Premium Courses Free -->
+    <url>
+        <loc>https://megatech-it-solutions.pages.dev/academy/project/get-premuim-courses-free/index.html</loc>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>

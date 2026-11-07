@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://megatech-it-solutions.vercel.app/sitemap.xml
+Sitemap: https://megatech-it-solutions.pages.dev/sitemap.xml
